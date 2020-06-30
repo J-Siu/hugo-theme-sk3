@@ -8,9 +8,9 @@ SK3 demo site: https://sk3.jsiu.dev/
 
 Example site content from [hugoBasicExample](https://github.com/gohugoio/hugoBasicExample)
 
-### Usage
+### Install
 
-- Clone
+- Using clone
 
     In site directory:
 
@@ -18,7 +18,7 @@ Example site content from [hugoBasicExample](https://github.com/gohugoio/hugoBas
     git clone https://github.com/J-Siu/hugo-theme-sk3 theme/sk3
     ```
 
-- Submodule
+- Using submodule
 
     In site directory:
 
@@ -48,75 +48,239 @@ hugo server -D --bind :: \
 
 ### Features
 
-- Card list
-- Card width (default:290px on computer screen)
 - Collapsible table of content
-- Color theme
-- Copyright start year
-- Disqus - Per page disable
 - Git modify date
-- Google AdSense
 - Google analytics
 - Menu sidebar
 - Mobile ready
-- Optional card date
-- Optional card summary
-- Optional page width
-- Optional prev/next
-- Optional sub-title
+
+### Layout
+
+#### Site
+
+- Main type
+
+  Control `type` used to generate homepage list. Hugo default `post`.
+
+  ```toml
+  [Params]
+  maintype  = "post"
+  ```
+
+- Sub-title
+
+  If defined, sub-title appear after site title in smaller font.
+
+  ```toml
+  [Params]
+  subtitle  = "A Hugo Themes"
+  ```
+
+- Copyright start year
+
+  Year is extracted from `startdate` and generate copyright in format "2012-(current year)".
+
+  > Site `copyright` override this behavior.
+
+  ```toml
+  [Params]
+  startdate = "2012-12-02"
+  ```
+
+- Page width (default: 1200px)
+
+  ```toml
+  [Params]
+  pagewidth = "1200px"
+  ```
+
+  > Page width will automatically set to 100% on small screen.
+
 - Social links
+
+  Social link buttons appear at the bottom of card/list page:
+
+  ```toml
+  [Params.sociallink]
+	facebook       = ""
+	flickr         = ""
+	instagram      = ""
+	linkedin       = ""
+	pinterest      = ""
+	reddit         = ""
+	tumblr         = ""
+	twitter        = ""
+	vimeo          = ""
+	youtubechannel = ""
+	youtubeuser    = ""
+  ```
+
 - Social share
 
-### Site Config
+  Social share buttons appear at the bottom of regular page:
+
+  ```toml
+  [Params.socialshare]
+	facebook  = true
+	instagram = true
+	linkedin  = true
+	pinterest = true
+	reddit    = true
+	telegram  = true
+	twitter   = true
+	vk        = true
+  ````
+
+#### Color theme
+
+- Default dark theme
+
+  Change color theme directly in `config.toml`. Following are defaults defined in CSS:
+
+  ```toml
+  [Params.color]
+  bg     = "#181a1b"
+  border = "white"
+  link   = "#3d84ff"
+  text   = "white"
+  ```
+
+#### Card/List
+
+- Width (default:32% on computer screen)
+  > 32% gives 3 columns, 24% gives 4 columns, etc. 100% basically turn into list mode.
+- Date
+- Summary
+
+  ```toml
+  [Params.card]
+	date    = true
+	summary = true
+	width   = "32%"
+  ```
+
+#### Per Page
+
+- Disable Disqus
+- Disable Prev/Next
+- Disable table of content
+
+  To disable the above, in front matter:
+
+  ```toml
+  comment = false
+  prevnext = false
+  toc = false
+  ```
+
+#### Google AdSense
+
+- Support Google AdSense auto:
+
+  ```toml
+  [Params]
+  adsense_id = ""
+  ```
+
+#### Twitter Cards / Opengraph
+
+Use following to enable Twitter Cards / Opengraph:
+
+```toml
+[Params]
+opengraph   = true
+twitercards = true
+description = "Site description"
+title       = "Site title"
+```
+
+### config.sk3.toml
 
 ```toml
 baseURL = "https://sk3.jsiu.dev"
-title = "SK3"
-copyright = ""
+theme   = "sk3"
+title   = "SK3"
 
-enableGitInfo = false
-relativeURLs = true
-theme = "sk3"
+enableGitInfo = true
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+languageCode           = "en"
+paginate               = 15
+
+#disqusShortname = ""
+#googleAnalytics = ""
 
 [Params]
-startdate = "2012-12-02"
-subtitle  = "A Hugo Themes"
-toc       = true
-adsense_id = ""
-homepage  = false
-maxwidth  = "1900"
+#maintype  = "post"
+#pagewidth = "1200px"
+#startdate = "2012-12-02"
+#subtitle  = "A Hugo Theme"
 
-[Params.card]
-width = "290px"
-date  = true
-summary   = true
+#adsense_id = ""
 
-[Params.color]
-bg-color     = "#181a1b"
-border-color = "white"
-link-color   = "#3d84ff"
-text-color   = "white"
+# Fill in following if using opengraph / twitter card
+#opengraph   = true
+#twitercards = true
+#description = "A Hugo Theme"
+#title       = "SK3"
+
+  [Params.card]
+  date    = true
+  summary = true
+  #width   = "32%"
+
+  #[Params.color]
+  #bg     = "#181a1b"
+  #border = "white"
+  #link   = "#3d84ff"
+  #text   = "white"
+
+  #[Params.sociallink]
+  #facebook       = ""
+  #flickr         = ""
+  #instagram      = ""
+  #linkedin       = ""
+  #pinterest      = ""
+  #reddit         = ""
+  #tumblr         = ""
+  #twitter        = ""
+  #vimeo          = ""
+  #youtubechannel = ""
+  #youtubeuser    = ""
+
+  [Params.socialshare]
+  facebook  = true
+  instagram = true
+  linkedin  = true
+  pinterest = true
+  reddit    = true
+  telegram  = true
+  twitter   = true
+  vk        = true
+
+[markup]
+	[markup.tableOfContents]
+	endLevel   = 6
+	startLevel = 1
 ```
 
 ### Front Matter
 
 ```toml
+---
 comment = false
 prevnext = false
 toc = false
+---
 ```
 
 ### TODO
 
-- README.md
-  - Detail Params instructions.
 - Alternative homepage template
-- Clean up css
-  - refactor margin, padding
 - Meta
   - Author
   - others?
-- Include share buttons
+- Include social buttons
 
 ### Repository
 
@@ -138,6 +302,12 @@ toc = false
     - Display issue with Disqus
     - Display issue with prev/next
     - Unwanted title on homepage
+- 0.8.7
+  - CSS clean up
+  - Complete README.md
+  - Default page width 1200px
+  - Default card width 32%
+  - Fixed menu bar top and left "leaking"
 
 ### License
 
