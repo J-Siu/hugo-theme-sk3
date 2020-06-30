@@ -2,8 +2,8 @@
 <div class="main">
 
 	{{if not .IsHome}}
-	{{with .Title}}<div><heading>{{.}}</heading></div>{{end}}
-	{{with .Content}}<div><article>{{.}}</article></div>{{end}}
+	{{with .Title}}<h1><heading>{{.}}</heading></h1>{{end}}
+	{{with .Content}}<article>{{.}}</article>{{end}}
 	{{end}}
 
 	<!--Set type-->
@@ -22,10 +22,10 @@
 	{{$paginator:=(.Scratch.Get "Paginator")}}
 
 	<!--pagination-->
-	<div class="flex center">{{template "_internal/pagination.html" .}}</div>
+	<div class="flex flex-center-h"><h3>{{template "_internal/pagination.html" .}}</h3></div>
 
 	<!--cards-->
-	<section class="flex center">
+	<section class="flex flex-center-h">
 	{{range $paginator.Pages}}
 	<div class="card box">
 		<div class="flex">
@@ -40,7 +40,7 @@
 	</section>
 
 	<!--pagination-->
-	<div class="flex center"><div>{{template "_internal/pagination.html" .}}</div></div>
+	<div class="flex flex-center-h"><h3>{{template "_internal/pagination.html" .}}</h3></div>
 
 	{{partial "social-link.html" .}}
 

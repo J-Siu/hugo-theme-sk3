@@ -1,4 +1,5 @@
-<div class="flex center">
+{{if .Site.Params.sociallink}}
+<div class="flex flex-center-h">
 	<h2>
 		{{range .Site.Data.social.site}}
 		{{if isset $.Site.Params.sociallink .id}}
@@ -7,3 +8,4 @@
 		{{end}}
 	</h2>
 </div>
+{{end}}

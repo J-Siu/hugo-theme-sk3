@@ -44,13 +44,32 @@ html {
   border-top: 1px solid;
 }
 
-.center {
-  justify-content: center;
-}
-
 .flex {
   display: flex;
   flex-wrap: wrap;
+}
+
+.flex-right {
+  display: flex;
+  margin-left: auto;
+  vertical-align: baseline;
+}
+
+.flex-down {
+  margin-top: auto;
+}
+
+.flex-up {
+  margin-bottom: auto;
+}
+
+.flex-center-h {
+  justify-content: center;
+}
+
+.flex-center-v {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .no-dot {
@@ -77,25 +96,6 @@ header h4 {
   margin-block-end: 0;
   padding: 0px;
   margin: 0px;
-}
-
-.flex-right {
-  display: flex;
-  margin-left: auto;
-  vertical-align: baseline;
-}
-
-.flex-down {
-  margin-top: auto;
-}
-
-.flex-up {
-  margin-bottom: auto;
-}
-
-.flex-center-v {
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .pagination li {
