@@ -17,6 +17,6 @@
 </footer>
 
 <!--js-->
-{{with .Site.Menus.main}}
+{{if or .Site.Menus.main .Site.Params.socialshare}}
 <script src="{{relLangURL ""}}js/sk3.js"></script>
 {{end}}
