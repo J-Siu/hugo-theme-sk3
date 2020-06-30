@@ -60,4 +60,4 @@ title       = "SK3"
 [markup]
 	[markup.tableOfContents]
 	endLevel   = 6
-	startLevel = 3
+	startLevel = 1
