@@ -1,0 +1,22 @@
+<footer class="flex center">
+
+	{{if .Site.Copyright}}
+		<div class="pad-r-5px">{{.Site.Copyright}}</div>
+	{{else}}
+		<div class="pad-r-5px">
+		©
+		{{with .Site.Params.startdate}}
+			{{dateFormat "2006" .}}-
+		{{- end}}
+		{{- now.Format "2006"}} {{.Site.Title}}
+		</div>
+	{{end}}
+	<div class="pad-r-5px">Power by <a href="https://gohugo.io">Hugo</a>.</div>
+	<div>Theme <a href="https://github.com/J-Siu/hugo-theme-sk3/">SK3</a> by <a href="https://github.com/J-Siu/">J-Siu</a>.</div>
+
+</footer>
+
+<!--js-->
+{{with .Site.Menus.main}}
+<script src="{{relLangURL ""}}js/sk3.js"></script>
+{{end}}

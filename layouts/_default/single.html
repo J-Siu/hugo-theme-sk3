@@ -1,0 +1,57 @@
+{{define "main"}}
+<div class="main">
+
+	{{with .Title}} <heading>
+		<h1>{{.}}</h1>
+	</heading> {{end}}
+
+	{{if and .Site.Params.toc (.Param "toc")}}
+	<div class="toc-box">
+		<div class="collapsible">Table of Content</div>
+		<toc>{{.TableOfContents}}</toc>
+	</div>
+	{{end}}
+
+	{{with .Content}}<content>{{.}}</content>{{end}}
+	{{with .Lastmod}}<div>Update: {{dateFormat "2006-01-02" .}}</div>{{end}}
+
+	<!--share-->
+	{{ partial "social-share.html" . }}
+
+	<!--tags-->
+	{{if (.GetTerms "tags")}}
+		<div class="flex">
+			<div class="pad-r-5px">Tags:</div>
+			{{range (.GetTerms "tags")}}
+			<div class="pad-r-5px"><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></div>
+			{{end}}
+		</div>
+	{{end}}
+
+	<!--prev/next-->
+	{{if (.Param "prevnext")}}
+		{{if or .PrevInSection .NextInSection}}
+		<div class="flex">
+			{{with .PrevInSection}}<a href="{{.RelPermalink}}"><< {{.Title}}</a> {{end}}
+			{{with .NextInSection}}<a class="flex-right" href="{{.RelPermalink}}">{{.Title}} >></a>{{end}}
+		</div>
+		{{end}}
+	{{end}}
+
+	<!--related-->
+	{{$related := .Site.RegularPages.Related . | first 5}}
+	{{with $related}}
+	<h3>See Also</h3>
+	<ul>
+		{{range .}}
+		<li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+		{{end}}
+	</ul>
+	{{end}}
+
+	<!--disqus-->
+	{{if and .Site.DisqusShortname (.Param "comment")}}
+		{{template "_internal/disqus.html" .}}
+	{{end}}
+</div>
+{{end}}

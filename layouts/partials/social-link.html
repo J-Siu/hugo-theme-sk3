@@ -1,0 +1,9 @@
+<div class="flex center">
+	<h2>
+		{{range .Site.Data.social.site}}
+		{{if isset $.Site.Params.sociallink .id}}
+		<a href="{{printf .url (index $.Site.Params.sociallink .id)}}" class="{{.cls}}"></a>
+		{{end}}
+		{{end}}
+	</h2>
+</div>

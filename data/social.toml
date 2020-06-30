@@ -1,0 +1,44 @@
+[[site]]
+cls = "fa fa-facebook"
+id  = "facebook"
+url = "https://www.facebook.com/%s/"
+[[site]]
+cls = "fa fa-flickr"
+id  = "flickr"
+url = "https://www.flickr.com/photos/%s/"
+[[site]]
+cls = "fa fa-instagram"
+id  = "instagram"
+url = "https://www.instagram.com/%s/"
+[[site]]
+cls = "fa fa-linkedin"
+id  = "linkedin"
+url = "https://www.linkedin.com/in/%s/"
+[[site]]
+cls = "fa fa-pinterest"
+id  = "pinterest"
+url = "https://www.pinterest.com/%s/boards/"
+[[site]]
+cls = "fa fa-reddit"
+id  = "reddit"
+url = "https://www.reddit.com/user/%s"
+[[site]]
+cls = "fa fa-tumblr"
+id  = "tumblr"
+url = "https://www.tumblr.com/dashboard/blog/%s/"
+[[site]]
+cls = "fa fa-twitter"
+id  = "twitter"
+url = "https://twitter.com/%s"
+[[site]]
+cls = "fa fa-vimeo"
+id  = "vimeo"
+url = "https://vimeo.com/%s"
+[[site]]
+cls = "fa fa-youtube"
+id  = "youtubeuser"
+url = "https://www.youtube.com/user/%s"
+[[site]]
+cls = "fa fa-youtube"
+id  = "youtubechannel"
+url = "https://www.youtube.com/channel/%s"

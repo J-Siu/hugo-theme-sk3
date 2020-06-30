@@ -1,0 +1,46 @@
+{{define "main"}}
+<div class="main">
+
+	{{with .Title}}<div><heading>{{.}}</heading></div>{{end}}
+	{{with .Content}}<div><article>{{.}}</article></div>{{end}}
+
+	<!--Set type-->
+	{{if .Site.Params.mainType}}
+	{{.Scratch.Set "type" .Site.Params.mainType}}
+	{{else}}
+	{{.Scratch.Set "type" "post"}}
+	{{end}}
+
+	<!--Set paginator base on .IsHome-->
+	{{if .IsHome}}
+	{{.Scratch.Set "Paginator" (.Paginate (where .Site.RegularPages "Type" (.Scratch.Get "type")))}}
+	{{else}}
+	{{.Scratch.Set "Paginator" .Paginator}}
+	{{end}}
+	{{$paginator:=(.Scratch.Get "Paginator")}}
+
+	<!--pagination-->
+	<div class="flex center">{{template "_internal/pagination.html" .}}</div>
+
+	<!--cards-->
+	<section class="flex center">
+	{{range $paginator.Pages}}
+	<div class="card box">
+		<div class="flex">
+		<h3><a href="{{.RelPermalink}}">{{.Title}}</a></h3>
+		{{if .Site.Params.card.date}}
+			{{with .Lastmod}}<div class="flex-right flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}
+		{{end}}
+	</div>
+		{{if .Site.Params.card.summary}}<div>{{.Summary}}</div>{{end}}
+	</div>
+	{{end}}
+	</section>
+
+	<!--pagination-->
+	<div class="flex center"><div>{{template "_internal/pagination.html" .}}</div></div>
+
+	{{partial "social-link.html" .}}
+
+</div>
+{{end}}
