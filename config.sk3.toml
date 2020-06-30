@@ -18,7 +18,7 @@ googleAnalytics = "UA-36805525-1"     # optional
 
 [Params]
 #maintype  = "post"
-pagewidth = "1024px"
+pagewidth = "1200px"
 startdate = "2012-12-02"
 subtitle  = "A Hugo Themes"
 toc       = true
@@ -60,7 +60,7 @@ title       = "SK3"
 	[Params.card]
 	date    = true
 	summary = true
-	#width   = "100%"
+	width   = "32%"
 
 	[Params.color]
 	bg     = "#181a1b"
