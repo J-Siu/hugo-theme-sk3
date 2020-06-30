@@ -2,37 +2,37 @@ baseURL = "https://sk3.jsiu.dev"
 theme   = "sk3"
 title   = "SK3"
 
-enableGitInfo = true
-#paginate      = 24
+enableGitInfo          = true
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 languageCode           = "en"
 paginate               = 3
 relativeURLs           = true
 
-#disqusShortname = ""
-#googleAnalytics = ""
-
-disqusShortname = "https-johnsiu-com"
-googleAnalytics = "UA-36805525-1"     # optional
-
 [Params]
-#maintype  = "post"
-pagewidth = "1200px"
-startdate = "2012-12-02"
-subtitle  = "A Hugo Themes"
-toc       = true
+# maintype  = "post"
+# pagewidth = "1200px"
+# startdate = "2012-12-02"
+subtitle  = "A Hugo Theme"
 
-homepage = false
-# AdSense
-adsense = ""
+#adsense_id = ""
 
-opengraph   = false
-twitercards = false
 # Fill in following if using opengraph / twitter card
+opengraph   = true
+twitercards = true
 description = "A Hugo Theme"
-images      = [ "site-feature-image.jpg" ]
 title       = "SK3"
+
+	[Params.card]
+	date    = true
+	summary = true
+	# width   = "32%"
+
+	# [Params.color]
+	# bg     = "#181a1b"
+	# border = "white"
+	# link   = "#3d84ff"
+	# text   = "white"
 
 	[Params.sociallink]
 	facebook       = "john.siu.714"
@@ -57,53 +57,7 @@ title       = "SK3"
 	twitter   = true
 	vk        = true
 
-	[Params.card]
-	date    = true
-	summary = true
-	width   = "32%"
-
-	[Params.color]
-	bg     = "#181a1b"
-	border = "white"
-	link   = "#3d84ff"
-	text   = "white"
-
-	# [menu]
-	# 	[[menu.main]]
-	# 	identifier = "about"
-	# 	name       = "About"
-	# 	url        = "/about/"
-	# 	weight     = 10
-	# 	[[menu.main]]
-	# 	name = "Tags"
-	# 	url  = "/tags/"
-
 [markup]
-  [markup.tableOfContents]
-    endLevel = 6
-    startLevel = 3
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.parser]
-      attribute = true
-      autoHeadingID = true
-    [markup.goldmark.renderer]
-      hardWraps = false
-      unsafe = true
-      xHTML = false
-  [markup.highlight]
-    codeFences = true
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = true
-    #style = "monokai"
-    tabWidth = 4
+	[markup.tableOfContents]
+	endLevel   = 6
+	startLevel = 3
