@@ -1,41 +1,42 @@
 <header class="flex">
 
-<div class="flex">
-	<h1 class="flex-center-v menu-button">☰</h1>
-	<h1><a href="{{relLangURL ""}}">{{.Site.Title}}</a></h1>
-{{with .Site.Params.subtitle}}<h3 class="subtitle flex-center-v">{{.}}</h3>{{end}}
-</div>
-
-<nav class="sidebar box-right" id="menu-bar">
-	<h1 class="flex-center-v menu-button">☰</h1>
-	{{partial "social-share.html" .}}
-	<h4>
-	{{$currentPage := .}}
-	{{range .Site.Menus.main}}
-		{{if .HasChildren}}
-		<li class="{{if $currentPage.HasMenuCurrent "main" .}}active{{end}}">
-			<a href="#">
-				{{.Pre}}
-				<span>{{.Name}}</span>
-			</a>
-		</li>
-		<ul>
-			{{range .Children}}
-			<li class="{{if $currentPage.IsMenuCurrent "main" .}}active{{end}}">
-				<a href="{{.URL}}">{{.Name}}</a>
+	<nav class="sidebar box-right no-dot" id="menu-bar">
+		<h1 class="flex-center-v menu-button">☰</h1>
+		{{partial "social-share.html" .}}
+		<hr>
+		<h4>
+			{{$currentPage := .}}
+			{{range .Site.Menus.main}}
+			{{if .HasChildren}}
+			<li class="{{if $currentPage.HasMenuCurrent "main" .}}active{{end}}">
+				<a href="#">
+					{{.Pre}}
+					<span>{{.Name}}</span>
+				</a>
+			</li>
+			<ul>
+				{{range .Children}}
+				<li class="{{if $currentPage.IsMenuCurrent "main" .}}active{{end}}">
+					<a href="{{.URL}}">{{.Name}}</a>
+				</li>
+				{{end}}
+			</ul>
+			{{else}}
+			<li>
+				<a href="{{.URL}}">
+					{{.Pre}}
+					<span>{{.Name}}</span>
+				</a>
 			</li>
 			{{end}}
-		</ul>
-		{{else}}
-		<li>
-			<a href="{{.URL}}">
-				{{.Pre}}
-				<span>{{.Name}}</span>
-			</a>
-		</li>
-		{{end}}
-	{{end}}
-	</h4>
-</nav>
+			{{end}}
+		</h4>
+	</nav>
+
+	<div class="flex">
+		<h1 class="flex-center-v menu-button">☰</h1>
+		<h1><a href="{{relLangURL ""}}">{{.Site.Title}}</a></h1>
+		{{with .Site.Params.subtitle}}<h3 class="subtitle flex-center-v">{{.}}</h3>{{end}}
+	</div>
 
 </header>

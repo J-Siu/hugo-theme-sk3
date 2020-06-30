@@ -11,11 +11,20 @@
   .card {
     width: 100%
   }
+
+  .sidebar {
+    left: 0;
+    padding-left: 17px;
+  }
 }
 
 @media only screen and (min-width: 993px) {
   .card {
     width: var(--card-width);
+  }
+
+  .sidebar {
+    padding-left: 1px;
   }
 }
 
@@ -171,13 +180,16 @@ toc ul {
 }
 
 .sidebar {
-  background-color: var(--bg-color);
-  height: 100%;
-  width: 200px;
-  position: fixed !important;
-  z-index: 1;
-  overflow: auto;
   display: none;
+  height: 100%;
+  top: 0;
+  background-color: var(--bg-color);
+  overflow: auto;
+  position: fixed !important;
+  width: 200px;
+  z-index: 1;
+  padding-top: 8px;
+  padding-right: 15px;
 }
 
 .sidebar h1 {
