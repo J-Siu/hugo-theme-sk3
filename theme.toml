@@ -1,7 +1,7 @@
 name = "sk3"
 license = "MIT"
 licenselink = "https://github.com/J-Siu/hugo-theme-sk3/blob/master/LICENSE"
-description = "Fully functional basic Hugo theme, no css, no javascript."
+description = "Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2)."
 homepage = "https://sk3.jsiu.dev/"
 tags = ["blog"]
 features = []
