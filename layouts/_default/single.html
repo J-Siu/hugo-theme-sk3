@@ -5,7 +5,7 @@
 		<h1>{{.}}</h1>
 	</heading> {{end}}
 
-	{{if and .Site.Params.toc (.Param "toc")}}
+	{{if and .Site.Params.toc (.Params.toc|default true)}}
 	<div class="toc-box">
 		<div class="collapsible">Table of Content</div>
 		<toc>{{.TableOfContents}}</toc>
@@ -29,12 +29,12 @@
 	{{end}}
 
 	<!--prev/next-->
-	{{if (.Param "prevnext")}}
+	{{if (.Params.prevnext|default true)}}
 		{{if or .PrevInSection .NextInSection}}
-		<div class="flex">
+		<h3 class="flex">
 			{{with .PrevInSection}}<a href="{{.RelPermalink}}"><< {{.Title}}</a> {{end}}
 			{{with .NextInSection}}<a class="flex-right" href="{{.RelPermalink}}">{{.Title}} >></a>{{end}}
-		</div>
+		</h3>
 		{{end}}
 	{{end}}
 
@@ -50,7 +50,7 @@
 	{{end}}
 
 	<!--disqus-->
-	{{if and .Site.DisqusShortname (.Param "comment")}}
+	{{if and .Site.DisqusShortname (.Params.comment|default true)}}
 		{{template "_internal/disqus.html" .}}
 	{{end}}
 </div>
