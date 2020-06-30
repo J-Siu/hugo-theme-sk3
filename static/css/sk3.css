@@ -158,33 +158,8 @@ toc li {
 }
 
 toc ul {
-  margin-left: 1px;
-  padding-left: 0px;
-}
-
-toc ul ul {
-  margin-left: 1px;
-  padding-left: 15px;
-}
-
-toc ul ul ul {
-  margin-left: 1px;
-  padding-left: 30px;
-}
-
-toc ul ul ul ul {
-  margin-left: 1px;
-  padding-left: 45px;
-}
-
-toc ul ul ul ul ul {
-  margin-left: 1px;
-  padding-left: 60px;
-}
-
-toc ul ul ul ul ul ul {
-  margin-left: 1px;
-  padding-left: 75px;
+  margin-left: 0px;
+  padding-left: 20px;
 }
 
 .pad-l-5px {
