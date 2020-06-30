@@ -85,6 +85,10 @@ html {
   list-style-type: none;
 }
 
+.txt-center-h{
+	text-align: center;
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
