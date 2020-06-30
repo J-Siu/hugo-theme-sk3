@@ -5,7 +5,7 @@
 		<h1>{{.}}</h1>
 	</heading> {{end}}
 
-	{{if and .Site.Params.toc (.Params.toc|default true)}}
+	{{if (.Params.toc|default true)}}
 	<div class="toc-box">
 		<div class="collapsible">Table of Content</div>
 		<toc>{{.TableOfContents}}</toc>
