@@ -6,10 +6,9 @@
 {{with .Site.Params.subtitle}}<h3 class="subtitle flex-center-v">{{.}}</h3>{{end}}
 </div>
 
-{{if .Site.Menus.main}}
 <nav class="sidebar box-right" id="menu-bar">
 	<h1 class="flex-center-v menu-button">☰</h1>
-	{{partial "social-link.html" .}}
+	{{partial "social-share.html" .}}
 	<h4>
 	{{$currentPage := .}}
 	{{range .Site.Menus.main}}
@@ -38,6 +37,5 @@
 	{{end}}
 	</h4>
 </nav>
-{{end}}
 
 </header>
