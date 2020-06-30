@@ -1,8 +1,10 @@
 {{define "main"}}
 <div class="main">
 
+	{{if not .IsHome}}
 	{{with .Title}}<div><heading>{{.}}</heading></div>{{end}}
 	{{with .Content}}<div><article>{{.}}</article></div>{{end}}
+	{{end}}
 
 	<!--Set type-->
 	{{if .Site.Params.mainType}}
