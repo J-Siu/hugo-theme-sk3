@@ -1,6 +1,8 @@
 {{define "main"}}
 <div class="main">
 
+	<div></div>
+
 	{{if not .IsHome}}
 	{{with .Title}}<h1>
 		<heading>{{.}}</heading>
@@ -23,10 +25,14 @@
 	{{end}}
 	{{$paginator:=(.Scratch.Get "Paginator")}}
 
+	<div></div>
+
 	<!--pagination-->
 	<div class="sk3-flex sk3-flex-center-h">
 		<sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager>
 	</div>
+
+	<div></div>
 
 	<!--cards-->
 	<section class="sk3-flex sk3-flex-center-h">
@@ -43,12 +49,16 @@
 		{{end}}
 	</section>
 
+	<div></div>
+
 	<!--pagination-->
 	<div class="sk3-flex sk3-flex-center-h">
 		<sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager>
 	</div>
 
 	{{partial "social-link.html" .}}
+
+	<div></div>
 
 </div>
 {{end}}
