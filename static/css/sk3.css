@@ -250,3 +250,14 @@ toc ul {
 sk3-social {
   font-size: 1.5em;
 }
+
+/* social button */
+.fa {
+  padding: 5px;
+	text-align: center;
+	opacity: 0.7;
+}
+
+.fa:hover {
+		opacity: 1;
+}
