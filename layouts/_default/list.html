@@ -22,7 +22,7 @@
 	{{$paginator:=(.Scratch.Get "Paginator")}}
 
 	<!--pagination-->
-	<div class="sk3-flex sk3-flex-center-h"><h3>{{template "_internal/pagination.html" .}}</h3></div>
+	<div class="sk3-flex sk3-flex-center-h"><sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager></div>
 
 	<!--cards-->
 	<section class="sk3-flex sk3-flex-center-h">
@@ -40,7 +40,7 @@
 	</section>
 
 	<!--pagination-->
-	<div class="sk3-flex sk3-flex-center-h"><h3>{{template "_internal/pagination.html" .}}</h3></div>
+	<div class="sk3-flex sk3-flex-center-h"><sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager></div>
 
 	{{partial "social-link.html" .}}
 

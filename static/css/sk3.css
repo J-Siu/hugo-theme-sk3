@@ -76,20 +76,6 @@ header h4 {
   margin: 0px;
 }
 
-.pagination li {
-  list-style-type: none;
-  display: inline-block;
-  margin-left: 5px;
-  font-size: 1.17em;
-  font-weight: bold;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-}
-
-.pagination {
-  padding: 1px;
-}
-
 .main,
 header,
 footer {
@@ -98,19 +84,6 @@ footer {
   margin-top: 5px;
   margin-bottom: 5px;
   display: block;
-}
-
-toc {
-  display: none;
-}
-
-toc li {
-  list-style-type: none;
-}
-
-toc ul {
-  margin-left: 0px;
-  padding-left: 20px;
 }
 
 .sidebar {
@@ -249,6 +222,42 @@ toc ul {
 
 sk3-social {
   font-size: 1.5em;
+}
+
+sk3-toc {
+  display: none;
+}
+
+sk3-toc li {
+  list-style-type: none;
+}
+
+sk3-toc ul {
+  margin-left: 0px;
+  padding-left: 5px;
+}
+
+sk3-toc ul ul{
+  margin-left: 0px;
+  padding-left: 20px;
+}
+
+sk3-pager {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+sk3-pager ul {
+	margin: 10px;
+	padding: 0;
+}
+
+sk3-pager li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 5px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
 }
 
 /* social button */
