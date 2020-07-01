@@ -4,7 +4,7 @@ licenselink = "https://github.com/J-Siu/hugo-theme-sk3/blob/master/LICENSE"
 description = "Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2)."
 homepage = "https://sk3.jsiu.dev/"
 tags = ["blog"]
-features = []
+features = ["responsive","adsense"]
 min_version = "0.65.0"
 
 [author]
