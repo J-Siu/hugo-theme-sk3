@@ -2,6 +2,8 @@
 
 Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2).
 
+Inspired by [Vimux/Binario](https://github.com/Vimux/Binario). Go check it out!
+
 ---
 
 <!-- TOC -->
@@ -73,7 +75,7 @@ hugo server -D --bind :: \
 --disableFastRender \
 --theme sk3 \
 --themesDir ../../ \
---config config.toml,../config.sk3.toml \
+--config config.toml,../config.demo.toml \
 --verbose
 ```
 
@@ -231,6 +233,8 @@ hugo server -D --bind :: \
 
 Use following to enable Twitter Cards / Opengraph:
 
+> This should be enabled in general as Google search also pick up the same meta tags.
+
 ```toml
 [Params]
 opengraph   = true
@@ -318,9 +322,12 @@ paginate               = 15
 - Meta
   - Author
   - others?
-- Include social buttons
 - Submit to Hugo theme
   - images
+
+### Font Awesome
+
+Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Awesome) Brands([free](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)).
 
 ### Repository
 

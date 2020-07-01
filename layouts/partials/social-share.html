@@ -1,41 +1,41 @@
 <div class="sk3-flex sk3-flex-center-h">
 	<sk3-social>
 		{{if .Site.Params.socialshare.facebook}}
-		<a target="_blank" rel="noopener noreferrer" class="fa fa-facebook"
+		<a target="_blank" rel="noopener noreferrer" class="fab fa-facebook"
 			href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}"
 			onclick="window.open(this.href, 'Facebook', 'width=800,height=600,toolbar=0,status=0'); return false"></a>
 		{{end}}
 		{{if .Site.Params.socialshare.twitter}}
-		<a target="_blank" rel="noopener noreferrer" class="fa fa-twitter"
+		<a target="_blank" rel="noopener noreferrer" class="fab fa-twitter"
 			href="https://twitter.com/intent/tweet/?url={{.Permalink}}&amp;text={{.Title}}"
 			onclick="window.open(this.href, 'Twitter', 'width=800,height=450,resizable=yes,toolbar=0,status=0'); return false"></a>
 		{{end}}
 		{{if .Site.Params.socialshare.reddit}}
-		<a target="_blank" rel="noopener noreferrer" class="fa fa-reddit"
+		<a target="_blank" rel="noopener noreferrer" class="fab fa-reddit"
 			href="https://www.reddit.com/submit?url={{.Permalink}}&amp;title={{.Title}}"
 			onclick="window.open(this.href, 'Reddit', 'width=832,height=624,toolbar=0,status=0'); return false"></a>
 		{{end}}
 		{{if .Site.Params.socialshare.telegram}}
-		<a target="_blank" rel="noopener noreferrer" class="fa fa-telegram"
+		<a target="_blank" rel="noopener noreferrer" class="fab fa-telegram"
 			href="https://t.me/share/url?url={{.Permalink}}&amp;title={{.Title}}"
 			onclick="window.open(this.href, 'Telegram', 'width=800,height=600,toolbar=0,status=0'); return false"></a>
 		{{end}}
 		{{if .Site.Params.socialshare.linkedin}}
-		<a target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"
+		<a target="_blank" rel="noopener noreferrer" class="fab fa-linkedin"
 			href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink}}&title={{.Title}}"
 			onclick="window.open(this.href, 'LinkedIn', 'width=640,height=480,toolbar=0,status=0'); return false"></a>
 		{{end}}
 		{{if .Site.Params.socialshare.vk}}
-		<a target="_blank" rel="noopener noreferrer" class="fa fa-vk" href="https://vk.com/share.php?url={{.Permalink}}"
+		<a target="_blank" rel="noopener noreferrer" class="fab fa-vk" href="https://vk.com/share.php?url={{.Permalink}}"
 			onclick="window.open(this.href, 'VK', 'width=640,height=480,toolbar=0,status=0'); return false"></a>
 		{{end}}
 		{{if .Site.Params.socialshare.pocket}}
-		<a target="_blank" rel="noopener noreferrer" class="fa fa-pocket"
+		<a target="_blank" rel="noopener noreferrer" class="fab fa-pocket"
 			href="https://getpocket.com/edit?url={{.Permalink}}&amp;title={{.Title}}"
 			onclick="window.open(this.href, 'Pocket', 'width=480,height=320,toolbar=0,status=0'); return false"></a>
 		{{end}}
 		{{if .Site.Params.socialshare.pinterest}}
-		<a target="_blank" rel="noopener noreferrer" class="fa fa-pinterest"
+		<a target="_blank" rel="noopener noreferrer" class="fab fa-pinterest"
 			href="https://pinterest.com/pin/create/button/?url={{.Permalink}}&description={{.Title}}"
 			onclick="window.open(this.href, 'Pinterest', 'width=800,height=720,toolbar=0,status=0'); return false"></a>
 		{{end}}

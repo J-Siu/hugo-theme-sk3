@@ -1,44 +1,44 @@
 [[site]]
-cls = "fa fa-facebook"
+cls = "fab fa-facebook"
 id  = "facebook"
 url = "https://www.facebook.com/%s/"
 [[site]]
-cls = "fa fa-flickr"
+cls = "fab fa-flickr"
 id  = "flickr"
 url = "https://www.flickr.com/photos/%s/"
 [[site]]
-cls = "fa fa-instagram"
+cls = "fab fa-instagram"
 id  = "instagram"
 url = "https://www.instagram.com/%s/"
 [[site]]
-cls = "fa fa-linkedin"
+cls = "fab fa-linkedin"
 id  = "linkedin"
 url = "https://www.linkedin.com/in/%s/"
 [[site]]
-cls = "fa fa-pinterest"
+cls = "fab fa-pinterest"
 id  = "pinterest"
 url = "https://www.pinterest.com/%s/boards/"
 [[site]]
-cls = "fa fa-reddit"
+cls = "fab fa-reddit"
 id  = "reddit"
 url = "https://www.reddit.com/user/%s"
 [[site]]
-cls = "fa fa-tumblr"
+cls = "fab fa-tumblr"
 id  = "tumblr"
 url = "https://www.tumblr.com/dashboard/blog/%s/"
 [[site]]
-cls = "fa fa-twitter"
+cls = "fab fa-twitter"
 id  = "twitter"
 url = "https://twitter.com/%s"
 [[site]]
-cls = "fa fa-vimeo"
+cls = "fab fa-vimeo"
 id  = "vimeo"
 url = "https://vimeo.com/%s"
 [[site]]
-cls = "fa fa-youtube"
+cls = "fab fa-youtube"
 id  = "youtubeuser"
 url = "https://www.youtube.com/user/%s"
 [[site]]
-cls = "fa fa-youtube"
+cls = "fab fa-youtube"
 id  = "youtubechannel"
 url = "https://www.youtube.com/channel/%s"
