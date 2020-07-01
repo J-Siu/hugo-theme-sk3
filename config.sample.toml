@@ -1,0 +1,65 @@
+baseURL = "https://"
+theme   = "sk3"
+title   = ""
+
+enableGitInfo = true
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+languageCode           = "en"
+paginate               = 15
+
+#disqusShortname = ""
+#googleAnalytics = ""
+
+[Params]
+#maintype  = "post"
+#pagewidth = "1200px"
+#startdate = "2012-12-02"
+#subtitle  = "A Hugo Theme"
+
+#adsense_id = ""
+
+# Fill in following if using opengraph / twitter card
+#opengraph   = true
+#twitercards = true
+#description = "A Hugo Theme"
+#title       = "SK3"
+
+  [Params.card]
+  date    = true
+  summary = true
+  #width   = "32%"
+
+  #[Params.color]
+  #bg     = "#181a1b"
+  #border = "white"
+  #link   = "#3d84ff"
+  #text   = "white"
+
+  #[Params.sociallink]
+  #facebook       = ""
+  #flickr         = ""
+  #instagram      = ""
+  #linkedin       = ""
+  #pinterest      = ""
+  #reddit         = ""
+  #tumblr         = ""
+  #twitter        = ""
+  #vimeo          = ""
+  #youtubechannel = ""
+  #youtubeuser    = ""
+
+  [Params.socialshare]
+  facebook  = true
+  instagram = true
+  linkedin  = true
+  pinterest = true
+  reddit    = true
+  telegram  = true
+  twitter   = true
+  vk        = true
+
+[markup]
+  [markup.tableOfContents]
+  endLevel   = 6
+  startLevel = 1

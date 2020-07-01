@@ -27,11 +27,13 @@ Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://githu
 
 <!-- /TOC -->
 
-### Demo Site
+### Sites
+
+John Siu Blog: https://johnsiu.com/
 
 SK3 demo site: https://sk3.jsiu.dev/
 
-Example site content from [hugoBasicExample](https://github.com/gohugoio/hugoBasicExample)
+SK3 demo site content from [hugoBasicExample](https://github.com/gohugoio/hugoBasicExample)
 
 ### Install
 
@@ -237,12 +239,12 @@ description = "site description"
 title       = "site title"
 ```
 
-### config.sk3.toml
+### config.sample.toml
 
 ```toml
-baseURL = "https://sk3.jsiu.dev"
+baseURL = "https://"
 theme   = "sk3"
-title   = "SK3"
+title   = ""
 
 enableGitInfo = true
 DefaultContentLanguage = "en"
@@ -319,6 +321,7 @@ toc = false
 
 ### TODO
 
+- use card in single page for prev/next, tag, share, date, etc.
 - Alternative homepage template
 - Meta
   - Author
