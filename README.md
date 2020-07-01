@@ -6,7 +6,7 @@ Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://githu
 
 <!-- TOC -->
 
-- [Demo Site](#demo-site)
+- [Sites](#sites)
 - [Install](#install)
 - [Testing](#testing)
 - [Features](#features)
@@ -17,7 +17,7 @@ Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://githu
   - [Per Page](#per-page)
   - [Google AdSense](#google-adsense)
   - [Twitter Cards / Opengraph](#twitter-cards--opengraph)
-- [config.sk3.toml](#configsk3toml)
+- [Sample Config](#sample-config)
 - [Front Matter](#front-matter)
 - [TODO](#todo)
 - [Repository](#repository)
@@ -239,7 +239,9 @@ description = "site description"
 title       = "site title"
 ```
 
-### config.sample.toml
+### Sample Config
+
+`config.sample.toml` located in theme dir.
 
 ```toml
 baseURL = "https://"
@@ -307,16 +309,6 @@ paginate               = 15
   [markup.tableOfContents]
   endLevel   = 6
   startLevel = 1
-```
-
-### Front Matter
-
-```toml
----
-comment = false
-prevnext = false
-toc = false
----
 ```
 
 ### TODO
