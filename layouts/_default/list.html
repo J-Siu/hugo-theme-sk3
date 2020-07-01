@@ -2,7 +2,9 @@
 <div class="main">
 
 	{{if not .IsHome}}
-	{{with .Title}}<h1><heading>{{.}}</heading></h1>{{end}}
+	{{with .Title}}<h1>
+		<heading>{{.}}</heading>
+	</h1>{{end}}
 	{{with .Content}}<article>{{.}}</article>{{end}}
 	{{end}}
 
@@ -22,25 +24,29 @@
 	{{$paginator:=(.Scratch.Get "Paginator")}}
 
 	<!--pagination-->
-	<div class="sk3-flex sk3-flex-center-h"><sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager></div>
+	<div class="sk3-flex sk3-flex-center-h">
+		<sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager>
+	</div>
 
 	<!--cards-->
 	<section class="sk3-flex sk3-flex-center-h">
-	{{range $paginator.Pages}}
-	<div class="sk3-card box">
-		<div class="sk3-flex">
-		<h3><a href="{{.RelPermalink}}">{{.Title}}</a></h3>
-		{{if .Site.Params.card.date}}
-			{{with .Lastmod}}<div class="sk3-flex-right sk3-flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}
+		{{range $paginator.Pages}}
+		<div class="sk3-card box">
+			<div class="sk3-flex">
+				<a class="title" href="{{.RelPermalink}}">{{.Title}}</a>
+				{{if .Site.Params.card.date}}
+				{{with .Lastmod}}<div class="sk3-flex-right sk3-flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}
+				{{end}}
+			</div>
+			{{if .Site.Params.card.summary}}<div>{{.Summary}}</div>{{end}}
+		</div>
 		{{end}}
-	</div>
-		{{if .Site.Params.card.summary}}<div>{{.Summary}}</div>{{end}}
-	</div>
-	{{end}}
 	</section>
 
 	<!--pagination-->
-	<div class="sk3-flex sk3-flex-center-h"><sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager></div>
+	<div class="sk3-flex sk3-flex-center-h">
+		<sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager>
+	</div>
 
 	{{partial "social-link.html" .}}
 

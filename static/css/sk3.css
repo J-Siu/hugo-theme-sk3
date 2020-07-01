@@ -54,6 +54,10 @@ html {
   text-align: center;
 }
 
+.txt-right {
+  text-align: right;
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -120,6 +124,13 @@ footer {
   margin-block-start: 5px;
 }
 
+.sk3-card .title {
+  /*h3*/
+	font-size: 1.17em;
+	font-weight: bold;
+	display: inline-flex;
+}
+
 .sk3-flex {
   display: flex;
   flex-wrap: wrap;
@@ -136,6 +147,10 @@ footer {
 
 .sk3-flex-up {
   margin-bottom: auto;
+}
+
+.sk3-flex-inline {
+	display: inline-flex;
 }
 
 .sk3-flex-center-h {
