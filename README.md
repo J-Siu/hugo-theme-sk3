@@ -289,6 +289,7 @@ paginate               = 15
   #[Params.sociallink]
   #facebook       = ""
   #flickr         = ""
+  #github         = ""
   #instagram      = ""
   #linkedin       = ""
   #pinterest      = ""
@@ -317,11 +318,10 @@ paginate               = 15
 
 ### TODO
 
-- use card in single page for prev/next, tag, share, date, etc.
+- use card in single page for prev/next, tag, share, date, etc.?
 - Alternative homepage template
 - Meta
   - Author
-  - others?
 - Submit to Hugo theme
   - images
 
@@ -360,6 +360,10 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
   - Improve header
   - Improve README.md
   - Fix margin/padding
+- 0.8.9
+  - CSS / spacing update
+  - Include config.sample.toml
+  - Use Font Awesome webfont
 
 ### License
 
