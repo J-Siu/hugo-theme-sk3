@@ -1,22 +1,29 @@
 <footer class="sk3-flex sk3-flex-center-h sk3-margin-v-10 sk3-pad-v-10">
 
 	{{if .Site.Copyright}}
-		<div class="sk3-pad-h txt-center-h">{{.Site.Copyright}}</div>
+	<div class="sk3-pad-h txt-center-h">{{.Site.Copyright}}</div>
 	{{else}}
-		<div class="sk3-pad-h txt-center-h">
+	<div class="sk3-pad-h txt-center-h">
 		©
 		{{with .Site.Params.startdate}}
-			{{dateFormat "2006" .}}-
+		{{dateFormat "2006" .}}-
 		{{- end}}
 		{{- now.Format "2006"}} {{.Site.Title}}
-		</div>
+	</div>
 	{{end}}
 	<div class="sk3-pad-h txt-center-h">Power by <a href="https://gohugo.io">Hugo</a>.</div>
-	<div class="sk3-pad-h txt-center-h">Theme <a href="https://github.com/J-Siu/hugo-theme-sk3/">SK3</a> by <a href="https://github.com/J-Siu/">J-Siu</a>.</div>
+	<div class="sk3-pad-h txt-center-h">Theme <a href="https://github.com/J-Siu/hugo-theme-sk3/">SK3</a> by <a
+			href="https://github.com/J-Siu/">J-Siu</a>.</div>
 
 </footer>
 
-<!--js-->
+<!--scripts-->
 {{if or .Site.Menus.main .Site.Params.socialshare}}
 <script src="{{relLangURL ""}}js/sk3.js"></script>
 {{end}}
+<!--hugo internal template-->
+{{template "_internal/google_analytics_async.html" .}}
+{{if .Site.Params.opengraph}}{{template "_internal/opengraph.html" .}}{{end}}
+{{if .Site.Params.twittercards}}{{template "_internal/twitter_cards.html" .}}{{end}}
+<!--AdSense-->
+{{partial "adsense.html" .}}
