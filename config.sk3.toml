@@ -2,9 +2,10 @@ baseURL = "https://sk3.jsiu.dev"
 theme   = "sk3"
 title   = "SK3"
 
-enableGitInfo          = true
 DefaultContentLanguage = "en"
+enableGitInfo          = true
 enableInlineShortcodes = true
+googleAnalytics        = "UA-36805525-2"
 languageCode           = "en"
 paginate               = 3
 relativeURLs           = true
@@ -13,15 +14,15 @@ relativeURLs           = true
 # maintype  = "post"
 # pagewidth = "1200px"
 # startdate = "2012-12-02"
-subtitle  = "A Hugo Theme"
+subtitle = "A Hugo Theme"
 
-#adsense_id = ""
+adsense_id = "ca-pub-8176479711832264"
 
 # Fill in following if using opengraph / twitter card
-opengraph   = true
-twitercards = true
 description = "A Hugo Theme"
+opengraph   = true
 title       = "SK3"
+twitercards = true
 
 	[Params.card]
 	date    = true
