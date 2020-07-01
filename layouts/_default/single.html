@@ -16,12 +16,12 @@
 	{{with .Content}}<content>{{.}}</content>{{end}}
 
 	<!--share-->
-	<div class="sk3-flex-center box sk3-pad-v-10">
+	<div class="sk3-flex-center box sk3-margin-v-10">
 		{{ partial "social-share.html" . }}
 	</div>
 
 	<!--tag/date-->
-	<div class="sk3-flex sk3-pad-v-10">
+	<div class="sk3-flex sk3-margin-v-10">
 
 		<!--tags-->
 		{{if (.GetTerms "tags")}}
