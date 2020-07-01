@@ -1,9 +1,9 @@
 <footer class="sk3-flex sk3-flex-center-h">
 
 	{{if .Site.Copyright}}
-		<div class="sk3-pad-h">{{.Site.Copyright}}</div>
+		<div class="sk3-pad-h txt-center-h">{{.Site.Copyright}}</div>
 	{{else}}
-		<div class="sk3-pad-h">
+		<div class="sk3-pad-h txt-center-h">
 		©
 		{{with .Site.Params.startdate}}
 			{{dateFormat "2006" .}}-
@@ -11,7 +11,7 @@
 		{{- now.Format "2006"}} {{.Site.Title}}
 		</div>
 	{{end}}
-	<div class="sk3-pad-h">Power by <a href="https://gohugo.io">Hugo</a>.</div>
+	<div class="sk3-pad-h txt-center-h">Power by <a href="https://gohugo.io">Hugo</a>.</div>
 	<div>Theme <a href="https://github.com/J-Siu/hugo-theme-sk3/">SK3</a> by <a href="https://github.com/J-Siu/">J-Siu</a>.</div>
 
 </footer>
