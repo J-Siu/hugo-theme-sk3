@@ -1,3 +1,5 @@
+# Config file https://sk3.jsiu.dev demo site
+
 baseURL = "https://sk3.jsiu.dev"
 theme   = "sk3"
 title   = "SK3"
