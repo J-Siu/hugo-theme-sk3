@@ -1,19 +1,25 @@
 {{define "main"}}
 <div class="main">
 
+	<div></div>
+
 	{{with .Title}} <heading>
 		<h1>{{.}}</h1>
 	</heading> {{end}}
 
+	<div></div>
+
 	<!--toc-->
 	{{if (.Params.toc|default true)}}
 	<div class="box sk3-pad-10">
-		<div class="collapsible">Table of Content</div>
+		<div class="collapsible">☰ Table of Content</div>
 		<sk3-toc>{{.TableOfContents}}</sk3-toc>
 	</div>
 	{{end}}
 
 	{{with .Content}}<content>{{.}}</content>{{end}}
+
+	<div></div>
 
 	<!--share-->
 	<div class="sk3-flex-center box sk3-margin-v-10">
@@ -59,6 +65,8 @@
 		{{end}}
 	</ul>
 	{{end}}
+
+	<div></div>
 
 	<!--disqus-->
 	{{if and .Site.DisqusShortname (.Params.comment|default true)}}
