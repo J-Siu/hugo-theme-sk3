@@ -39,6 +39,7 @@ paginate               = 15
   #[Params.sociallink]
   #facebook       = ""
   #flickr         = ""
+	#github         = ""
   #instagram      = ""
   #linkedin       = ""
   #pinterest      = ""

@@ -235,8 +235,30 @@ footer {
   margin-right: 10px;
 }
 
+sk3-pager {
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+sk3-pager ul {
+	margin: 10px;
+	padding: 0;
+}
+
+sk3-pager li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 5px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
 sk3-social {
-  font-size: 1.5em;
+  font-size: 2em;
+}
+
+sk3-social a{
+	margin-left: 10px;
 }
 
 sk3-toc {
@@ -257,25 +279,20 @@ sk3-toc ul ul{
   padding-left: 20px;
 }
 
-sk3-pager {
-  font-size: 1.17em;
-  font-weight: bold;
+/* svg */
+.sk3-social-fab {
+	height: 24px;
+	width: 24px;
+	opacity: 0.7;
+
+	fill: var(--link-color);
 }
 
-sk3-pager ul {
-	margin: 10px;
-	padding: 0;
+.sk3-social-fab:hover {
+	opacity: 1;
 }
 
-sk3-pager li {
-  list-style-type: none;
-  display: inline-block;
-  margin-left: 5px;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-}
-
-/* font awesome */
+/* for Font Awesome webfont*/
 .fab {
   padding: 5px;
 	text-align: center;

@@ -329,6 +329,12 @@ paginate               = 15
 
 Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Awesome) Brands([free](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)).
 
+`fa-svg-extract.sh` is used to extract icon from Font Awesome sprites/brands.svg.
+
+```sh
+./fa-svg-extract.sh brands.svg > sk3-fa-brands.svg
+```
+
 ### Repository
 
 - [hugo-theme-sk3](https://github.com/J-Siu/hugo-theme-sk3)
@@ -364,6 +370,8 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
   - CSS / spacing update
   - Include config.sample.toml
   - Use Font Awesome webfont
+- 0.9.0
+  - Switch to Font Awesome SVG
 
 ### License
 
