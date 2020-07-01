@@ -1,4 +1,6 @@
-# Config file https://sk3.jsiu.dev demo site
+# Config file for demo site https://sk3.jsiu.dev
+#
+# This is used in combine with exampleSite/config.toml
 
 baseURL = "https://sk3.jsiu.dev"
 theme   = "sk3"
@@ -16,12 +18,11 @@ relativeURLs           = true
 # maintype  = "post"
 # pagewidth = "1200px"
 # startdate = "2012-12-02"
-subtitle = "A Hugo Theme"
-
 adsense_id = "ca-pub-8176479711832264"
+subtitle   = "A Hugo Theme"
 
 # Fill in following if using opengraph / twitter card
-description = "A Hugo Theme"
+description = "Hugo Theme SK3 by John Siu"
 opengraph   = true
 title       = "SK3"
 twitercards = true
