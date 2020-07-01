@@ -2,7 +2,32 @@
 
 Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2).
 
-### Demo
+---
+
+<!-- TOC -->
+
+- [Demo Site](#demo-site)
+- [Install](#install)
+- [Testing](#testing)
+- [Features](#features)
+- [Layout](#layout)
+  - [Site](#site)
+  - [Color theme](#color-theme)
+  - [Card/List](#cardlist)
+  - [Per Page](#per-page)
+  - [Google AdSense](#google-adsense)
+  - [Twitter Cards / Opengraph](#twitter-cards--opengraph)
+- [config.sk3.toml](#configsk3toml)
+- [Front Matter](#front-matter)
+- [TODO](#todo)
+- [Repository](#repository)
+- [Contributors](#contributors)
+- [Change Log](#change-log)
+- [License](#license)
+
+<!-- /TOC -->
+
+### Demo Site
 
 SK3 demo site: https://sk3.jsiu.dev/
 
@@ -10,21 +35,25 @@ Example site content from [hugoBasicExample](https://github.com/gohugoio/hugoBas
 
 ### Install
 
+In site directory:
+
 - Using clone
 
-    In site directory:
-
-    ```sh
-    git clone https://github.com/J-Siu/hugo-theme-sk3 theme/sk3
-    ```
+  ```sh
+  git clone https://github.com/J-Siu/hugo-theme-sk3 theme/sk3
+  ```
 
 - Using submodule
 
-    In site directory:
+  ```sh
+  git submodule add https://github.com/J-Siu/hugo-theme-sk3 theme/sk3
+  ```
 
-    ```sh
-    git submodule add https://github.com/J-Siu/hugo-theme-sk3 theme/sk3
-    ```
+- Update submodule
+
+  ```sh
+  git submodule update --recursive --remote
+  ```
 
 ### Testing
 
@@ -48,11 +77,15 @@ hugo server -D --bind :: \
 
 ### Features
 
-- Collapsible table of content
-- Git modify date
-- Google analytics
-- Menu sidebar
-- Mobile ready
+- Blog
+- Disqus
+- Google Adsense
+- Google Analytics
+- Layout Customization
+- Minimalist Design
+- Responsive
+- Social Links
+- Social Share
 
 ### Layout
 
@@ -60,7 +93,7 @@ hugo server -D --bind :: \
 
 - Main type
 
-  Control `type` used to generate homepage list. Hugo default `post`.
+  Page `type` for generating homepage list. Hugo default `post`.
 
   ```toml
   [Params]
@@ -145,6 +178,16 @@ hugo server -D --bind :: \
   text   = "white"
   ```
 
+  Following is a light theme
+
+  ```toml
+  [Params.color]
+  bg     = "white"
+  border = "black"
+  link   = "#3d84ff"
+  text   = "black"
+  ```
+
 #### Card/List
 
 - Width (default:32% on computer screen)
@@ -190,8 +233,8 @@ Use following to enable Twitter Cards / Opengraph:
 [Params]
 opengraph   = true
 twitercards = true
-description = "Site description"
-title       = "Site title"
+description = "site description"
+title       = "site title"
 ```
 
 ### config.sk3.toml
@@ -259,9 +302,9 @@ paginate               = 15
   vk        = true
 
 [markup]
-	[markup.tableOfContents]
-	endLevel   = 6
-	startLevel = 1
+  [markup.tableOfContents]
+  endLevel   = 6
+  startLevel = 1
 ```
 
 ### Front Matter
@@ -281,6 +324,8 @@ toc = false
   - Author
   - others?
 - Include social buttons
+- Submit to Hugo theme
+  - images
 
 ### Repository
 
@@ -308,6 +353,11 @@ toc = false
   - Default page width 1200px
   - Default card width 32%
   - Fixed menu bar top and left "leaking"
+- 0.8.8
+  - CSS clean up
+  - Improve header
+  - Improve README.md
+  - Fix margin/padding
 
 ### License
 
