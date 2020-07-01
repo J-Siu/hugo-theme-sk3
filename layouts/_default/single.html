@@ -5,37 +5,48 @@
 		<h1>{{.}}</h1>
 	</heading> {{end}}
 
+	<!--toc-->
 	{{if (.Params.toc|default true)}}
-	<div class="toc-box">
+	<div class="box sk3-pad-10">
 		<div class="collapsible">Table of Content</div>
 		<toc>{{.TableOfContents}}</toc>
 	</div>
 	{{end}}
 
 	{{with .Content}}<content>{{.}}</content>{{end}}
-	{{with .Lastmod}}<div>Update: {{dateFormat "2006-01-02" .}}</div>{{end}}
 
 	<!--share-->
-	{{ partial "social-share.html" . }}
+	<div class="sk3-flex-center box sk3-pad-v-10">
+		{{ partial "social-share.html" . }}
+	</div>
 
-	<!--tags-->
-	{{if (.GetTerms "tags")}}
-		<div class="flex">
-			<div class="pad-r-5px">Tags:</div>
+	<!--tag/date-->
+	<div class="sk3-flex sk3-pad-v-10">
+
+		<!--tags-->
+		{{if (.GetTerms "tags")}}
+		<div class="sk3-flex">
+			<div class="sk3-pad-h">Tag:</div>
 			{{range (.GetTerms "tags")}}
-			<div class="pad-r-5px"><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></div>
+			<div class="sk3-pad-h"><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></div>
 			{{end}}
 		</div>
-	{{end}}
+		{{end}}
+
+		<!--date-->
+		{{with .Lastmod}}<div class="sk3-flex-right">Update: {{dateFormat "2006-01-02" .}}</div>{{end}}
+
+	</div>
 
 	<!--prev/next-->
 	{{if (.Params.prevnext|default true)}}
-		{{if or .PrevInSection .NextInSection}}
-		<h3 class="flex">
-			{{with .PrevInSection}}<a href="{{.RelPermalink}}"><< {{.Title}}</a> {{end}}
-			{{with .NextInSection}}<a class="flex-right" href="{{.RelPermalink}}">{{.Title}} >></a>{{end}}
-		</h3>
-		{{end}}
+	{{if or .PrevInSection .NextInSection}}
+	<h3 class="sk3-flex">
+		{{with .PrevInSection}}<a href="{{.RelPermalink}}">
+			<< {{.Title}}</a> {{end}}
+				{{with .NextInSection}}<a class="sk3-flex-right" href="{{.RelPermalink}}">{{.Title}} >></a>{{end}}
+	</h3>
+	{{end}}
 	{{end}}
 
 	<!--related-->
@@ -51,7 +62,7 @@
 
 	<!--disqus-->
 	{{if and .Site.DisqusShortname (.Params.comment|default true)}}
-		{{template "_internal/disqus.html" .}}
+	{{template "_internal/disqus.html" .}}
 	{{end}}
 </div>
 {{end}}

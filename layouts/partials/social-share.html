@@ -1,5 +1,5 @@
-<div class="flex flex-center-h">
-	<h2>
+<div class="sk3-flex sk3-flex-center-h">
+	<sk3-social>
 		{{if .Site.Params.socialshare.facebook}}
 		<a target="_blank" rel="noopener noreferrer" class="fa fa-facebook"
 			href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}"
@@ -39,5 +39,5 @@
 			href="https://pinterest.com/pin/create/button/?url={{.Permalink}}&description={{.Title}}"
 			onclick="window.open(this.href, 'Pinterest', 'width=800,height=720,toolbar=0,status=0'); return false"></a>
 		{{end}}
-	</h2>
+	</sk3-social>
 </div>

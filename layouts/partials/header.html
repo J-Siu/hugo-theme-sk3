@@ -1,7 +1,8 @@
-<header class="flex">
+<header class="sk3-flex">
 
-	<nav class="sidebar box-right no-dot" id="menu-bar">
-		<h1 class="flex-center-v menu-button">☰</h1>
+	<!--Menu-->
+	<nav class="sidebar box-right sk3-no-dot" id="menu-bar">
+		<div class="sk3-title sk3-flex-center-v menu-button">☰</div>
 		{{partial "social-share.html" .}}
 		<hr>
 		<h4>
@@ -33,10 +34,11 @@
 		</h4>
 	</nav>
 
-	<div class="flex">
-		<h1 class="flex-center-v menu-button">☰</h1>
-		<h1><a href="{{relLangURL ""}}">{{.Site.Title}}</a></h1>
-		{{with .Site.Params.subtitle}}<h3 class="subtitle flex-center-v">{{.}}</h3>{{end}}
+	<!--Title Bar-->
+	<div class="sk3-flex">
+		<div class="sk3-title sk3-flex-center-v menu-button">☰</div>
+		<div class="sk3-title sk3-margin-h"><a href="{{relLangURL ""}}">{{.Site.Title}}</a></div>
+		{{with .Site.Params.subtitle}}<div class="sk3-subtitle sk3-flex-center-v">{{.}}</div>{{end}}
 	</div>
 
 </header>

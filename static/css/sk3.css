@@ -8,23 +8,19 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .card {
+  .sk3-card {
     width: 100%
   }
 
   .sidebar {
     left: 0;
-    padding-left: 17px;
+    padding-left: 18px;
   }
 }
 
 @media only screen and (min-width: 993px) {
-  .card {
+  .sk3-card {
     width: var(--card-width);
-  }
-
-  .sidebar {
-    padding-left: 1px;
   }
 }
 
@@ -43,6 +39,7 @@ html {
 
 .box {
   border: 1px solid;
+  padding: 5px;
 }
 
 .box-right {
@@ -53,40 +50,8 @@ html {
   border-top: 1px solid;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-right {
-  display: flex;
-  margin-left: auto;
-  vertical-align: baseline;
-}
-
-.flex-down {
-  margin-top: auto;
-}
-
-.flex-up {
-  margin-bottom: auto;
-}
-
-.flex-center-h {
-  justify-content: center;
-}
-
-.flex-center-v {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.no-dot {
-  list-style-type: none;
-}
-
-.txt-center-h{
-	text-align: center;
+.txt-center-h {
+  text-align: center;
 }
 
 a {
@@ -125,11 +90,6 @@ header h4 {
   padding: 1px;
 }
 
-.subtitle {
-  margin-left: 5px;
-  margin-top: auto;
-}
-
 .main,
 header,
 footer {
@@ -138,28 +98,6 @@ footer {
   margin-top: 5px;
   margin-bottom: 5px;
   display: block;
-}
-
-.card {
-  padding: 10px;
-  margin: 5px;
-  /*width: 300px;*/
-  box-sizing: border-box;
-}
-
-.card h3 {
-  margin-block-end: 1px;
-  margin-block-start: 1px;
-}
-
-.card p {
-  margin-block-end: 1px;
-  margin-block-start: 5px;
-}
-
-.toc-box {
-  border: 1px solid;
-  padding: 5px;
 }
 
 toc {
@@ -173,14 +111,6 @@ toc li {
 toc ul {
   margin-left: 0px;
   padding-left: 20px;
-}
-
-.pad-l-5px {
-  padding-left: 5px;
-}
-
-.pad-r-5px {
-  padding-right: 5px;
 }
 
 .sidebar {
@@ -198,4 +128,125 @@ toc ul {
 
 .sidebar h1 {
   font-size: 2em;
+}
+
+.sk3-card {
+  padding: 10px;
+  margin: 5px;
+  /*width: 300px;*/
+  box-sizing: border-box;
+}
+
+.sk3-card h3 {
+  margin-block-end: 1px;
+  margin-block-start: 1px;
+}
+
+.sk3-card p {
+  margin-block-end: 1px;
+  margin-block-start: 5px;
+}
+
+.sk3-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sk3-flex-right {
+  display: flex;
+  margin-left: auto;
+}
+
+.sk3-flex-down {
+  margin-top: auto;
+}
+
+.sk3-flex-up {
+  margin-bottom: auto;
+}
+
+.sk3-flex-center-h {
+  justify-content: center;
+}
+
+.sk3-flex-center-v {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.sk3-no-dot {
+  list-style-type: none;
+}
+
+.sk3-subtitle {
+  /*h3*/
+	font-size: 1.17em;
+	font-weight: bold;
+	font-variant-position: sub;
+}
+
+.sk3-title {
+  /*h1*/
+  font-size: 2em;
+	font-weight: bold;
+}
+
+.sk3-pad {
+  padding: 5px;
+}
+
+.sk3-pad-10 {
+  padding: 10px;
+}
+
+.sk3-pad-v {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.sk3-pad-v-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sk3-pad-h {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sk3-pad-h-10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.sk3-margin {
+  margin: 5px;
+}
+
+.sk3-margin-10 {
+  margin: 10px;
+}
+
+.sk3-margin-v {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.sk3-margin-v-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sk3-margin-h {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.sk3-margin-h-10 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+sk3-social {
+  font-size: 1.5em;
 }
