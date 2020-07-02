@@ -16,11 +16,12 @@ Inspired by [Vimux/Binario](https://github.com/Vimux/Binario). Go check it out!
   - [Site](#site)
   - [Color theme](#color-theme)
   - [Card/List](#cardlist)
-  - [Per Page](#per-page)
   - [Google AdSense](#google-adsense)
   - [Twitter Cards / Opengraph](#twitter-cards--opengraph)
+  - [Page Info Style](#page-info-style)
+  - [Per Page](#per-page)
 - [Sample Config](#sample-config)
-- [Front Matter](#front-matter)
+- [Font Awesome](#font-awesome)
 - [TODO](#todo)
 - [Repository](#repository)
 - [Contributors](#contributors)
@@ -206,20 +207,6 @@ hugo server -D --bind :: \
 	width   = "32%"
   ```
 
-#### Per Page
-
-- Disable Disqus
-- Disable Prev/Next
-- Disable table of content
-
-  To disable the above, in front matter:
-
-  ```toml
-  comment = false
-  prevnext = false
-  toc = false
-  ```
-
 #### Google AdSense
 
 - Support Google AdSense auto:
@@ -242,6 +229,29 @@ twitercards = true
 description = "site description"
 title       = "site title"
 ```
+
+#### Page Info Style
+
+  Page info can be in box style.
+
+  ```toml
+  [Params]
+  pageinfostyle = "box"
+  ```
+
+#### Per Page
+
+- Disable Disqus
+- Disable Prev/Next
+- Disable table of content
+
+  To disable the above, in front matter:
+
+  ```toml
+  comment = false
+  prevnext = false
+  toc = false
+  ```
 
 ### Sample Config
 
@@ -316,15 +326,6 @@ paginate               = 15
   startLevel = 1
 ```
 
-### TODO
-
-- use card in single page for prev/next, tag, share, date, etc.?
-- Alternative homepage template
-- Meta
-  - Author
-- Submit to Hugo theme
-  - images
-
 ### Font Awesome
 
 Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Awesome) Brands([free](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)).
@@ -334,6 +335,16 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 ```sh
 ./fa-svg-extract.sh brands.svg > sk3-fa-brands.svg
 ```
+
+### TODO
+
+- Use card in single page for Prev/Next, tag, share, date, etc.?
+- Code fence not monospace, css conflict?
+- Submit to Hugo theme
+  - images
+- Alternative homepage template
+- Click anywhere to close menu
+- Use SVG with image tag
 
 ### Repository
 
@@ -369,7 +380,7 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 - 0.8.9
   - CSS / spacing update
   - Include config.sample.toml
-  - Use Font Awesome webfont
+  - Use Font Awesome web font
 - 0.9.0
   - Switch to Font Awesome SVG
 

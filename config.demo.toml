@@ -18,8 +18,9 @@ relativeURLs           = true
 # maintype  = "post"
 # pagewidth = "1200px"
 # startdate = "2012-12-02"
-adsense_id = "ca-pub-8176479711832264"
-subtitle   = "A Hugo Theme"
+adsense_id  = "ca-pub-8176479711832264"
+pageinfobox = true
+subtitle    = "A Hugo Theme"
 
 # Fill in following if using opengraph / twitter card
 description = "Hugo Theme SK3 Demo Site"
@@ -89,7 +90,7 @@ defaultMarkdownHandler = "goldmark"
 	lineNos            = true
 	lineNumbersInTable = true
 	noClasses          = true
-	style              = "monokai"
+	style              = "fruity"
 	tabWidth           = 4
 
 	[markup.tableOfContents]

@@ -181,6 +181,14 @@ footer {
   padding: 5px;
 }
 
+.sk3-pad-down {
+  padding-top: 5px;
+}
+
+.sk3-margin-down {
+  margin-top: 2px;
+}
+
 .sk3-pad-10 {
   padding: 10px;
 }

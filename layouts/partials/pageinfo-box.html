@@ -1,0 +1,80 @@
+<!--card-->
+<section class="sk3-flex sk3-flex-center-h">
+
+	<!--card : share-->
+	{{if .Site.Params.socialshare}}
+	<div class="sk3-card sk3-flex sk3-flex-center-h box">
+		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
+			<!--share-->
+			{{partial "social-share.html" .}}
+		</div>
+	</div>
+	{{end}}
+
+	<!--card : author-->
+	{{if or .Lastmod .Params.author}}
+	<div class="sk3-card sk3-flex sk3-flex-center-h box">
+		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
+			<!--author-->
+			{{with .Params.author}}<div class="sk3-margin-h title">{{.}}</div>{{end}}
+			<!--date-->
+			{{with .Lastmod}}<div class="sk3-margin-h sk3-margin-down">Update: {{dateFormat "2006-01-02" .}}</div>{{end}}
+		</div>
+	</div>
+	{{end}}
+
+	<!--card : tag-->
+	{{if (.GetTerms "tags")}}
+	<div class="sk3-card sk3-flex sk3-flex-center-h box">
+		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
+
+			<!--tags-->
+			{{if (.GetTerms "tags")}}
+			<div class="sk3-flex sk3-margin-h">
+				Tag
+				{{range (.GetTerms "tags")}}
+				[<a class="sk3-margin-h" href="{{.RelPermalink}}">{{.LinkTitle}}</a>]
+				{{end}}
+			</div>
+			{{end}}
+
+		</div>
+	</div>
+	{{end}}
+
+	<!--card : nav-->
+	{{if (.Params.prevnext|default true)}}
+	{{if or .PrevInSection .NextInSection}}
+	<div class="sk3-card sk3-flex sk3-flex-center-h box">
+		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
+			<!--prev-->
+			{{with .PrevInSection}}<a class="sk3-margin-h" href="{{.RelPermalink}}">
+				<h3>
+					<< {{.Title}}</h3>
+			</a> {{end}}
+			<!--next-->
+			{{with .NextInSection}}<a class="sk3-margin-h" href="{{.RelPermalink}}">
+				<h3>{{.Title}} >></h3>
+			</a>{{end}}
+		</div>
+	</div>
+	{{end}}
+	{{end}}
+
+	<!--card : related-->
+	{{$related := .Site.RegularPages.Related . | first 5}}
+	{{if $related}}
+	<div class="sk3-card sk3-flex sk3-flex-center-h box">
+		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
+			<!--related-->
+			{{with $related}}
+			See Also
+			{{range .}}
+			[<a class="sk3-margin-h" href="{{.RelPermalink}}">{{.Title}}</a>]
+			{{end}}
+			{{end}}
+		</div>
+	</div>
+	{{end}}
+
+</section>
