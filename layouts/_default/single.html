@@ -11,13 +11,16 @@
 
 	<!--toc-->
 	{{if (.Params.toc|default true)}}
-	<div class="box sk3-pad-10">
+	{{if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")}}
+	<div class="box sk3-pad-10 sk3-margin-v-10">
 		<div class="collapsible">☰ Table of Content</div>
 		<sk3-toc>{{.TableOfContents}}</sk3-toc>
 	</div>
 	{{end}}
+	{{end}}
 
 	<!--content-->
+
 	{{with .Content}}<content>{{.}}</content>{{end}}
 
 	<div></div>
