@@ -113,5 +113,5 @@ defaultMarkdownHandler = "goldmark"
 		autoHeadingIDType = "github"
 		[markup.goldmark.renderer]
 		hardWraps = false
-		unsafe    = false
+		unsafe    = true
 		xhtml     = false
