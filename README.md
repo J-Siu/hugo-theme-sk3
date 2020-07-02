@@ -236,7 +236,7 @@ title       = "site title"
 
   ```toml
   [Params]
-  pageinfostyle = "box"
+  pageinfobox = true
   ```
 
 #### Per Page
@@ -338,13 +338,10 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 
 ### TODO
 
-- Use card in single page for Prev/Next, tag, share, date, etc.?
-- Code fence not monospace, css conflict?
 - Submit to Hugo theme
   - images
 - Alternative homepage template
 - Click anywhere to close menu
-- Use SVG with image tag
 
 ### Repository
 
@@ -383,6 +380,11 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
   - Use Font Awesome web font
 - 0.9.0
   - Switch to Font Awesome SVG
+- 0.9.1
+  - Add box style page info
+  - CSS clean up
+  - Do not render empty toc
+  - Fix highlight font conflict
 
 ### License
 
