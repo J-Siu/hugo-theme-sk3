@@ -5,8 +5,6 @@
 	<title>{{.Site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}</title>
 	<meta name="description" content="{{if .IsHome}}{{.Site.Params.description}}{{else}}{{.Description}}{{end}}">
 	{{with .Params.author}}<meta name="author" content="{{.}}">{{end}}
-	<!--svg-->
-	{{partial "sk3-fa-brands.svg" .}}
 	<!--css-->
 	<link rel="stylesheet" href="{{relLangURL ""}}css/sk3.css">
 	<!--.Site.Params-->
