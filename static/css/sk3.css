@@ -35,27 +35,6 @@ html {
 	font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace
 }
 
-.box {
-  border: 1px solid;
-  padding: 5px;
-}
-
-.box-right {
-  border-right: 1px solid;
-}
-
-.box-top {
-  border-top: 1px solid;
-}
-
-.txt-center-h {
-  text-align: center;
-}
-
-.txt-right {
-  text-align: right;
-}
-
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -78,6 +57,11 @@ header h4 {
   margin: 0px;
 }
 
+kbd{
+	border:1px solid;
+	border-radius: 3.5px;
+}
+
 .main,
 header,
 footer {
@@ -86,6 +70,39 @@ footer {
   margin-top: 5px;
   margin-bottom: 5px;
   display: block;
+}
+
+table {
+	border: 1px solid;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th, td {
+	text-align: left;
+	padding: 5px;
+	border: 1px solid;
+}
+
+.box {
+  border: 1px solid;
+  padding: 5px;
+}
+
+.box-right {
+  border-right: 1px solid;
+}
+
+.box-top {
+  border-top: 1px solid;
+}
+
+.txt-center-h {
+  text-align: center;
+}
+
+.txt-right {
+  text-align: right;
 }
 
 .sidebar {
