@@ -31,9 +31,11 @@
 			<!--tags-->
 			{{if (.GetTerms "tags")}}
 			<div class="sk3-flex sk3-margin-h">
-				Tag
+				<div class="sk3-flex sk3-flex-center-v">Tag</div>
 				{{range (.GetTerms "tags")}}
-				[<a class="sk3-margin-h" href="{{.RelPermalink}}">{{.LinkTitle}}</a>]
+				<div class="sk3-margin-h txt-center-h">
+					[<a class="sk3-margin-h" href="{{.RelPermalink}}">{{.LinkTitle}}</a>]
+				</div>
 				{{end}}
 			</div>
 			{{end}}
@@ -48,12 +50,12 @@
 	<div class="sk3-card sk3-flex sk3-flex-center-h box">
 		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
 			<!--prev-->
-			{{with .PrevInSection}}<a class="sk3-margin-h" href="{{.RelPermalink}}">
+			{{with .PrevInSection}}<a class="sk3-margin-h txt-center-h" href="{{.RelPermalink}}">
 				<h3>
 					<< {{.Title}}</h3>
 			</a> {{end}}
 			<!--next-->
-			{{with .NextInSection}}<a class="sk3-margin-h" href="{{.RelPermalink}}">
+			{{with .NextInSection}}<a class="sk3-margin-h txt-center-h" href="{{.RelPermalink}}">
 				<h3>{{.Title}} >></h3>
 			</a>{{end}}
 		</div>
@@ -65,12 +67,14 @@
 	{{$related := .Site.RegularPages.Related . | first 5}}
 	{{if $related}}
 	<div class="sk3-card sk3-flex sk3-flex-center-h box">
+		<div class="sk3-flex sk3-flex-center-v">See Also</div>
 		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
 			<!--related-->
 			{{with $related}}
-			See Also
 			{{range .}}
-			[<a class="sk3-margin-h" href="{{.RelPermalink}}">{{.Title}}</a>]
+			<div class="sk3-margin-h txt-center-h">
+				[<a class="sk3-margin-h" href="{{.RelPermalink}}">{{.Title}}</a>]
+			</div>
 			{{end}}
 			{{end}}
 		</div>
