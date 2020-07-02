@@ -22,9 +22,9 @@ adsense_id = "ca-pub-8176479711832264"
 subtitle   = "A Hugo Theme"
 
 # Fill in following if using opengraph / twitter card
-description = "Hugo Theme SK3 by John Siu"
+description = "Hugo Theme SK3 Demo Site"
 opengraph   = true
-title       = "SK3"
+title       = "Hugo Theme SK3 Demo Site"
 twitercards = true
 
 	[Params.card]
@@ -63,6 +63,54 @@ twitercards = true
 	vk        = true
 
 [markup]
+defaultMarkdownHandler = "goldmark"
+
+	[markup.blackFriday]
+	angledQuotes               = false
+	footnoteAnchorPrefix       = ""
+	footnoteReturnLinkContents = ""
+	fractions                  = true
+	hrefTargetBlank            = false
+	latexDashes                = true
+	nofollowLinks              = false
+	noreferrerLinks            = false
+	plainIDAnchors             = true
+	skipHTML                   = false
+	smartDashes                = true
+	smartypants                = true
+	smartypantsQuotesNBSP      = false
+	taskLists                  = true
+
+	[markup.highlight]
+	codeFences         = true
+	guessSyntax        = false
+	hl_Lines           = ""
+	lineNoStart        = 1
+	lineNos            = true
+	lineNumbersInTable = true
+	noClasses          = true
+	style              = "monokai"
+	tabWidth           = 4
+
 	[markup.tableOfContents]
 	endLevel   = 6
+	ordered    = false
 	startLevel = 1
+
+	[markup.goldmark]
+		[markup.goldmark.extensions]
+		definitionList = true
+		footnote       = true
+		linkify        = true
+		strikethrough  = true
+		table          = true
+		taskList       = true
+		typographer    = true
+		[markup.goldmark.parser]
+		attribute         = true
+		autoHeadingID     = true
+		autoHeadingIDType = "github"
+		[markup.goldmark.renderer]
+		hardWraps = false
+		unsafe    = false
+		xhtml     = false
