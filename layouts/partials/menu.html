@@ -1,0 +1,54 @@
+<!--Menu Bar-->
+<nav class="sidebar box-right sk3-no-dot" id="menu-bar">
+	<div class="sk3-title sk3-flex-center-v menu-button">☰</div>
+
+	<!--Social Share-->
+	<hr>
+	{{if site.Params.socialshare}}
+	<div class="sk3-flex sk3-flex-center-h">
+		<b>Share</b> {{partial "social-share.html" .}}
+	</div>
+	{{end}}
+	<hr>
+
+	<!--Menu-->
+	<h4>
+		{{$currentPage := .}}
+		{{range site.Menus.main}}
+		{{if .HasChildren}}
+		<li class="{{if $currentPage.HasMenuCurrent "main" .}}active{{end}}">
+			<a href="#">
+				{{.Pre}}
+				<span>{{.Name}}</span>
+			</a>
+		</li>
+		<ul>
+			{{range .Children}}
+			<li class="{{if $currentPage.IsMenuCurrent "main" .}}active{{end}}">
+				<a href="{{.URL}}">{{.Name}}</a>
+			</li>
+			{{end}}
+		</ul>
+		{{else}}
+		<li>
+			<a href="{{.URL}}">
+				{{.Pre}}
+				<span>{{.Name}}</span>
+			</a>
+		</li>
+		{{end}}
+		{{end}}
+	</h4>
+
+	<!--Social Link-->
+	<hr>
+
+	{{if site.Params.sociallink}}
+	<div class="sk3-flex sk3-flex-center-h">
+		<b>Link</b> {{partial "social-link.html" .}}
+	</div>
+	{{end}}
+
+	<hr>
+
+</nav>
