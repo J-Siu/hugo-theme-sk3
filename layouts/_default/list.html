@@ -51,7 +51,12 @@
 		<sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager>
 	</div>
 
-	{{partial "social-link.html" .}}
+	<!--social link-->
+	{{if site.Params.sociallink}}
+	<div class="sk3-flex sk3-flex-center-h">
+		{{partial "social-link.html" .}}
+	</div>
+	{{end}}
 
 	<div></div>
 
