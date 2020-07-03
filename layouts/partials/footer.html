@@ -22,8 +22,10 @@
 <script>
 	// menu
 	var m = document.getElementsByClassName("menu-button");
+	var e = document.getElementById("menu-bar");
+	e.style.display = "none"
+	//e.style.display = "block"
 	for (var i = 0; i < m.length; i++) {
-		var e = document.getElementById("menu-bar");
 		m[i].addEventListener("click", function () {
 			e.style.display === "block" ? e.style.display = "none" : e.style.display = "block";
 		}, false)
