@@ -343,6 +343,7 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 
 - [ ] Alternative homepage template
 - [ ] Click anywhere to close menu
+- [ ] favicon?
 
 ### Repository
 

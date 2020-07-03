@@ -57,6 +57,10 @@ header h4 {
   margin: 0px;
 }
 
+img {
+	max-width: 100%;
+}
+
 kbd{
 	border:1px solid;
 	border-radius: 3.5px;
