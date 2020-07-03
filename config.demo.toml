@@ -9,7 +9,6 @@ title   = "SK3"
 DefaultContentLanguage = "en"
 enableGitInfo          = true
 enableInlineShortcodes = true
-googleAnalytics        = "UA-36805525-2"
 languageCode           = "en"
 paginate               = 3
 relativeURLs           = true
@@ -18,7 +17,6 @@ relativeURLs           = true
 # mainSections = "post"
 # pagewidth    = "1200px"
 # startdate    = "2012-12-02"
-adsense_id  = "ca-pub-8176479711832264"
 pageinfobox = true
 subtitle    = "A Hugo Theme"
 
