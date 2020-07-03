@@ -1,8 +1,6 @@
 ## Hugo Theme - SK3 (Skeleton 3)
 
-Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2).
-
-Inspired by [Vimux/Binario](https://github.com/Vimux/Binario). Go check it out!
+Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2).
 
 ---
 
@@ -62,8 +60,6 @@ In site directory:
 
 ### Testing
 
-In `exampleSite`:
-
 ```sh
 git clone https://github.com/J-Siu/hugo-theme-sk3 sk3
 cd sk3
@@ -82,27 +78,27 @@ hugo server -D --bind :: \
 
 ### Features
 
-- Blog
-- Disqus
-- Google Adsense
-- Google Analytics
-- Layout Customization
-- Minimalist Design
-- Responsive
-- Social Links
-- Social Share
+- [x] Blog
+- [x] Customizable
+- [x] Disqus
+- [x] Google Adsense
+- [x] Google Analytics
+- [x] Minimalist Design
+- [x] Responsive
+- [x] Social Links
+- [x] Social Share
 
 ### Layout
 
 #### Site
 
-- Main type
+- Main section type
 
-  Page `type` for generating homepage list. Hugo default `post`.
+  For generating homepage list. Hugo default to section with most entries.
 
   ```toml
   [Params]
-  maintype  = "post"
+  mainSections = "post"
   ```
 
 - Sub-title
@@ -173,7 +169,9 @@ hugo server -D --bind :: \
 
 - Default dark theme
 
-  Change color theme directly in `config.toml`. Following are defaults defined in CSS:
+  Change color theme directly in `config.toml`.
+
+  Default in CSS:
 
   ```toml
   [Params.color]
@@ -272,10 +270,10 @@ paginate               = 15
 #googleAnalytics = ""
 
 [Params]
-#maintype  = "post"
-#pagewidth = "1200px"
-#startdate = "2012-12-02"
-#subtitle  = "A Hugo Theme"
+#mainSections = "post"
+#pagewidth    = "1200px"
+#startdate    = "2012-12-02"
+#subtitle     = "A Hugo Theme"
 
 #adsense_id = ""
 
@@ -336,12 +334,14 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 ./fa-svg-extract.sh brands.svg > sk3-fa-brands.svg
 ```
 
+### Thank You
+
+- SK3 inspired by [Vimux/Binario](https://github.com/Vimux/Binario). Check it out too!
+
 ### TODO
 
-- Submit to Hugo theme
-  - images
-- Alternative homepage template
-- Click anywhere to close menu
+- [ ] Alternative homepage template
+- [ ] Click anywhere to close menu
 
 ### Repository
 
@@ -385,6 +385,14 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
   - CSS clean up
   - Do not render empty toc
   - Fix highlight font conflict
+- 0.9.2
+  - Add images
+  - Demo config
+  - Fix css
+  - Improve menu
+  - README.md update
+  - Template .Site. -> site.
+  - Use site.Params.mainSections
 
 ### License
 
