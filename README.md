@@ -289,25 +289,27 @@ paginate               = 15
   summary = true
   #width   = "32%"
 
-  #[Params.color]
-  #bg     = "#181a1b"
-  #border = "white"
-  #link   = "#3d84ff"
-  #text   = "white"
+	# [Params.color]
+	# bg     = "#181a1b"
+	# border = "white"
+	# link   = "#3d84ff"
+	# text   = "white"
 
-  #[Params.sociallink]
-  #facebook       = ""
-  #flickr         = ""
-  #github         = ""
-  #instagram      = ""
-  #linkedin       = ""
-  #pinterest      = ""
-  #reddit         = ""
-  #tumblr         = ""
-  #twitter        = ""
-  #vimeo          = ""
-  #youtubechannel = ""
-  #youtubeuser    = ""
+	# [Params.sociallink]
+	# facebook       = ""
+	# flickr         = ""
+	# github         = ""
+	# instagram      = ""
+	# linkedin       = ""
+	# pinterest      = ""
+	# reddit         = ""
+	# stack-exchange = ""
+	# stack-overflow = ""
+	# tumblr         = ""
+	# twitter        = ""
+	# vimeo          = ""
+	# youtubechannel = ""
+	# youtubeuser    = ""
 
   [Params.socialshare]
   facebook  = true

@@ -13,6 +13,8 @@ linkedin
 pinterest
 qq
 reddit
+stack-exchange
+stack-overflow
 telegram
 tumblr
 twitch

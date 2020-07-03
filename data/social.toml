@@ -34,6 +34,16 @@ id  = "reddit"
 svg = "reddit"
 url = "https://www.reddit.com/user/%s"
 [[link]]
+cls = "fab fa-stack-exchange"
+id  = "stack-exchange"
+svg = "stack-exchange"
+url = "https://stackexchange.com/users/%s/"
+[[link]]
+cls = "fab fa-stack-overflow"
+id  = "stack-overflow"
+svg = "stack-overflow"
+url = "https://stackoverflow.com/users/%s/"
+[[link]]
 cls = "fab fa-tumblr"
 id  = "tumblr"
 svg = "tumblr"
