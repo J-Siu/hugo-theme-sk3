@@ -15,9 +15,9 @@ paginate               = 3
 relativeURLs           = true
 
 [Params]
-# maintype  = "post"
-# pagewidth = "1200px"
-# startdate = "2012-12-02"
+# mainSections = "post"
+# pagewidth    = "1200px"
+# startdate    = "2012-12-02"
 adsense_id  = "ca-pub-8176479711832264"
 pageinfobox = true
 subtitle    = "A Hugo Theme"

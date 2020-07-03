@@ -3,27 +3,22 @@
 
 	<div></div>
 
+	<!--_index.md-->
 	{{if not .IsHome}}
-	{{with .Title}}<h1>
+	{{with .Title}}
+	<h1>
 		<heading>{{.}}</heading>
-	</h1>{{end}}
-	{{with .Content}}<article>{{.}}</article>{{end}}
+	</h1>
+	{{end}}
+	{{with .Content}}
+	<div>
+		<article>{{.}}</article>
+	</div>
+	{{end}}
 	{{end}}
 
-	<!--Set type-->
-	{{if .Site.Params.mainType}}
-	{{.Scratch.Set "type" .Site.Params.mainType}}
-	{{else}}
-	{{.Scratch.Set "type" "post"}}
-	{{end}}
-
-	<!--Set paginator base on .IsHome-->
-	{{if .IsHome}}
-	{{.Scratch.Set "Paginator" (.Paginate (where .Site.RegularPages "Type" (.Scratch.Get "type")))}}
-	{{else}}
-	{{.Scratch.Set "Paginator" .Paginator}}
-	{{end}}
-	{{$paginator:=(.Scratch.Get "Paginator")}}
+	<!--$paginator-->
+	{{$paginator := .Paginate (where site.RegularPages "Type" "in" site.Params.mainSections)}}
 
 	<div></div>
 
