@@ -39,12 +39,14 @@
 		}, false)
 	}</script>
 {{end}}
+
 <!--hugo internal template-->
 {{template "_internal/google_analytics_async.html" .}}
 {{if .Site.Params.opengraph}}{{template "_internal/opengraph.html" .}}{{end}}
 {{if .Site.Params.twittercards}}{{template "_internal/twitter_cards.html" .}}{{end}}
-	<!--svg-->
-	{{partial "sk3-fa-brands.svg" .}}
+
+<!--svg-->
+{{partial "sk3-fa-brands.svg" .}}
 
 <!--AdSense-->
 {{partial "adsense.html" .}}
