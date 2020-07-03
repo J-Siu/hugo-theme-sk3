@@ -35,11 +35,11 @@
 		<div class="sk3-card box">
 			<div class="sk3-flex">
 				<a class="title" href="{{.RelPermalink}}">{{.Title}}</a>
-				{{if .Site.Params.card.date}}
+				{{if site.Params.card.date}}
 				{{with .Lastmod}}<div class="sk3-flex-right sk3-flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}
 				{{end}}
 			</div>
-			{{if .Site.Params.card.summary}}<div>{{.Summary}}</div>{{end}}
+			{{if site.Params.card.summary}}<div>{{.Summary}}</div>{{end}}
 		</div>
 		{{end}}
 	</section>

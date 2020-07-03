@@ -28,7 +28,7 @@
 	<div></div>
 
 	<!--Page Info-->
-	{{if .Site.Params.pageinfobox}}
+	{{if site.Params.pageinfobox}}
 	{{partial "pageinfo-box.html" .}}
 	{{else}}
 	{{partial "pageinfo.html" .}}
@@ -37,7 +37,7 @@
 	<div></div>
 
 	<!--Disqus-->
-	{{if and .Site.DisqusShortname (.Params.comment|default true)}}
+	{{if and site.DisqusShortname (.Params.comment|default true)}}
 	{{template "_internal/disqus.html" .}}
 	{{end}}
 

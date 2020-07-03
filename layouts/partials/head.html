@@ -2,22 +2,22 @@
 	<!--Meta-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{.Site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}</title>
-	<meta name="description" content="{{if .IsHome}}{{.Site.Params.description}}{{else}}{{.Description}}{{end}}">
+	<title>{{site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}</title>
+	<meta name="description" content="{{if .IsHome}}{{site.Params.description}}{{else}}{{.Description}}{{end}}">
 	{{with .Params.author}}<meta name="author" content="{{.}}">{{end}}
 	<!--css-->
 	<link rel="stylesheet" href="{{relLangURL ""}}css/sk3.css">
-	<!--.Site.Params-->
+	<!--site.Params-->
 	<style>
-		{{with .Site.Params.card.width}}
+		{{with site.Params.card.width}}
 		@media only screen and (min-width: 993px){:root{--card-width: {{.}};}}
 		{{end}}
-		{{with .Site.Params.pagewidth}}
+		{{with site.Params.pagewidth}}
 		@media only screen and (min-width: 993px){:root{--html-width: {{.}};}}
 		{{end}}
-		{{with .Site.Params.color.bg}}:root{--bg-color:{{.}};}{{end}}
-		{{with .Site.Params.color.border}}:root{--border-color:{{.}};}{{end}}
-		{{with .Site.Params.color.link}}:root{--link-color:{{.}};}{{end}}
-		{{with .Site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
+		{{with site.Params.color.bg}}:root{--bg-color:{{.}};}{{end}}
+		{{with site.Params.color.border}}:root{--border-color:{{.}};}{{end}}
+		{{with site.Params.color.link}}:root{--link-color:{{.}};}{{end}}
+		{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
 	</style>
 </head>

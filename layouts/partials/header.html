@@ -7,7 +7,7 @@
 		<hr>
 		<h4>
 			{{$currentPage := .}}
-			{{range .Site.Menus.main}}
+			{{range site.Menus.main}}
 			{{if .HasChildren}}
 			<li class="{{if $currentPage.HasMenuCurrent "main" .}}active{{end}}">
 				<a href="#">
@@ -37,8 +37,8 @@
 	<!--Title Bar-->
 	<div class="sk3-flex">
 		<div class="sk3-title sk3-flex-center-v menu-button">☰</div>
-		<div class="sk3-title sk3-margin-h"><a href="{{relLangURL ""}}">{{.Site.Title}}</a></div>
-		{{with .Site.Params.subtitle}}<div class="sk3-subtitle sk3-flex-center-v">{{.}}</div>{{end}}
+		<div class="sk3-title sk3-margin-h"><a href="{{relLangURL ""}}">{{site.Title}}</a></div>
+		{{with site.Params.subtitle}}<div class="sk3-subtitle sk3-flex-center-v">{{.}}</div>{{end}}
 	</div>
 
 </header>

@@ -2,7 +2,7 @@
 <section class="sk3-flex sk3-flex-center-h">
 
 	<!--card : share-->
-	{{if .Site.Params.socialshare}}
+	{{if site.Params.socialshare}}
 	<div class="sk3-card sk3-flex sk3-flex-center-h box">
 		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
 			<!--share-->
@@ -64,7 +64,7 @@
 	{{end}}
 
 	<!--card : related-->
-	{{$related := .Site.RegularPages.Related . | first 5}}
+	{{$related := site.RegularPages.Related . | first 5}}
 	{{if $related}}
 	<div class="sk3-card sk3-flex sk3-flex-center-h box">
 		<div class="sk3-flex sk3-flex-center-v">See Also</div>

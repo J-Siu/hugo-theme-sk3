@@ -1,14 +1,14 @@
 <footer class="sk3-flex sk3-flex-center-h sk3-margin-v-10 sk3-pad-v-10">
 
-	{{if .Site.Copyright}}
-	<div class="sk3-pad-h txt-center-h">{{.Site.Copyright}}</div>
+	{{if site.Copyright}}
+	<div class="sk3-pad-h txt-center-h">{{site.Copyright}}</div>
 	{{else}}
 	<div class="sk3-pad-h txt-center-h">
 		©
-		{{with .Site.Params.startdate}}
+		{{with site.Params.startdate}}
 		{{dateFormat "2006" .}}-
 		{{- end}}
-		{{- now.Format "2006"}} {{.Site.Title}}
+		{{- now.Format "2006"}} {{site.Title}}
 	</div>
 	{{end}}
 	<div class="sk3-pad-h txt-center-h">Power by <a href="https://gohugo.io">Hugo</a>.</div>
@@ -18,7 +18,7 @@
 </footer>
 
 <!--scripts-->
-{{if or .Site.Menus.main .Site.Params.socialshare}}
+{{if or site.Menus.main site.Params.socialshare}}
 <script>
 	// menu
 	var m = document.getElementsByClassName("menu-button");
@@ -42,8 +42,8 @@
 
 <!--hugo internal template-->
 {{template "_internal/google_analytics_async.html" .}}
-{{if .Site.Params.opengraph}}{{template "_internal/opengraph.html" .}}{{end}}
-{{if .Site.Params.twittercards}}{{template "_internal/twitter_cards.html" .}}{{end}}
+{{if site.Params.opengraph}}{{template "_internal/opengraph.html" .}}{{end}}
+{{if site.Params.twittercards}}{{template "_internal/twitter_cards.html" .}}{{end}}
 
 <!--svg-->
 {{partial "sk3-fa-brands.svg" .}}
