@@ -20,6 +20,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Si
   - [Per Page](#per-page)
 - [Sample Config](#sample-config)
 - [Font Awesome](#font-awesome)
+- [Thank You](#thank-you)
 - [TODO](#todo)
 - [Repository](#repository)
 - [Contributors](#contributors)
