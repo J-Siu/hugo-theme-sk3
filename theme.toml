@@ -1,12 +1,25 @@
-name = "sk3"
-license = "MIT"
+description = "Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2)."
+features    = []
+homepage    = "https://sk3.jsiu.dev/"
+license     = "MIT"
 licenselink = "https://github.com/J-Siu/hugo-theme-sk3/blob/master/LICENSE"
-description = "Fully functional basic Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2)."
-homepage = "https://sk3.jsiu.dev/"
-tags = ["blog"]
-features = ["responsive","adsense"]
 min_version = "0.65.0"
+name        = "sk3"
+tags        = [
+	"blog",
+	"clean",
+	"customizable",
+	"dark",
+	"disqus",
+	"google adsense",
+	"google analytics",
+	"minimal",
+	"mobile",
+	"personal",
+	"responsive",
+	"simple",
+]
 
 [author]
-  name = "John Siu"
-  homepage = "https://github.com/J-Siu"
+homepage = "https://johnsiu.com/"
+name     = "John Siu"
