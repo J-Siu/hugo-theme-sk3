@@ -1,44 +1,44 @@
-	<!--share-->
-	<div class="sk3-flex-center box sk3-margin-v-10">
-		{{ partial "social-share.html" . }}
-	</div>
+<!--share-->
+<div class="sk3-flex sk3-flex-center-h box sk3-margin-v-10">
+	{{ partial "social-share.html" . }}
+</div>
 
-	<!--tag/date-->
-	<div class="sk3-flex sk3-margin-v-10">
+<!--tag/date-->
+<div class="sk3-flex sk3-margin-v-10">
 
-		<!--tags-->
-		{{if (.GetTerms "tags")}}
-		<div class="sk3-flex">
-			<div class="sk3-pad-h">Tag:</div>
-			{{range (.GetTerms "tags")}}
-			<div class="sk3-pad-h"><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></div>
-			{{end}}
-		</div>
+	<!--tags-->
+	{{if (.GetTerms "tags")}}
+	<div class="sk3-flex">
+		<div class="sk3-pad-h">Tag:</div>
+		{{range (.GetTerms "tags")}}
+		<div class="sk3-pad-h"><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></div>
 		{{end}}
-
-		<!--date-->
-		{{with .Lastmod}}<div class="sk3-flex-right">Update: {{dateFormat "2006-01-02" .}}</div>{{end}}
-
 	</div>
-
-	<!--prev/next-->
-	{{if (.Params.prevnext|default true)}}
-	{{if or .PrevInSection .NextInSection}}
-	<h3 class="sk3-flex">
-		{{with .PrevInSection}}<a href="{{.RelPermalink}}">
-			<< {{.Title}}</a> {{end}}
-				{{with .NextInSection}}<a class="sk3-flex-right" href="{{.RelPermalink}}">{{.Title}} >></a>{{end}}
-	</h3>
-	{{end}}
 	{{end}}
 
-	<!--related-->
-	{{$related := site.RegularPages.Related . | first 5}}
-	{{with $related}}
-	<h3>See Also</h3>
-	<ul>
-		{{range .}}
-		<li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-		{{end}}
-	</ul>
+	<!--date-->
+	{{with .Lastmod}}<div class="sk3-flex-right">Update: {{dateFormat "2006-01-02" .}}</div>{{end}}
+
+</div>
+
+<!--prev/next-->
+{{if (.Params.prevnext|default true)}}
+{{if or .PrevInSection .NextInSection}}
+<h3 class="sk3-flex">
+	{{with .PrevInSection}}<a href="{{.RelPermalink}}">
+		<< {{.Title}}</a> {{end}}
+			{{with .NextInSection}}<a class="sk3-flex-right" href="{{.RelPermalink}}">{{.Title}} >></a>{{end}}
+</h3>
+{{end}}
+{{end}}
+
+<!--related-->
+{{$related := site.RegularPages.Related . | first 5}}
+{{with $related}}
+<h3>See Also</h3>
+<ul>
+	{{range .}}
+	<li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
 	{{end}}
+</ul>
+{{end}}
