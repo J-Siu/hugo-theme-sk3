@@ -1,59 +1,59 @@
-[[site]]
+[[link]]
 cls = "fab fa-facebook"
 id  = "facebook"
 svg = "facebook"
 url = "https://www.facebook.com/%s/"
-[[site]]
+[[link]]
 cls = "fab fa-flickr"
 id  = "flickr"
 svg = "flickr"
 url = "https://www.flickr.com/photos/%s/"
-[[site]]
+[[link]]
 cls = "fab fa-github"
 id  = "github"
 svg = "github"
 url = "https://github.com/%s/"
-[[site]]
+[[link]]
 cls = "fab fa-instagram"
 id  = "instagram"
 svg = "instagram"
 url = "https://www.instagram.com/%s/"
-[[site]]
+[[link]]
 cls = "fab fa-linkedin"
 id  = "linkedin"
 svg = "linkedin"
 url = "https://www.linkedin.com/in/%s/"
-[[site]]
+[[link]]
 cls = "fab fa-pinterest"
 id  = "pinterest"
 svg = "pinterest"
 url = "https://www.pinterest.com/%s/boards/"
-[[site]]
+[[link]]
 cls = "fab fa-reddit"
 id  = "reddit"
 svg = "reddit"
 url = "https://www.reddit.com/user/%s"
-[[site]]
+[[link]]
 cls = "fab fa-tumblr"
 id  = "tumblr"
 svg = "tumblr"
 url = "https://www.tumblr.com/dashboard/blog/%s/"
-[[site]]
+[[link]]
 cls = "fab fa-twitter"
 id  = "twitter"
 svg = "twitter"
 url = "https://twitter.com/%s"
-[[site]]
+[[link]]
 cls = "fab fa-vimeo"
 id  = "vimeo"
 svg = "vimeo"
 url = "https://vimeo.com/%s"
-[[site]]
+[[link]]
 cls = "fab fa-youtube"
 id  = "youtubeuser"
 svg = "youtube"
 url = "https://www.youtube.com/user/%s"
-[[site]]
+[[link]]
 cls = "fab fa-youtube"
 id  = "youtubechannel"
 svg = "youtube"
