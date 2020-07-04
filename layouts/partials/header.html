@@ -1,8 +1,9 @@
 <header class="sk3-flex">
 
 	<!--Menu-->
+	{{if or site.Menus site.Params.socialshare site.Params.sociallink}}
 	{{partial "menu.html" .}}
-
+	{{end}}
 	<!--Title Bar-->
 	<div class="sk3-flex">
 		<div class="sk3-title sk3-flex-center-v menu-button">☰</div>

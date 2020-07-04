@@ -3,15 +3,16 @@
 	<div class="sk3-title sk3-flex-center-v menu-button">☰</div>
 
 	<!--Social Share-->
-	<hr>
 	{{if site.Params.socialshare}}
+	<hr>
 	<div class="sk3-flex sk3-flex-center-h">
 		<b>Share</b> {{partial "social-share.html" .}}
 	</div>
 	{{end}}
-	<hr>
 
 	<!--Menu-->
+	{{if site.Menus}}
+	<hr>
 	<h4>
 		{{$currentPage := .}}
 		{{range site.Menus.main}}
@@ -39,11 +40,12 @@
 		{{end}}
 		{{end}}
 	</h4>
+	{{end}}
 
 	<!--Social Link-->
-	<hr>
 
 	{{if site.Params.sociallink}}
+	<hr>
 	<div class="sk3-flex sk3-flex-center-h">
 		<b>Link</b> {{partial "social-link.html" .}}
 	</div>
