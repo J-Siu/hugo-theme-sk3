@@ -22,7 +22,7 @@
 </div>
 
 <!--prev/next-->
-{{if (.Params.prevnext|default true)}}
+{{if (default true .Params.prevnext)}}
 {{if or .PrevInSection .NextInSection}}
 <h3 class="sk3-flex">
 	{{with .PrevInSection}}<a href="{{.RelPermalink}}">

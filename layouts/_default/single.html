@@ -13,7 +13,7 @@
 	<div></div>
 
 	<!--TOC-->
-	{{if (.Params.toc|default true)}}
+	{{if (default true .Params.toc)}}
 	{{if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")}}
 	<div class="box sk3-pad-10 sk3-margin-v-10">
 		<div class="collapsible">☰ Table of Content</div>
@@ -37,7 +37,7 @@
 	<div></div>
 
 	<!--Disqus-->
-	{{if and site.DisqusShortname (.Params.comment|default true)}}
+	{{if and site.DisqusShortname (default true .Params.comment)}}
 	{{template "_internal/disqus.html" .}}
 	{{end}}
 
