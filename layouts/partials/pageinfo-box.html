@@ -45,7 +45,7 @@
 	{{end}}
 
 	<!--card : nav-->
-	{{if (.Params.prevnext|default true)}}
+	{{if (default true .Params.prevnext)}}
 	{{if or .PrevInSection .NextInSection}}
 	<div class="sk3-card sk3-flex sk3-flex-center-h box">
 		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
