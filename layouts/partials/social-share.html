@@ -6,11 +6,26 @@
 		</svg>
 	</a>
 	{{end}}
-	{{if site.Params.socialshare.twitter}}
+	{{if site.Params.socialshare.linkedin}}
 	<a target="_blank" rel="noopener noreferrer"
-		href="https://twitter.com/intent/tweet/?url={{.Permalink}}&amp;text={{.Title}}"
-		onclick="window.open(this.href, 'Twitter', 'width=800,height=450,resizable=yes,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
-			<use xlink:href="#twitter"></use>
+		href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink}}&title={{.Title}}"
+		onclick="window.open(this.href, 'LinkedIn', 'width=640,height=480,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
+			<use xlink:href="#linkedin"></use>
+		</svg>
+	</a>
+	{{end}}
+	{{if site.Params.socialshare.pinterest}}
+	<a target="_blank" rel="noopener noreferrer"
+		href="https://pinterest.com/pin/create/button/?url={{.Permalink}}&description={{.Title}}"
+		onclick="window.open(this.href, 'Pinterest', 'width=800,height=720,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
+			<use xlink:href="#pinterest"></use>
+		</svg>
+	</a>
+	{{end}}
+	{{if site.Params.socialshare.pocket}}
+	<a target="_blank" rel="noopener noreferrer" href="https://getpocket.com/edit?url={{.Permalink}}&amp;title={{.Title}}"
+		onclick="window.open(this.href, 'Pocket', 'width=480,height=320,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
+			<use xlink:href="#pocket"></use>
 		</svg>
 	</a>
 	{{end}}
@@ -29,11 +44,11 @@
 		</svg>
 	</a>
 	{{end}}
-	{{if site.Params.socialshare.linkedin}}
+	{{if site.Params.socialshare.twitter}}
 	<a target="_blank" rel="noopener noreferrer"
-		href="https://www.linkedin.com/shareArticle?mini=true&url={{.Permalink}}&title={{.Title}}"
-		onclick="window.open(this.href, 'LinkedIn', 'width=640,height=480,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
-			<use xlink:href="#linkedin"></use>
+		href="https://twitter.com/intent/tweet/?url={{.Permalink}}&amp;text={{.Title}}"
+		onclick="window.open(this.href, 'Twitter', 'width=800,height=450,resizable=yes,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
+			<use xlink:href="#twitter"></use>
 		</svg>
 	</a>
 	{{end}}
@@ -44,19 +59,18 @@
 		</svg>
 	</a>
 	{{end}}
-	{{if site.Params.socialshare.pocket}}
-	<a target="_blank" rel="noopener noreferrer" href="https://getpocket.com/edit?url={{.Permalink}}&amp;title={{.Title}}"
-		onclick="window.open(this.href, 'Pocket', 'width=480,height=320,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
-			<use xlink:href="#pocket"></use>
-		</svg>
-	</a>
-	{{end}}
-	{{if site.Params.socialshare.pinterest}}
+
+	<!--no icon ... -->
+	{{if site.Params.socialshare.qzone}}
 	<a target="_blank" rel="noopener noreferrer"
-		href="https://pinterest.com/pin/create/button/?url={{.Permalink}}&description={{.Title}}"
-		onclick="window.open(this.href, 'Pinterest', 'width=800,height=720,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
-			<use xlink:href="#pinterest"></use>
+		href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{.Permalink}}&sharesource=qzone&title={{.Title}}&summary={{default .Title .Description}}"
+		onclick="window.open(this.href, 'QZone', 'width=800,height=720,toolbar=0,status=0'); return false"><svg class="sk3-social-fab">
+			<use xlink:href="#qzone"></use>
 		</svg>
 	</a>
 	{{end}}
+
+
+
+
 </sk3-social>
