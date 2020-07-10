@@ -3,7 +3,7 @@
 	{{range site.Data.social.link}}
 	{{if isset site.Params.sociallink .id}}
 	<a href="{{printf .url (index site.Params.sociallink .id)}}"><svg class="sk3-social-fab">
-			<use xlink:href="#{{.svg}}"></use>
+			<use xlink:href="#{{default .id .svg}}"></use>
 		</svg>
 	</a>
 	{{end}}
