@@ -1,8 +1,10 @@
 #!/bin/sh
 
-SVG=$1
+# ${1} = Font Awesome svg file path
 
-site="
+file=${1}
+
+svg="
 baidu
 douban
 facebook
@@ -27,7 +29,7 @@ youtube
 "
 
 echo '<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">'
-for i in $site; do
-	grep -A 2 \"$i\" ${SVG}
+for i in ${svg}; do
+	grep -A 2 \"${i}\" ${file}
 done
 echo '</svg>'
