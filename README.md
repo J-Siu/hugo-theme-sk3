@@ -168,12 +168,12 @@ hugo server -D --bind :: \
 
 - SVG External
 
-Set `svg_ext` to `true` will load social icon using Font Awesome external css.
+  Set `svg_ext` to `true` will load social icon using Font Awesome external css.
 
-```toml
-[Params]
-svg_ext			= true
-```
+  ```toml
+  [Params]
+  svg_ext			= true
+  ```
 
 #### Color theme
 
