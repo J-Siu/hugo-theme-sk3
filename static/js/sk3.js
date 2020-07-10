@@ -1,15 +1,33 @@
 // menu
-function menu_button() {
-	var e = document.getElementsByClassName("menu-bar");
-	for (var j = 0; j < e.length; j++) {
-		e[j].style.display === "block" ? e[j].style.display = "none" : e[j].style.display = "block";
+
+function _menu_button(ev) {
+	var t = document.getElementsByTagName("html")[0];
+	var c = document.getElementsByClassName("menu-bar");
+	for (var j = 0; j < c.length; j++) {
+		if (c[j].style.display === "block") {
+			c[j].style.display = "none"
+			t.removeEventListener("click", _menu_button)
+		}
+		else {
+			ev.stopPropagation()
+			c[j].style.display = "block"
+			t.addEventListener("click", _menu_button, false)
+		}
 	}
 }
-var m = document.getElementsByClassName("menu-button");
-for (var i = 0; i < m.length; i++) {
-	m[i].addEventListener("click", menu_button, false)
+
+function _menu_init() {
+	var m = document.getElementsByClassName("menu-button");
+	console.log("menu init")
+	for (var i = 0; i < m.length; i++) {
+		m[i].addEventListener("click", _menu_button, false)
+	}
 }
+
+_menu_init()
+
 // toc
+
 var c = document.getElementsByClassName("collapsible");
 for (var i = 0; i < c.length; i++) {
 	c[i].display = "none"
