@@ -19,6 +19,7 @@ relativeURLs           = true
 # startdate    = "2012-12-02"
 pageinfobox = true
 subtitle    = "A Hugo Theme"
+svg_ext			= true
 
 # Fill in following if using opengraph / twitter card
 description = "Hugo Theme SK3 Demo Site"
@@ -55,7 +56,6 @@ twitercards = true
 
 	[Params.socialshare]
 	facebook  = true
-	instagram = true
 	linkedin  = true
 	pinterest = true
 	reddit    = true

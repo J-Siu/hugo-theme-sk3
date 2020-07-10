@@ -166,6 +166,15 @@ hugo server -D --bind :: \
 	vk        = true
   ````
 
+- SVG External
+
+Set `svg_ext` to `true` will load social icon using Font Awesome external css.
+
+```toml
+[Params]
+svg_ext			= true
+```
+
 #### Color theme
 
 - Default dark theme
@@ -271,12 +280,12 @@ paginate               = 15
 #googleAnalytics = ""
 
 [Params]
+#adsense_id   = ""
 #mainSections = "post"
 #pagewidth    = "1200px"
 #startdate    = "2012-12-02"
 #subtitle     = "A Hugo Theme"
-
-#adsense_id = ""
+#svg_ext			= true
 
 # Fill in following if using opengraph / twitter card
 #opengraph   = true
@@ -344,7 +353,6 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 ### TODO
 
 - [ ] Alternative homepage template
-- [ ] Click anywhere to close menu
 - [ ] favicon?
 
 ### Repository
@@ -387,7 +395,7 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 - 0.9.1
   - Add box style page info
   - CSS clean up
-  - Do not render empty toc
+  - Do not render empty table of content
   - Fix highlight font conflict
 - 0.9.2
   - Add images
@@ -397,6 +405,9 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
   - README.md update
   - Template .Site. -> site.
   - Use site.Params.mainSections
+- 0.9.3
+  - Click anywhere to close menu
+  - SVG external option
 
 ### License
 

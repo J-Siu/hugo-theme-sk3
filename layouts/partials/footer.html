@@ -28,7 +28,11 @@
 {{if site.Params.twittercards}}{{template "_internal/twitter_cards.html" .}}{{end}}
 
 <!--svg-->
+{{if site.Params.svg_ext}}
+<link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+{{else}}
 {{partial "sk3-fa-brands.svg" .}}
+{{end}}
 
 <!--AdSense-->
 {{partial "adsense.html" .}}

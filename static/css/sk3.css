@@ -321,9 +321,10 @@ sk3-toc ul ul {
   opacity: 1;
 }
 
-/* for Font Awesome webfont*/
+/* for Font Awesome webfont */
 .fab {
-  padding: 5px;
+	font-size: 24px;
+  padding: 2px;
   text-align: center;
   opacity: 0.7;
 }

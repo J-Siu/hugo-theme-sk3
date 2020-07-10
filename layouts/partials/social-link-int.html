@@ -1,0 +1,12 @@
+{{if site.Params.sociallink}}
+<sk3-social>
+	{{range site.Data.social.site}}
+	{{if isset site.Params.sociallink .id}}
+	<a href="{{printf .url (index site.Params.sociallink .id)}}"><svg class="sk3-social-fab">
+			<use xlink:href="#{{default .id .svg}}"></use>
+		</svg>
+	</a>
+	{{end}}
+	{{end}}
+</sk3-social>
+{{end}}

@@ -12,13 +12,13 @@ paginate               = 15
 #googleAnalytics = ""
 
 [Params]
+#adsense_id   = ""
 #mainSections = "post"
 #pageinfobox  = true
 #pagewidth    = "1200px"
 #startdate    = "2012-12-02"
 #subtitle     = "A Hugo Theme"
-
-#adsense_id = ""
+#svg_ext			= true
 
 # Fill in following if using opengraph / twitter card
 #opengraph   = true
