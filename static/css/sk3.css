@@ -32,7 +32,7 @@ html {
   margin-left: auto;
   margin-right: auto;
   max-width: var(--html-width);
-	font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace
+  font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace
 }
 
 a {
@@ -58,12 +58,12 @@ header h4 {
 }
 
 img {
-	max-width: 100%;
+  max-width: 100%;
 }
 
-kbd{
-	border:1px solid;
-	border-radius: 3.5px;
+kbd {
+  border: 1px solid;
+  border-radius: 3.5px;
 }
 
 .main,
@@ -77,15 +77,17 @@ footer {
 }
 
 table {
-	border: 1px solid;
-	border-collapse: collapse;
-	width: 100%;
+  border: 1px solid;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-td, th, td {
-	text-align: left;
-	padding: 5px;
-	border: 1px solid;
+td,
+th,
+td {
+  text-align: left;
+  padding: 5px;
+  border: 1px solid;
 }
 
 .box {
@@ -145,9 +147,9 @@ td, th, td {
 
 .sk3-card .title {
   /*h3*/
-	font-size: 1.17em;
-	font-weight: bold;
-	display: inline-flex;
+  font-size: 1.17em;
+  font-weight: bold;
+  display: inline-flex;
 }
 
 .sk3-flex {
@@ -169,7 +171,7 @@ td, th, td {
 }
 
 .sk3-flex-inline {
-	display: inline-flex;
+  display: inline-flex;
 }
 
 .sk3-flex-center-h {
@@ -187,15 +189,15 @@ td, th, td {
 
 .sk3-subtitle {
   /*h3*/
-	font-size: 1.17em;
-	font-weight: bold;
-	font-variant-position: sub;
+  font-size: 1.17em;
+  font-weight: bold;
+  font-variant-position: sub;
 }
 
 .sk3-title {
   /*h1*/
   font-size: 2em;
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .sk3-pad {
@@ -268,8 +270,8 @@ sk3-pager {
 }
 
 sk3-pager ul {
-	margin: 10px;
-	padding: 0;
+  margin: 10px;
+  padding: 0;
 }
 
 sk3-pager li {
@@ -284,8 +286,8 @@ sk3-social {
   font-size: 2em;
 }
 
-sk3-social a{
-	margin-left: 10px;
+sk3-social a {
+  margin-left: 10px;
 }
 
 sk3-toc {
@@ -301,31 +303,31 @@ sk3-toc ul {
   padding-left: 5px;
 }
 
-sk3-toc ul ul{
+sk3-toc ul ul {
   margin-left: 0px;
   padding-left: 20px;
 }
 
 /* svg */
 .sk3-social-fab {
-	height: 24px;
-	width: 24px;
-	opacity: 0.7;
+  height: 24px;
+  width: 24px;
+  opacity: 0.7;
 
-	fill: var(--link-color);
+  fill: var(--link-color);
 }
 
 .sk3-social-fab:hover {
-	opacity: 1;
+  opacity: 1;
 }
 
 /* for Font Awesome webfont*/
 .fab {
   padding: 5px;
-	text-align: center;
-	opacity: 0.7;
+  text-align: center;
+  opacity: 0.7;
 }
 
 .fab:hover {
-		opacity: 1;
+  opacity: 1;
 }
