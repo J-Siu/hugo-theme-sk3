@@ -16,7 +16,7 @@
 	<div class="sk3-card sk3-flex sk3-flex-center-h box">
 		<div class="sk3-flex sk3-flex-center-v sk3-flex-center-h">
 			<!--author-->
-			{{with .Params.author}}<div class="sk3-margin-h title">{{.}}</div>{{end}}
+			{{with .Params.author}}<div class="sk3-margin-h"><h3>{{.}}</h3></div>{{end}}
 			<!--date-->
 			{{with .Lastmod}}<div class="sk3-margin-h sk3-margin-down">Update: {{dateFormat "2006-01-02" .}}</div>{{end}}
 		</div>
