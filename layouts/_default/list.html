@@ -29,7 +29,7 @@
 
 	<!--pagination-->
 	<div class="sk3-flex sk3-flex-center-h">
-		<sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager>
+		<sk3-pager>{{template "_internal/pagination.html" .}}</sk3-pager>
 	</div>
 
 	<div></div>
@@ -39,7 +39,7 @@
 		{{range $paginator.Pages}}
 		<div class="sk3-card box">
 			<div class="sk3-flex">
-				<a class="title" href="{{.RelPermalink}}">{{.Title}}</a>
+				<a class="sk3-flex-inline" href="{{.RelPermalink}}"><h3>{{.Title}}</h3></a>
 				{{if site.Params.card.date}}
 				{{with .Lastmod}}<div class="sk3-flex-right sk3-flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}
 				{{end}}
@@ -53,7 +53,7 @@
 
 	<!--pagination-->
 	<div class="sk3-flex sk3-flex-center-h">
-		<sk3-pager class="sk3-margin-v sk3-pad-v">{{template "_internal/pagination.html" .}}</sk3-pager>
+		<sk3-pager>{{template "_internal/pagination.html" .}}</sk3-pager>
 	</div>
 
 	<!--social link-->

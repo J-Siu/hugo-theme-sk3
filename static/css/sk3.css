@@ -24,15 +24,17 @@
   }
 }
 
-
 html {
   background-color: var(--bg-color);
   border-color: var(--border-color);
   color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace
+}
+
+body {
   margin-left: auto;
   margin-right: auto;
   max-width: var(--html-width);
-  font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace
 }
 
 a {
@@ -63,16 +65,16 @@ img {
 
 kbd {
   border: 1px solid;
-  border-radius: 3.5px;
+  border-radius: 3.0.35em;
 }
 
 .main,
 header,
 footer {
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-right: 0.7em;
+  margin-left: 0.7em;
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
   display: block;
 }
 
@@ -86,13 +88,13 @@ td,
 th,
 td {
   text-align: left;
-  padding: 5px;
+  padding: 0.35em;
   border: 1px solid;
 }
 
 .box {
   border: 1px solid;
-  padding: 5px;
+  padding: 0.7em;
 }
 
 .box-right {
@@ -129,9 +131,8 @@ td {
 }
 
 .sk3-card {
-  padding: 10px;
-  margin: 5px;
-  /*width: 300px;*/
+  padding: 0.7em;
+  margin: 0.35em;
   box-sizing: border-box;
 }
 
@@ -142,36 +143,12 @@ td {
 
 .sk3-card p {
   margin-block-end: 1px;
-  margin-block-start: 5px;
-}
-
-.sk3-card .title {
-  /*h3*/
-  font-size: 1.17em;
-  font-weight: bold;
-  display: inline-flex;
+  margin-block-start: 0.35em;
 }
 
 .sk3-flex {
   display: flex;
   flex-wrap: wrap;
-}
-
-.sk3-flex-right {
-  display: flex;
-  margin-left: auto;
-}
-
-.sk3-flex-down {
-  margin-top: auto;
-}
-
-.sk3-flex-up {
-  margin-bottom: auto;
-}
-
-.sk3-flex-inline {
-  display: inline-flex;
 }
 
 .sk3-flex-center-h {
@@ -183,103 +160,111 @@ td {
   margin-bottom: auto;
 }
 
-.sk3-no-dot {
-  list-style-type: none;
+.sk3-flex-down {
+  margin-top: auto;
 }
 
-.sk3-subtitle {
-  /*h3*/
-  font-size: 1.17em;
-  font-weight: bold;
-  font-variant-position: sub;
+.sk3-flex-inline {
+  display: inline-flex;
 }
 
-.sk3-title {
-  /*h1*/
-  font-size: 2em;
-  font-weight: bold;
+.sk3-flex-right {
+  display: flex;
+  margin-left: auto;
 }
 
-.sk3-pad {
-  padding: 5px;
+.sk3-flex-up {
+  margin-bottom: auto;
 }
 
-.sk3-pad-down {
-  padding-top: 5px;
+.sk3-margin {
+  margin: 0.35em;
+}
+
+.sk3-margin-10 {
+  margin: 0.7em;
 }
 
 .sk3-margin-down {
   margin-top: 2px;
 }
 
-.sk3-pad-10 {
-  padding: 10px;
-}
-
-.sk3-pad-v {
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.sk3-pad-v-10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.sk3-pad-h {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.sk3-pad-h-10 {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.sk3-margin {
-  margin: 5px;
-}
-
-.sk3-margin-10 {
-  margin: 10px;
-}
-
-.sk3-margin-v {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.sk3-margin-v-10 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
 .sk3-margin-h {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0.35em;
+  margin-right: 0.35em;
 }
 
 .sk3-margin-h-10 {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+}
+
+.sk3-margin-v {
+  margin-top: 0.35em;
+  margin-bottom: 0.35em;
+}
+
+.sk3-margin-v-10 {
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
+}
+
+.sk3-no-dot {
+  list-style-type: none;
+}
+
+.sk3-pad {
+  padding: 0.35em;
+}
+
+.sk3-pad-10 {
+  padding: 0.7em;
+}
+
+.sk3-pad-down {
+  padding-top: 0.35em;
+}
+
+.sk3-pad-h {
+  padding-left: 0.35em;
+  padding-right: 0.35em;
+}
+
+.sk3-pad-h-10 {
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+
+.sk3-pad-v {
+  padding-top: 0.35em;
+  padding-bottom: 0.35em;
+}
+
+.sk3-pad-v-10 {
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+}
+
+.sk3-sub {
+  font-variant-position: sub;
 }
 
 sk3-pager {
   font-size: 1.17em;
   font-weight: bold;
-}
-
-sk3-pager ul {
-  margin: 10px;
-  padding: 0;
+  padding-bottom: 0.3em;
+  padding-top: 0.3em;
 }
 
 sk3-pager li {
   list-style-type: none;
   display: inline-block;
-  margin-left: 5px;
   padding-left: 0.3em;
   padding-right: 0.3em;
+}
+
+sk3-pager ul {
+  padding: 0;
 }
 
 sk3-social {
@@ -287,7 +272,8 @@ sk3-social {
 }
 
 sk3-social a {
-  margin-left: 10px;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
 }
 
 sk3-toc {
@@ -299,13 +285,13 @@ sk3-toc li {
 }
 
 sk3-toc ul {
-  margin-left: 0px;
-  padding-left: 5px;
+  margin-left: 0;
+  padding-left: 0.35em;
 }
 
 sk3-toc ul ul {
-  margin-left: 0px;
-  padding-left: 20px;
+  margin-left: 0;
+  padding-left: 1.4em;
 }
 
 /* svg */
@@ -321,9 +307,9 @@ sk3-toc ul ul {
   opacity: 1;
 }
 
-/* for Font Awesome webfont */
+/* Font Awesome webfont */
 .fab {
-	font-size: 24px;
+  font-size: 24px;
   padding: 2px;
   text-align: center;
   opacity: 0.7;
