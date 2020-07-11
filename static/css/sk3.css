@@ -126,10 +126,10 @@ td {
 
 .sidebar-mask {
   /* background-color: white; */
-  /* opacity: 15%; */
   bottom: 0;
   display: none;
   left: 0;
+  /* opacity: 15%; */
   position: fixed !important;
   right: 0;
   top: 0;
@@ -278,8 +278,7 @@ sk3-social {
 }
 
 sk3-social a {
-  padding-left: 0.2em;
-  padding-right: 0.2em;
+	margin: 0.2em;
 }
 
 sk3-toc {
