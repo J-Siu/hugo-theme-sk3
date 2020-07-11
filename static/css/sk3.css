@@ -11,11 +11,6 @@
   .sk3-card {
     width: 100%
   }
-
-  .sidebar {
-    left: 0;
-    padding-left: 18px;
-  }
 }
 
 @media only screen and (min-width: 993px) {
@@ -37,6 +32,16 @@ body {
   max-width: var(--html-width);
 }
 
+#content,
+header,
+footer {
+  display: block;
+  margin-bottom: 0.7em;
+  margin-left: 0.7em;
+  margin-right: 0.7em;
+  margin-top: 0.7em;
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -51,12 +56,12 @@ header h1,
 header h2,
 header h3,
 header h4 {
-  padding-block-start: 0;
-  padding-block-end: 0;
-  margin-block-start: 0;
   margin-block-end: 0;
-  padding: 0px;
+  margin-block-start: 0;
   margin: 0px;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding: 0px;
 }
 
 img {
@@ -66,16 +71,6 @@ img {
 kbd {
   border: 1px solid;
   border-radius: 3.0.35em;
-}
-
-.main,
-header,
-footer {
-  margin-right: 0.7em;
-  margin-left: 0.7em;
-  margin-top: 0.35em;
-  margin-bottom: 0.35em;
-  display: block;
 }
 
 table {
@@ -114,20 +109,31 @@ td {
 }
 
 .sidebar {
-  display: none;
-  height: 100%;
-  top: 0;
   background-color: var(--bg-color);
+  bottom: 0;
+  display: none;
   overflow: auto;
+  padding-top: 0.7em;
   position: fixed !important;
+  top: 0;
   width: 200px;
-  z-index: 1;
-  padding-top: 8px;
-  padding-right: 15px;
+  z-index: 2;
 }
 
 .sidebar h1 {
   font-size: 2em;
+}
+
+.sidebar-mask {
+  /* background-color: white; */
+  /* opacity: 15%; */
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed !important;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .sk3-card {

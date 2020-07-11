@@ -5,7 +5,7 @@
 	<!--Social Share-->
 	{{if site.Params.socialshare}}
 	<hr>
-	<div class="sk3-flex sk3-flex-center-h">
+	<div class="sk3-flex sk3-pad-h-10 sk3-flex-center-h">
 		<b>Share</b> {{partial "social-share.html" .}}
 	</div>
 	{{end}}
@@ -13,7 +13,7 @@
 	<!--Menu-->
 	{{if site.Menus}}
 	<hr>
-	<h4>
+	<h4 class="sk3-flex sk3-pad-h-10">
 		{{$currentPage := .}}
 		{{range site.Menus.main}}
 		{{if .HasChildren}}
@@ -46,7 +46,7 @@
 
 	{{if site.Params.sociallink}}
 	<hr>
-	<div class="sk3-flex sk3-flex-center-h">
+	<div class="sk3-flex sk3-pad-h-10 sk3-flex-center-h">
 		<b>Follow</b> {{partial "social-link.html" .}}
 	</div>
 	{{end}}
@@ -54,3 +54,4 @@
 	<hr>
 
 </nav>
+<div class="sidebar-mask menu-bar menu-button"></div>

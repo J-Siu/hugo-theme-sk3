@@ -1,17 +1,14 @@
 // menu
 
 function _menu_button(ev) {
-	var t = document.getElementsByTagName("html")[0];
 	var c = document.getElementsByClassName("menu-bar");
 	for (var j = 0; j < c.length; j++) {
 		if (c[j].style.display === "block") {
 			c[j].style.display = "none"
-			t.removeEventListener("click", _menu_button)
 		}
 		else {
 			ev.stopPropagation()
 			c[j].style.display = "block"
-			t.addEventListener("click", _menu_button, false)
 		}
 	}
 }
