@@ -21,7 +21,6 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Si
 - [Sample Config](#sample-config)
 - [Font Awesome](#font-awesome)
 - [Thank You](#thank-you)
-- [TODO](#todo)
 - [Repository](#repository)
 - [Contributors](#contributors)
 - [Change Log](#change-log)
@@ -350,11 +349,6 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 
 - SK3 inspired by [Vimux/Binario](https://github.com/Vimux/Binario). Check it out too!
 
-### TODO
-
-- [ ] Alternative homepage template
-- [ ] favicon?
-
 ### Repository
 
 - [hugo-theme-sk3](https://github.com/J-Siu/hugo-theme-sk3)
@@ -408,6 +402,9 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 - 0.9.3
   - Click anywhere to close menu
   - SVG external option
+- 0.9.4
+  - Fix css spacing, kbd, social buttons, author box
+  - Fix menu closing click through
 
 ### License
 
