@@ -15,7 +15,6 @@ function _menu_button(ev) {
 
 function _menu_init() {
 	var m = document.getElementsByClassName("menu-button");
-	console.log("menu init")
 	for (var i = 0; i < m.length; i++) {
 		m[i].addEventListener("click", _menu_button, false)
 	}
