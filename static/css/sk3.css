@@ -70,7 +70,8 @@ img {
 
 kbd {
   border: 1px solid;
-  border-radius: 3.0.35em;
+	border-radius: 0.3em;
+	padding:0.25em;
 }
 
 table {
