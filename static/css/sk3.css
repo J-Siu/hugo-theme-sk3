@@ -2,8 +2,10 @@
   --bg-color: #181a1b;
   --border-color: white;
   --card-width: 32%;
-  --font-size: 1.12em;
+  --font-size: 1em;
   --html-width: 1200px;
+  --line-height: 1.429em;
+  --line-height-a: 1.7em;
   --link-color: #3d84ff;
   --margin-pad-full: 0.7em;
   --margin-pad-half: 0.35em;
@@ -28,12 +30,25 @@
   }
 }
 
+h1 {
+  font-size: var(--size-h1);
+}
+
+h3 {
+  font-size: var(--size-h3);
+}
+
 html {
   background-color: var(--bg-color);
   border-color: var(--border-color);
   color: var(--text-color);
   font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace;
   font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+a {
+  line-height: var(--line-height-a);
 }
 
 body {
