@@ -1,10 +1,19 @@
 :root {
-  --card-width: 32%;
-  --html-width: 1200px;
   --bg-color: #181a1b;
   --border-color: white;
-  --text-color: white;
+  --card-width: 32%;
+  --font-size: 1.12em;
+  --html-width: 1200px;
   --link-color: #3d84ff;
+  --margin-pad-full: 0.7em;
+  --margin-pad-half: 0.35em;
+  --margin-pad-social: 0.2em;
+  --sidebar-width: 200px;
+  --size-h1: 2em;
+  --size-h3: 1.17em;
+  --size-social-btn: 24px;
+  --text-color: white;
+  --toc-pad: 1.4em;
 }
 
 @media only screen and (max-width: 992px) {
@@ -23,7 +32,8 @@ html {
   background-color: var(--bg-color);
   border-color: var(--border-color);
   color: var(--text-color);
-  font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace
+  font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace;
+  font-size: var(--font-size);
 }
 
 body {
@@ -36,10 +46,7 @@ body {
 header,
 footer {
   display: block;
-  margin-bottom: 0.7em;
-  margin-left: 0.7em;
-  margin-right: 0.7em;
-  margin-top: 0.7em;
+  margin: var(--margin-pad-full);
 }
 
 a {
@@ -58,10 +65,10 @@ header h3,
 header h4 {
   margin-block-end: 0;
   margin-block-start: 0;
-  margin: 0px;
+  margin: 0;
   padding-block-end: 0;
   padding-block-start: 0;
-  padding: 0px;
+  padding: 0;
 }
 
 img {
@@ -70,8 +77,8 @@ img {
 
 kbd {
   border: 1px solid;
-	border-radius: 0.3em;
-	padding:0.25em;
+  border-radius: var(--margin-pad-half);
+  padding: var(--margin-pad-half);
 }
 
 table {
@@ -84,13 +91,13 @@ td,
 th,
 td {
   text-align: left;
-  padding: 0.35em;
+  padding: var(--margin-pad-half);
   border: 1px solid;
 }
 
 .box {
   border: 1px solid;
-  padding: 0.7em;
+  padding: var(--margin-pad-full);
 }
 
 .box-right {
@@ -114,15 +121,15 @@ td {
   bottom: 0;
   display: none;
   overflow: auto;
-  padding-top: 0.7em;
+  padding-top: var(--margin-pad-full);
   position: fixed !important;
   top: 0;
-  width: 200px;
+  width: var(--sidebar-width);
   z-index: 2;
 }
 
 .sidebar h1 {
-  font-size: 2em;
+  font-size: var(--size-h1);
 }
 
 .sidebar-mask {
@@ -138,8 +145,8 @@ td {
 }
 
 .sk3-card {
-  padding: 0.7em;
-  margin: 0.35em;
+  padding: var(--margin-pad-full);
+  margin: var(--margin-pad-half);
   box-sizing: border-box;
 }
 
@@ -150,7 +157,7 @@ td {
 
 .sk3-card p {
   margin-block-end: 1px;
-  margin-block-start: 0.35em;
+  margin-block-start: var(--margin-pad-half);
 }
 
 .sk3-flex {
@@ -185,11 +192,11 @@ td {
 }
 
 .sk3-margin {
-  margin: 0.35em;
+  margin: var(--margin-pad-half);
 }
 
 .sk3-margin-10 {
-  margin: 0.7em;
+  margin: var(--margin-pad-full);
 }
 
 .sk3-margin-down {
@@ -197,23 +204,23 @@ td {
 }
 
 .sk3-margin-h {
-  margin-left: 0.35em;
-  margin-right: 0.35em;
+  margin-left: var(--margin-pad-half);
+  margin-right: var(--margin-pad-half);
 }
 
 .sk3-margin-h-10 {
-  margin-left: 0.7em;
-  margin-right: 0.7em;
+  margin-left: var(--margin-pad-full);
+  margin-right: var(--margin-pad-full);
 }
 
 .sk3-margin-v {
-  margin-top: 0.35em;
-  margin-bottom: 0.35em;
+  margin-top: var(--margin-pad-half);
+  margin-bottom: var(--margin-pad-half);
 }
 
 .sk3-margin-v-10 {
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
+  margin-top: var(--margin-pad-full);
+  margin-bottom: var(--margin-pad-full);
 }
 
 .sk3-no-dot {
@@ -221,35 +228,35 @@ td {
 }
 
 .sk3-pad {
-  padding: 0.35em;
+  padding: var(--margin-pad-half);
 }
 
 .sk3-pad-10 {
-  padding: 0.7em;
+  padding: var(--margin-pad-full);
 }
 
 .sk3-pad-down {
-  padding-top: 0.35em;
+  padding-top: var(--margin-pad-half);
 }
 
 .sk3-pad-h {
-  padding-left: 0.35em;
-  padding-right: 0.35em;
+  padding-left: var(--margin-pad-half);
+  padding-right: var(--margin-pad-half);
 }
 
 .sk3-pad-h-10 {
-  padding-left: 0.7em;
-  padding-right: 0.7em;
+  padding-left: var(--margin-pad-full);
+  padding-right: var(--margin-pad-full);
 }
 
 .sk3-pad-v {
-  padding-top: 0.35em;
-  padding-bottom: 0.35em;
+  padding-top: var(--margin-pad-half);
+  padding-bottom: var(--margin-pad-half);
 }
 
 .sk3-pad-v-10 {
-  padding-top: 0.7em;
-  padding-bottom: 0.7em;
+  padding-top: var(--margin-pad-full);
+  padding-bottom: var(--margin-pad-full);
 }
 
 .sk3-sub {
@@ -257,17 +264,17 @@ td {
 }
 
 sk3-pager {
-  font-size: 1.17em;
+  font-size: var(--size-h3);
   font-weight: bold;
-  padding-bottom: 0.3em;
-  padding-top: 0.3em;
+  padding-bottom: var(--margin-pad-half);
+  padding-top: var(--margin-pad-half);
 }
 
 sk3-pager li {
   list-style-type: none;
   display: inline-block;
-  padding-left: 0.3em;
-  padding-right: 0.3em;
+  padding-left: var(--margin-pad-half);
+  padding-right: var(--margin-pad-half);
 }
 
 sk3-pager ul {
@@ -275,11 +282,11 @@ sk3-pager ul {
 }
 
 sk3-social {
-  font-size: 2em;
+  font-size: var(--size-h1);
 }
 
 sk3-social a {
-	margin: 0.2em;
+  margin: var(--margin-pad-social);
 }
 
 sk3-toc {
@@ -292,18 +299,18 @@ sk3-toc li {
 
 sk3-toc ul {
   margin-left: 0;
-  padding-left: 0.35em;
+  padding-left: var(--margin-pad-half);
 }
 
 sk3-toc ul ul {
   margin-left: 0;
-  padding-left: 1.4em;
+  padding-left: var(--toc-pad);
 }
 
 /* svg */
 .sk3-social-fab {
-  height: 24px;
-  width: 24px;
+  height: var(--size-social-btn);
+  width: var(--size-social-btn);
   opacity: 0.7;
 
   fill: var(--link-color);
@@ -315,7 +322,7 @@ sk3-toc ul ul {
 
 /* Font Awesome webfont */
 .fab {
-  font-size: 24px;
+  font-size: var(--size-social-btn);
   padding: 2px;
   text-align: center;
   opacity: 0.7;
