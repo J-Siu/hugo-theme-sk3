@@ -97,9 +97,12 @@ kbd {
 }
 
 table {
-  border: 1px solid;
   border-collapse: collapse;
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 td,
