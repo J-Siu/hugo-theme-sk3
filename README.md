@@ -413,6 +413,12 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 - 0.9.4
   - Fix css spacing, kbd, social buttons, author box
   - Fix menu closing click through
+- 0.9.5
+  - Add `listlastmod`
+  - Fix H1 line height
+  - Fix Google Analytics
+  - Fix table for mobile screen
+  - Refactor css margin/padding/font size
 
 ### License
 
