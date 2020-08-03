@@ -13,6 +13,7 @@ paginate               = 15
 
 [Params]
 #adsense_id   = ""
+#listlastmod	= true
 #mainSections = "post"
 #pageinfobox  = true
 #pagewidth    = "1200px"

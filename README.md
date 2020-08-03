@@ -128,6 +128,15 @@ hugo server -D --bind :: \
 
   > Page width will automatically set to 100% on small screen.
 
+- List Last Modify Date
+
+  Use last modify date in list page.
+
+  ```toml
+  [Params]
+  listlastmod	= true
+  ```
+
 - Social links
 
   Social link buttons appear at the bottom of card/list page:
@@ -278,6 +287,7 @@ paginate               = 15
 
 [Params]
 #adsense_id   = ""
+#listlastmod  = true
 #mainSections = "post"
 #pagewidth    = "1200px"
 #startdate    = "2012-12-02"

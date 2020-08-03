@@ -39,9 +39,15 @@
 		{{range $paginator.Pages}}
 		<div class="sk3-card box">
 			<div class="sk3-flex">
-				<a class="sk3-flex-inline" href="{{.RelPermalink}}"><h3>{{.Title}}</h3></a>
+				<a class="sk3-flex-inline" href="{{.RelPermalink}}">
+					<h3>{{.Title}}</h3>
+				</a>
 				{{if site.Params.card.date}}
+				{{if and site.Params.listlastmod .Lastmod}}
 				{{with .Lastmod}}<div class="sk3-flex-right sk3-flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}
+				{{else}}
+				{{with .Date}}<div class="sk3-flex-right sk3-flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}
+				{{end}}
 				{{end}}
 			</div>
 			{{if site.Params.card.summary}}<div>{{.Summary}}</div>{{end}}
