@@ -312,6 +312,7 @@ paginate               = 15
 
 [Params]
 #adsense_id   = ""
+#favicon      = ""
 #listlastmod  = true
 #mainSections = "post"
 #pagewidth    = "1200px"
