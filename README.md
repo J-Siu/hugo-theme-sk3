@@ -99,6 +99,31 @@ hugo server -D --bind :: \
   mainSections = "post"
   ```
 
+- Favicon
+
+  Path of favicon of the published site.
+
+  If favicon `logo.svg` is put inside `static` like following:
+
+  ```sh
+  ./
+  ├── archetypes/
+  ├── content/
+  ├── public/
+  ├── resources/
+  ├── static/
+  │   └── logo.svg
+  ├── themes/
+  └── config.toml
+  ```
+
+  The final path will be `/logo.svg`:
+
+  ```toml
+  [Params]
+  favicon = "/logo.svg"
+  ```
+
 - Sub-title
 
   If defined, sub-title appear after site title in smaller font.

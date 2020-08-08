@@ -20,4 +20,6 @@
 		{{with site.Params.color.link}}:root{--link-color:{{.}};}{{end}}
 		{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
 	</style>
+	<!--favicon-->
+	{{with site.Params.favicon}}<link rel="shortcut icon" href="{{.}}">{{end}}
 </head>
