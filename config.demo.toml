@@ -17,6 +17,7 @@ relativeURLs           = true
 # mainSections = "post"
 # pagewidth    = "1200px"
 # startdate    = "2012-12-02"
+favicon     = "/img/favicon.ico"
 listlastmod	= true
 pageinfobox = true
 subtitle    = "A Hugo Theme"
