@@ -385,8 +385,8 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 
 ### Repository
 
-- [hugo-theme-sk1](https://github.com/J-Siu/hugo-theme-sk3) Fully functional basic Hugo theme with no css, no javascript.
-- [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk3) Fully functional basic Hugo theme with minimum css.
+- [hugo-theme-sk1](https://github.com/J-Siu/hugo-theme-sk1) Fully functional basic Hugo theme with no css, no javascript.
+- [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2) Fully functional basic Hugo theme with minimum css.
 - [hugo-theme-sk3](https://github.com/J-Siu/hugo-theme-sk3) Full feature Hugo theme with Google AdSense support.
 
 ### Contributors
