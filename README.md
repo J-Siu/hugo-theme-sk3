@@ -41,13 +41,13 @@ In site directory:
 - Using clone
 
   ```sh
-  git clone https://github.com/J-Siu/hugo-theme-sk3 theme/sk3
+  git clone https://github.com/J-Siu/hugo-theme-sk3 themes/sk3
   ```
 
 - Using submodule
 
   ```sh
-  git submodule add https://github.com/J-Siu/hugo-theme-sk3 theme/sk3
+  git submodule add https://github.com/J-Siu/hugo-theme-sk3 themes/sk3
   ```
 
 - Update submodule
