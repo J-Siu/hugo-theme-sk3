@@ -19,7 +19,7 @@
 
 	<!--$paginator-->
 	{{if .IsHome}}
-	{{.Scratch.Set "Paginator" (.Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections))}}
+	{{.Scratch.Set "Paginator" (.Paginate (where site.RegularPages "Type" "in" site.Params.mainSections))}}
 	{{else}}
 	{{.Scratch.Set "Paginator" .Paginator}}
 	{{end}}

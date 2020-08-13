@@ -1,8 +1,8 @@
-{{if .Site.Params.sociallink}}
+{{if site.Params.sociallink}}
 <sk3-social>
-	{{range .Site.Data.social.site}}
-	{{if isset $.Site.Params.sociallink .id}}
-	<a href="{{printf .url (index $.Site.Params.sociallink .id)}}" class="sk3-social-fab {{.cls}}"></a>
+	{{range site.Data.social.site}}
+	{{if isset site.Params.sociallink .id}}
+	<a href="{{printf .url (index site.Params.sociallink .id)}}" class="sk3-social-fab {{.cls}}"></a>
 	{{end}}
 	{{end}}
 </sk3-social>
