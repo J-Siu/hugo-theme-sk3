@@ -20,7 +20,6 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Si
   - [Page Info Style](#page-info-style)
   - [Per Page](#per-page)
 - [Sample Config](#sample-config)
-- [Default Favicon](#default-favicon)
 - [Font Awesome](#font-awesome)
 - [Thank You](#thank-you)
 - [Contributors](#contributors)
@@ -131,6 +130,13 @@ hugo server -D --bind :: \
   ```toml
   [Params]
   favicon = "/logo.svg"
+  ```
+
+  SK themes come with default favicon. To disable it:
+
+  ```sh
+  # At Hugo site root
+  touch static/favicon.ico
   ```
 
 - Sub-title
@@ -376,24 +382,6 @@ paginate               = 15
   [markup.tableOfContents]
   endLevel   = 6
   startLevel = 1
-```
-
-### Default Favicon
-
-SK themes come with default favicon.
-
-Disable default favicon:
-
-```sh
-# At Hugo site root
-touch static/favicon.ico
-```
-
-Override default favicon:
-
-```sh
-# At Hugo site root
-cp <your favicon.ico> static/favicon.ico
 ```
 
 ### Font Awesome
