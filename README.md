@@ -6,6 +6,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Si
 
 <!-- TOC -->
 
+- [SK Themes](#sk-themes)
 - [Sites](#sites)
 - [Install](#install)
 - [Testing](#testing)
@@ -21,12 +22,19 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Si
 - [Sample Config](#sample-config)
 - [Font Awesome](#font-awesome)
 - [Thank You](#thank-you)
-- [Repository](#repository)
 - [Contributors](#contributors)
 - [Change Log](#change-log)
 - [License](#license)
 
 <!-- /TOC -->
+
+### SK Themes
+
+Theme|GitHub|Hugo|Demo|Description
+---|---|---|---|---
+SK1|[hugo-theme-sk1](//github.com/J-Siu/hugo-theme-sk1)|[SK1](//themes.gohugo.io/hugo-theme-sk1/)|[sk1.jsiu.dev](//sk1.jsiu.dev/)|Fully functional basic Hugo theme with no css, no javascript.
+SK2|[hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2)|[SK2](//themes.gohugo.io/hugo-theme-sk2/)|[sk2.jsiu.dev](//sk2.jsiu.dev/)|Fully functional basic Hugo theme with minimum css.
+SK3|[hugo-theme-sk3](//github.com/J-Siu/hugo-theme-sk3)|[SK3](//themes.gohugo.io/hugo-theme-sk3/)|[sk3.jsiu.dev](//sk3.jsiu.dev/)|Full feature Hugo theme with Google AdSense support.
 
 ### Sites
 
@@ -383,12 +391,6 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 
 - SK3 inspired by [Vimux/Binario](https://github.com/Vimux/Binario). Check it out too!
 
-### Repository
-
-- [hugo-theme-sk1](https://github.com/J-Siu/hugo-theme-sk1) Fully functional basic Hugo theme with no css, no javascript.
-- [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2) Fully functional basic Hugo theme with minimum css.
-- [hugo-theme-sk3](https://github.com/J-Siu/hugo-theme-sk3) Full feature Hugo theme with Google AdSense support.
-
 ### Contributors
 
 - [John Sing Dao Siu](https://github.com/J-Siu)
@@ -447,6 +449,11 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
   - Fix Google Analytics
   - Fix table for mobile screen
   - Refactor css margin/padding/font size
+- 0.9.6
+  - Add default favicon.ico
+  - Remove <h1> from header.html & menu.html (Bing SEO)
+  - Standardize .Site. -> site.
+  - Update README.md
 
 ### License
 
