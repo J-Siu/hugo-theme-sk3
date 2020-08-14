@@ -1,6 +1,6 @@
 ## Hugo Theme - SK3 (Skeleton 3)
 
-Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2) with Google AdSense support.
+Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2) with Google AdSense support.
 
 ---
 
@@ -38,9 +38,9 @@ SK3|[hugo-theme-sk3](//github.com/J-Siu/hugo-theme-sk3)|[SK3](//themes.gohugo.io
 
 ### Sites
 
-John Siu Blog: https://johnsiu.com/
+John Siu Blog: [johnsiu.com](//johnsiu.com/)
 
-SK3 demo site: https://sk3.jsiu.dev/ with content from [hugoBasicExample](https://github.com/gohugoio/hugoBasicExample)
+SK3 demo site: [sk3.jsiu.dev](//sk3.jsiu.dev/) with content from [hugoBasicExample](//github.com/gohugoio/hugoBasicExample)
 
 ### Install
 
@@ -386,7 +386,7 @@ paginate               = 15
 
 ### Font Awesome
 
-Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Awesome) Brands([free](https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)).
+Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome) Brands([free](//fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)).
 
 `fa-svg-extract.sh` is used to extract icon from Font Awesome sprites/brands.svg.
 
@@ -396,11 +396,11 @@ Social buttons provided by [Font Awesome](https://github.com/FortAwesome/Font-Aw
 
 ### Thank You
 
-- SK3 inspired by [Vimux/Binario](https://github.com/Vimux/Binario). Check it out too!
+- SK3 inspired by [Vimux/Binario](//github.com/Vimux/Binario). Check it out too!
 
 ### Contributors
 
-- [John Sing Dao Siu](https://github.com/J-Siu)
+- [John Sing Dao Siu](//github.com/J-Siu)
 
 ### Change Log
 
