@@ -3,8 +3,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}</title>
-	<meta name="description" content="{{if .IsHome}}{{site.Params.description}}{{else}}{{(default .Title .Description)}}{{end}}">
+	<meta name="description" content="{{if .IsHome}}
+	{{site.Params.description}}
+	{{else}}
+	{{if .Description}}
+	{{.Description}}
+	{{else}}
+	{{site.Title}} - {{.Title}}
+	{{end}}
+	{{end}}">
 	{{with .Params.author}}<meta name="author" content="{{.}}">{{end}}
+	{{with .Language}}<meta http-equiv="content-language" content="{{.}}">{{end}}
 	<!--css-->
 	<link rel="stylesheet" href="{{relLangURL ""}}css/sk3.css">
 	<!--site.Params-->
