@@ -297,13 +297,15 @@ title       = "site title"
 
 - Disable Disqus
 - Disable Prev/Next
-- Disable table of content
+- Disable Related
+- Disable Table of Content
 
   To disable the above, in front matter:
 
-  ```toml
+  ```yaml
   comment = false
   prevnext = false
+  related = false
   toc = false
   ```
 

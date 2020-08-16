@@ -33,6 +33,7 @@
 {{end}}
 
 <!--related-->
+{{if (default true .Params.related)}}
 {{$related := site.RegularPages.Related . | first 5}}
 {{with $related}}
 <h3>See Also</h3>
@@ -41,4 +42,5 @@
 	<li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
 	{{end}}
 </ul>
+{{end}}
 {{end}}
