@@ -458,7 +458,7 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Refactor css margin/padding/font size
 - 0.9.6
   - Add default favicon.ico
-  - Remove <h1> from header.html & menu.html (Bing SEO)
+  - Remove H1 from header.html & menu.html (Bing SEO)
   - Standardize .Site. -> site.
   - Update README.md
 
