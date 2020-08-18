@@ -18,7 +18,14 @@
 </footer>
 
 <!--scripts-->
-{{if or site.Menus.main site.Params.socialshare}}
+{{if or site.Menus.main site.Params.socialshare (default true .Params.toc)}}
+<script>
+{{if site.Params.openToc}}
+openToc={{site.Params.openToc}}
+{{else}}
+openToc=false
+{{end}}
+</script>
 <script src="{{relLangURL ""}}js/sk3.js"></script>
 {{end}}
 

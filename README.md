@@ -107,6 +107,13 @@ hugo server -D --bind :: \
   mainSections = "post"
   ```
 
+- Table of Content(Toc) open by default
+
+  ```toml
+  [Params]
+  openToc = true
+  ```
+
 - Favicon
 
   Path of favicon of the published site.

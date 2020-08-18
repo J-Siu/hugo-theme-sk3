@@ -19,6 +19,7 @@ relativeURLs           = true
 # startdate    = "2012-12-02"
 favicon     = "/favicon.ico"
 listlastmod	= true
+openToc     = true
 pageinfobox = true
 subtitle    = "A Hugo Theme"
 svg_ext			= true
