@@ -20,13 +20,16 @@
 <!--scripts-->
 {{if or site.Menus.main site.Params.socialshare (default true .Params.toc)}}
 <script>
-{{if site.Params.openToc}}
-openToc={{site.Params.openToc}}
-{{else}}
-openToc=false
-{{end}}
+	openToc=false
+	{{with site.Params.openToc}}openToc={{.}}{{end}}
 </script>
 <script src="{{relLangURL ""}}js/sk3.js"></script>
+
+{{end}}
+
+<!--custom css-->
+{{range site.Params.custom_css}}
+<link rel="stylesheet" href="{{.|relURL}}">
 {{end}}
 
 <!--hugo internal template-->

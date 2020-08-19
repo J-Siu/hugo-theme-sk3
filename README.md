@@ -13,7 +13,19 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 - [Features](#features)
 - [Layout](#layout)
   - [Site](#site)
-  - [Color theme](#color-theme)
+    - [Main section type](#main-section-type)
+    - [Table of ContentToc open by default](#table-of-contenttoc-open-by-default)
+    - [Favicon](#favicon)
+    - [Sub-Title](#sub-title)
+    - [Copyright Start Year](#copyright-start-year)
+    - [Page Width](#page-width)
+    - [List Last Modify Date](#list-last-modify-date)
+    - [Custom CSS](#custom-css)
+    - [Custom Javascript](#custom-javascript)
+    - [SVG External](#svg-external)
+  - [Social Links](#social-links)
+  - [Social Share](#social-share)
+  - [Color Theme](#color-theme)
   - [Card/List](#cardlist)
   - [Google AdSense](#google-adsense)
   - [Twitter Cards / Opengraph](#twitter-cards--opengraph)
@@ -85,6 +97,8 @@ hugo server -D --bind :: \
 ### Features
 
 - [x] Blog
+- [x] Custom CSS
+- [x] Custom Javascript
 - [x] Customizable
 - [x] Disqus
 - [x] Google Adsense
@@ -98,93 +112,154 @@ hugo server -D --bind :: \
 
 #### Site
 
-- Main section type
+##### Main section type
 
-  For generating homepage list. Hugo default to section with most entries.
+For generating homepage list. Hugo default to section with most entries.
 
-  ```toml
-  [Params]
-  mainSections = "post"
-  ```
+```toml
+[Params]
+mainSections = "post"
+```
 
-- Table of Content(Toc) open by default
+##### Table of Content(Toc) open by default
 
-  ```toml
-  [Params]
-  openToc = true
-  ```
+```toml
+[Params]
+openToc = true
+```
 
-- Favicon
+##### Favicon
 
-  Path of favicon of the published site.
+Path of favicon of the published site.
 
-  If favicon `logo.svg` is put inside `static` like following:
+If favicon `logo.svg` is put inside `static` like following:
 
-  ```sh
-  ./
-  ├── archetypes/
-  ├── content/
-  ├── public/
-  ├── resources/
-  ├── static/
-  │   └── logo.svg
-  ├── themes/
-  └── config.toml
-  ```
+```sh
+./
+├── archetypes/
+├── content/
+├── public/
+├── resources/
+├── static/
+│   └── logo.svg
+├── themes/
+└── config.toml
+```
 
-  The final path will be `/logo.svg`:
+The final path will be `/logo.svg`:
 
-  ```toml
-  [Params]
-  favicon = "/logo.svg"
-  ```
+```toml
+[Params]
+favicon = "/logo.svg"
+```
 
-  SK themes come with default favicon. To disable it:
+SK themes come with default favicon. To disable it:
 
-  ```sh
-  # At Hugo site root
-  touch static/favicon.ico
-  ```
+```sh
+# At Hugo site root
+touch static/favicon.ico
+```
 
-- Sub-title
+##### Sub-Title
 
-  If defined, sub-title appear after site title in smaller font.
+If defined, sub-title appear after site title in smaller font.
 
-  ```toml
-  [Params]
-  subtitle  = "A Hugo Themes"
-  ```
+```toml
+[Params]
+subtitle  = "A Hugo Themes"
+```
 
-- Copyright start year
+##### Copyright Start Year
 
-  Year is extracted from `startdate` and generate copyright in format "2012-(current year)".
+Year is extracted from `startdate` and generate copyright in format "2012-(current year)".
 
-  > Site `copyright` override this behavior.
+> Site `copyright` override this behavior.
 
-  ```toml
-  [Params]
-  startdate = "2012-12-02"
-  ```
+```toml
+[Params]
+startdate = "2012-12-02"
+```
 
-- Page width (default: 1200px)
+##### Page Width
 
-  ```toml
-  [Params]
-  pagewidth = "1200px"
-  ```
+> default: 1200px
 
-  > Page width will automatically set to 100% on small screen.
+```toml
+[Params]
+pagewidth = "1200px"
+```
 
-- List Last Modify Date
+> Page width will automatically set to 100% on small screen.
 
-  Use last modify date in list page.
+##### List Last Modify Date
 
-  ```toml
-  [Params]
-  listlastmod	= true
-  ```
+Use last modify date in list page.
 
-- Social links
+```toml
+[Params]
+listlastmod	= true
+```
+
+##### Custom CSS
+
+If you add custom css files like following:
+
+```sh
+./
+├── archetypes/
+├── content/
+├── public/
+├── resources/
+├── static/
+│   └── css/
+│       ├── abc.css
+│       └── def.css
+├── themes/
+└── config.toml
+```
+
+The final path of your css files will be `/css/abc.css` and `/css/def.css`:
+
+```toml
+[Params]
+custom_css = ["/css/abc.css", "/css/def.css"]
+```
+
+##### Custom Javascript
+
+If you add custom javascript like following:
+
+```sh
+./
+├── archetypes/
+├── content/
+├── public/
+├── resources/
+├── static/
+│   └── js/
+│       ├── abc.js
+│       └── def.js
+├── themes/
+└── config.toml
+```
+
+The final path of your javascript files will be `/js/abc.js` and `/js/def.js`:
+
+```toml
+[Params]
+custom_js = ["/js/abc.js", "/js/def.js"]
+```
+
+##### SVG External
+
+Set `svg_ext` to `true` will load social icon using Font Awesome external css.
+
+```toml
+[Params]
+svg_ext = true
+```
+
+#### Social Links
 
   Social link buttons appear at the bottom of card/list page:
 
@@ -203,7 +278,7 @@ hugo server -D --bind :: \
 	youtubeuser    = ""
   ```
 
-- Social share
+#### Social Share
 
   Social share buttons appear at the bottom of regular page:
 
@@ -219,16 +294,7 @@ hugo server -D --bind :: \
 	vk        = true
   ````
 
-- SVG External
-
-  Set `svg_ext` to `true` will load social icon using Font Awesome external css.
-
-  ```toml
-  [Params]
-  svg_ext			= true
-  ```
-
-#### Color theme
+#### Color Theme
 
 - Default dark theme
 
@@ -336,13 +402,15 @@ paginate               = 15
 
 [Params]
 #adsense_id   = ""
-#favicon      = ""
+#custom_css   = ["/css/abc.css", "/css/def.css"]
+#custom_js    = ["/js/abc.js", "/js/def.js"]
+#favicon      = "/favicon.ico"
 #listlastmod  = true
 #mainSections = "post"
 #pagewidth    = "1200px"
 #startdate    = "2012-12-02"
 #subtitle     = "A Hugo Theme"
-#svg_ext			= true
+#svg_ext      = true
 
 # Fill in following if using opengraph / twitter card
 #opengraph   = true
@@ -353,7 +421,7 @@ paginate               = 15
   [Params.card]
   date    = true
   summary = true
-  #width   = "32%"
+  #width  = "32%"
 
 	# [Params.color]
 	# bg     = "#181a1b"

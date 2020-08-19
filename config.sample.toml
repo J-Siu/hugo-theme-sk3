@@ -13,6 +13,8 @@ paginate               = 15
 
 [Params]
 #adsense_id   = ""
+#custom_css   = ["/css/abc.css", "/css/def.css"]
+#custom_js    = ["/js/abc.js", "/js/def.js"]
 #favicon      = ""
 #listlastmod	= true
 #mainSections = "post"

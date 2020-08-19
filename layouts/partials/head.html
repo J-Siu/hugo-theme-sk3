@@ -31,4 +31,8 @@
 	</style>
 	<!--favicon-->
 	{{with site.Params.favicon}}<link rel="icon" href="{{.}}">{{end}}
+	<!--custom scripts-->
+	{{range site.Params.custom_js}}
+	<script src="{{.|relURL}}"></script>
+	{{end}}
 </head>
