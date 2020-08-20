@@ -13,8 +13,8 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 - [Features](#features)
 - [Layout](#layout)
   - [Site](#site)
-    - [Main section type](#main-section-type)
-    - [Table of ContentToc open by default](#table-of-contenttoc-open-by-default)
+    - [Main Section Type](#main-section-type)
+    - [Table of ContentToc Open By Default](#table-of-contenttoc-open-by-default)
     - [Favicon](#favicon)
     - [Sub-Title](#sub-title)
     - [Copyright Start Year](#copyright-start-year)
@@ -22,6 +22,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
     - [List Last Modify Date](#list-last-modify-date)
     - [Custom CSS](#custom-css)
     - [Custom Javascript](#custom-javascript)
+    - [User-declared Canonical](#user-declared-canonical)
     - [SVG External](#svg-external)
   - [Social Links](#social-links)
   - [Social Share](#social-share)
@@ -112,7 +113,7 @@ hugo server -D --bind :: \
 
 #### Site
 
-##### Main section type
+##### Main Section Type
 
 For generating homepage list. Hugo default to section with most entries.
 
@@ -121,7 +122,7 @@ For generating homepage list. Hugo default to section with most entries.
 mainSections = "post"
 ```
 
-##### Table of Content(Toc) open by default
+##### Table of Content(Toc) Open By Default
 
 ```toml
 [Params]
@@ -249,6 +250,17 @@ The final path of your javascript files will be `/js/abc.js` and `/js/def.js`:
 [Params]
 custom_js = ["/js/abc.js", "/js/def.js"]
 ```
+
+##### User-declared Canonical
+
+> Only use this if site require __user-declared canonical__ meta. This is not related to [Hugo Canonicalization](//gohugo.io/content-management/urls/#canonicalization) nor `canonifyurls`.
+
+```toml
+[Params]
+user_canonical = true
+```
+
+A `rel="canonical"` meta link with absolute URL will be added to each page.
 
 ##### SVG External
 
@@ -401,16 +413,17 @@ paginate               = 15
 #googleAnalytics = ""
 
 [Params]
-#adsense_id   = ""
-#custom_css   = ["/css/abc.css", "/css/def.css"]
-#custom_js    = ["/js/abc.js", "/js/def.js"]
-#favicon      = "/favicon.ico"
-#listlastmod  = true
-#mainSections = "post"
-#pagewidth    = "1200px"
-#startdate    = "2012-12-02"
-#subtitle     = "A Hugo Theme"
-#svg_ext      = true
+#adsense_id     = ""
+#custom_css     = ["/css/abc.css", "/css/def.css"]
+#custom_js      = ["/js/abc.js", "/js/def.js"]
+#favicon        = "/favicon.ico"
+#listlastmod    = true
+#mainSections   = "post"
+#pagewidth      = "1200px"
+#startdate      = "2012-12-02"
+#subtitle       = "A Hugo Theme"
+#svg_ext        = true
+#user_canonical = false
 
 # Fill in following if using opengraph / twitter card
 #opengraph   = true

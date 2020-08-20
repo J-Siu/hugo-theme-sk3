@@ -17,12 +17,13 @@ relativeURLs           = true
 # mainSections = "post"
 # pagewidth    = "1200px"
 # startdate    = "2012-12-02"
-favicon     = "/favicon.ico"
-listlastmod	= true
-openToc     = true
-pageinfobox = true
-subtitle    = "A Hugo Theme"
-svg_ext			= true
+favicon        = "/favicon.ico"
+listlastmod    = true
+openToc        = true
+pageinfobox    = true
+subtitle       = "A Hugo Theme"
+svg_ext        = true
+user_canonical = false
 
 # Fill in following if using opengraph / twitter card
 description = "Hugo Theme SK3 Demo Site"
@@ -30,75 +31,75 @@ opengraph   = true
 title       = "Hugo Theme SK3 Demo Site"
 twitercards = true
 
-	[Params.card]
-	date    = true
-	summary = true
-	# width   = "32%"
+[Params.card]
+date    = true
+summary = true
+# width = "32%"
 
-	# [Params.color]
-	# bg     = "#181a1b"
-	# border = "white"
-	# link   = "#3d84ff"
-	# text   = "white"
+# [Params.color]
+# bg     = "#181a1b"
+# border = "white"
+# link   = "#3d84ff"
+# text   = "white"
 
-	[Params.sociallink]
-	facebook       = "john.siu.714"
-	flickr         = "johnsiu-com"
-	github         = "J-Siu"
-	instagram      = "john.sd.siu"
-	linkedin       = "john-sing-dao-siu"
-	pinterest      = "johnsdsiu"
-	reddit         = "js1943"
-	stack-exchange = "1882213"
-	stack-overflow = "1810391"
-	tumblr         = "jsds"
-	twitter        = "JohnSiuCom"
-	vimeo          = "user88929197"
-	youtubechannel = "UC5LvdqfL2PubOp904UnUJAg"
-	youtubeuser    = "JohnSDSiu"
+[Params.sociallink]
+facebook       = "john.siu.714"
+flickr         = "johnsiu-com"
+github         = "J-Siu"
+instagram      = "john.sd.siu"
+linkedin       = "john-sing-dao-siu"
+pinterest      = "johnsdsiu"
+reddit         = "js1943"
+stack-exchange = "1882213"
+stack-overflow = "1810391"
+tumblr         = "jsds"
+twitter        = "JohnSiuCom"
+vimeo          = "user88929197"
+youtubechannel = "UC5LvdqfL2PubOp904UnUJAg"
+youtubeuser    = "JohnSDSiu"
 
-	[Params.socialshare]
-	facebook  = true
-	linkedin  = true
-	pinterest = true
-	reddit    = true
-	telegram  = true
-	twitter   = true
-	vk        = true
+[Params.socialshare]
+facebook  = true
+linkedin  = true
+pinterest = true
+reddit    = true
+telegram  = true
+twitter   = true
+vk        = true
 
 [markup]
 defaultMarkdownHandler = "goldmark"
 
-	[markup.highlight]
-	codeFences         = true
-	guessSyntax        = false
-	hl_Lines           = ""
-	lineNoStart        = 1
-	lineNos            = true
-	lineNumbersInTable = true
-	noClasses          = true
-	style              = "fruity"
-	tabWidth           = 4
+[markup.highlight]
+codeFences         = true
+guessSyntax        = false
+hl_Lines           = ""
+lineNoStart        = 1
+lineNos            = true
+lineNumbersInTable = true
+noClasses          = true
+style              = "fruity"
+tabWidth           = 4
 
-	[markup.tableOfContents]
-	endLevel   = 6
-	ordered    = false
-	startLevel = 1
+[markup.tableOfContents]
+endLevel   = 6
+ordered    = false
+startLevel = 1
 
-	[markup.goldmark]
-		[markup.goldmark.extensions]
-		definitionList = true
-		footnote       = true
-		linkify        = true
-		strikethrough  = true
-		table          = true
-		taskList       = true
-		typographer    = true
-		[markup.goldmark.parser]
-		attribute         = true
-		autoHeadingID     = true
-		autoHeadingIDType = "github"
-		[markup.goldmark.renderer]
-		hardWraps = false
-		unsafe    = true
-		xhtml     = false
+[markup.goldmark]
+[markup.goldmark.extensions]
+definitionList = true
+footnote       = true
+linkify        = true
+strikethrough  = true
+table          = true
+taskList       = true
+typographer    = true
+[markup.goldmark.parser]
+attribute         = true
+autoHeadingID     = true
+autoHeadingIDType = "github"
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe    = true
+xhtml     = false

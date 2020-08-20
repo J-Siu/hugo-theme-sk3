@@ -1,4 +1,4 @@
-description = "Full feature Hugo theme build on top of [hugo-theme-sk2](https://github.com/J-Siu/hugo-theme-sk2)."
+description = "Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2)."
 features    = []
 homepage    = "https://sk3.jsiu.dev/"
 license     = "MIT"
