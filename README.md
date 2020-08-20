@@ -551,6 +551,13 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Remove H1 from header.html & menu.html (Bing SEO)
   - Standardize .Site. -> site.
   - Update README.md
+- 0.9.7
+  - Add custom css and js support
+  - Add open toc by default
+  - Add page related (enable/disable)
+  - Add user-declared canonical support
+  - Fix footer alignment
+  - Update favicon instructions
 
 ### License
 
