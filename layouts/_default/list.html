@@ -20,6 +20,8 @@
 	<!--$paginator-->
 	{{if .IsHome}}
 	{{.Scratch.Set "Paginator" (.Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections))}}
+	{{else if eq .Kind "taxonomy"}}
+	{{.Scratch.Set "Paginator" (.Paginate .Pages.ByTitle)}}
 	{{else}}
 	{{.Scratch.Set "Paginator" .Paginator}}
 	{{end}}
