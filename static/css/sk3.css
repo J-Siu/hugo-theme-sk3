@@ -296,6 +296,12 @@ sk3-pager ul {
   padding: 0;
 }
 
+sk3-pager li.active {
+  border: 1px solid;
+  border-color: var(--link-color);
+  ;
+}
+
 sk3-social {
   font-size: var(--size-h1);
 }
