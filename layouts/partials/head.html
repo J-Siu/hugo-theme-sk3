@@ -15,25 +15,18 @@
 	{{with .Params.author}}<meta name="author" content="{{.}}">{{end}}
 	{{with .Language}}<meta http-equiv="content-language" content="{{.}}">{{end}}
 	{{if site.Params.user_canonical}}<link rel="canonical" href="{{absURL .Permalink}}"/>{{end}}
-	<!--css-->
-	<link rel="stylesheet" href="{{relLangURL ""}}css/sk3.css">
-	<!--site.Params-->
-	<style>
-		{{with site.Params.card.width}}
-		@media only screen and (min-width: 993px){:root{--card-width: {{.}};}}
-		{{end}}
-		{{with site.Params.pagewidth}}
-		@media only screen and (min-width: 993px){:root{--html-width: {{.}};}}
-		{{end}}
-		{{with site.Params.color.bg}}:root{--bg-color:{{.}};}{{end}}
-		{{with site.Params.color.border}}:root{--border-color:{{.}};}{{end}}
-		{{with site.Params.color.link}}:root{--link-color:{{.}};}{{end}}
-		{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
-	</style>
 	<!--favicon-->
 	{{with site.Params.favicon}}<link rel="icon" href="{{.}}">{{end}}
+	<!--scripts-->
+	{{if or site.Menus.main site.Params.socialshare (default true .Params.toc)}}
+	<script>
+		openToc=false
+		{{with site.Params.openToc}}openToc={{.}}{{end}}
+	</script>
+	<script async src="{{relLangURL ""}}js/sk3.js"></script>
+	{{end}}
 	<!--custom scripts-->
 	{{range site.Params.custom_js}}
-	<script src="{{.|relURL}}"></script>
+	<script defer src="{{.|relURL}}"></script>
 	{{end}}
 </head>

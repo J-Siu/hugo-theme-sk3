@@ -17,16 +17,21 @@
 
 </footer>
 
-<!--scripts-->
-{{if or site.Menus.main site.Params.socialshare (default true .Params.toc)}}
-<script>
-	openToc=false
-	{{with site.Params.openToc}}openToc={{.}}{{end}}
-</script>
-<script src="{{relLangURL ""}}js/sk3.js"></script>
-
-{{end}}
-
+<!--css-->
+<link rel="stylesheet" href="{{relLangURL ""}}css/sk3.css">
+<!--site.Params-->
+<style>
+	{{with site.Params.card.width}}
+	@media only screen and (min-width: 993px){:root{--card-width: {{.}};}}
+	{{end}}
+	{{with site.Params.pagewidth}}
+	@media only screen and (min-width: 993px){:root{--html-width: {{.}};}}
+	{{end}}
+	{{with site.Params.color.bg}}:root{--bg-color:{{.}};}{{end}}
+	{{with site.Params.color.border}}:root{--border-color:{{.}};}{{end}}
+	{{with site.Params.color.link}}:root{--link-color:{{.}};}{{end}}
+	{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
+</style>
 <!--custom css-->
 {{range site.Params.custom_css}}
 <link rel="stylesheet" href="{{.|relURL}}">
