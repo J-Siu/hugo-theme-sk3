@@ -36,18 +36,12 @@
 {{range site.Params.custom_css}}
 <link rel="stylesheet" href="{{.|relURL}}">
 {{end}}
-
 <!--hugo internal template-->
-{{if site.GoogleAnalytics}}{{template "_internal/google_analytics_async.html" .}}{{end}}
 {{if site.Params.opengraph}}{{template "_internal/opengraph.html" .}}{{end}}
 {{if site.Params.twittercards}}{{template "_internal/twitter_cards.html" .}}{{end}}
-
 <!--svg-->
 {{if site.Params.svg_ext}}
 <link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
 {{else}}
 {{partial "sk3-fa-brands.svg" .}}
 {{end}}
-
-<!--AdSense-->
-{{partial "adsense.html" .}}

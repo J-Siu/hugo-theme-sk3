@@ -25,6 +25,10 @@
 	</script>
 	<script async src="{{relLangURL ""}}js/sk3.js"></script>
 	{{end}}
+	<!--Google-->
+	{{if site.GoogleAnalytics}}{{template "_internal/google_analytics_async.html" .}}{{end}}
+	<!--AdSense-->
+	{{partial "adsense.html" .}}
 	<!--custom scripts-->
 	{{range site.Params.custom_js}}
 	<script defer src="{{.|relURL}}"></script>
