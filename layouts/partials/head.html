@@ -31,6 +31,16 @@
 		{{with site.Params.color.border}}:root{--color-border:{{.}};}{{end}}
 		{{with site.Params.color.link}}:root{--color-link:{{.}};}{{end}}
 		{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
+		{{if .IsHome}}
+		/*
+			In single/index page, H1 is smaller than H2
+			In Home page, where there is no page title, H1 same size as H2
+		*/
+		:root{
+			--h1-ln-h-using: var(--h2-ln-h);
+			--h1-size-using: var(--h2-size);
+		}
+		{{end}}
 	</style>
 	<!--custom css-->
 	{{range site.Params.custom_css}}

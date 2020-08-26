@@ -1,7 +1,7 @@
 // menu
 
 function _menu_button(ev) {
-	var c = document.getElementsByClassName("menu-bar");
+	var c = document.getElementsByClassName("sk3-sidebar-trigger");
 	for (var j = 0; j < c.length; j++) {
 		if (c[j].style.display === "block") {
 			c[j].style.display = "none"
@@ -14,7 +14,7 @@ function _menu_button(ev) {
 }
 
 function _menu_init() {
-	var m = document.getElementsByClassName("menu-btn");
+	var m = document.getElementsByClassName("sk3-sidebar-btn");
 	for (var i = 0; i < m.length; i++) {
 		m[i].addEventListener("click", _menu_button, false)
 	}

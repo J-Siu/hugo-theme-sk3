@@ -1,10 +1,10 @@
 <!--Menu Bar-->
-<nav class="sidebar box-right sk3-no-dot menu-bar">
+<nav class="sk3-sidebar box-right sk3-sidebar-trigger">
 	<div></div>
 	<!--Social Share-->
 	{{if site.Params.socialshare}}
 	<hr>
-	<div class="sk3-flex sk3-pad-h-10 sk3-flex-center-h">
+	<div class="sk3-flex sk3-pad-h-full sk3-flex-center-h">
 		<b>Share</b> {{partial "social-share.html" .}}
 	</div>
 	{{end}}
@@ -12,7 +12,7 @@
 	<!--Menu-->
 	{{if site.Menus}}
 	<hr>
-	<ul class="sk3-pad-h-10 sk3-menu-item sk3-no-dot">
+	<ul class="sk3-pad-h-full sk3-sidebar-list-item">
 		{{$currentPage := .}}
 		{{range site.Menus.main}}
 		{{if .HasChildren}}
@@ -45,7 +45,7 @@
 
 	{{if site.Params.sociallink}}
 	<hr>
-	<div class="sk3-flex sk3-pad-h-10 sk3-flex-center-h">
+	<div class="sk3-flex sk3-pad-h-full sk3-flex-center-h">
 		<b>Follow</b> {{partial "social-link.html" .}}
 	</div>
 	{{end}}
@@ -53,4 +53,4 @@
 	<hr>
 
 </nav>
-<div class="sidebar-mask menu-bar menu-btn"></div>
+<div class="sk3-sidebar-mask sk3-sidebar-btn sk3-sidebar-trigger"></div>

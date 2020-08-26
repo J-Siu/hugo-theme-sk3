@@ -2,11 +2,11 @@
 
 	<!--Menu-->
 	{{if or site.Menus site.Params.socialshare site.Params.sociallink}}
-	{{partial "menu.html" .}}
+	{{partial "sidebar.html" .}}
 	{{end}}
 	<!--Title Bar-->
 	<div class="sk3-flex">
-		<div class="menu-btn sk3-flex-center-v sk3-margin-r">☰</div>
+		<div class="sk3-sidebar-btn">☰</div>
 		<a class="sk3-title-pad-left sk3-margin-r" href="{{relLangURL ""}}"><h1>{{site.Title}}</h1></a>
 		{{with site.Params.subtitle}}<span class="sk3-sub-title">{{.}}</span>{{end}}
 	</div>

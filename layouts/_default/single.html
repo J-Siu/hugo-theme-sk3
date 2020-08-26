@@ -15,7 +15,7 @@
 	<!--TOC-->
 	{{if (default true .Params.toc)}}
 	{{if and (ge (len .TableOfContents) 100) (ne .Params.toc "false")}}
-	<section class="box sk3-margin-v-10">
+	<section class="box sk3-margin-v-full">
 		<div class="collapsible">☰ Table of Content</div>
 		<sk3-toc>{{.TableOfContents}}</sk3-toc>
 	</section>
@@ -23,12 +23,12 @@
 	{{end}}
 
 	<!--Content-->
-	{{with .Content}}<content class="sk3-margin-v-10">{{.}}</content>{{end}}
+	{{with .Content}}<content class="sk3-margin-v-full">{{.}}</content>{{end}}
 
 	<div></div>
 
 	<!--Page Info-->
-	<section class="sk3-margin-v-10">
+	<section class="sk3-margin-v-full">
 		{{if site.Params.pageinfobox}}
 		{{partial "pageinfo-box.html" .}}
 		{{else}}
