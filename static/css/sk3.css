@@ -217,6 +217,10 @@ td {
   margin-bottom: auto;
 }
 
+.sk3-font-bold{
+	font-weight: bold;
+}
+
 .sk3-margin {
   margin: var(--margin-pad-half);
 }
@@ -251,6 +255,11 @@ td {
 .sk3-margin-v-10 {
   margin-top: var(--margin-pad-full);
   margin-bottom: var(--margin-pad-full);
+}
+
+.sk3-menu-item {
+	font-weight: bold;
+  list-style-type: none;
 }
 
 .sk3-no-dot {

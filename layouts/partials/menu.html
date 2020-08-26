@@ -12,7 +12,7 @@
 	<!--Menu-->
 	{{if site.Menus}}
 	<hr>
-	<h4 class="sk3-pad-h-10">
+	<ul class="sk3-pad-h-10 sk3-menu-item sk3-no-dot">
 		{{$currentPage := .}}
 		{{range site.Menus.main}}
 		{{if .HasChildren}}
@@ -38,7 +38,7 @@
 		</li>
 		{{end}}
 		{{end}}
-	</h4>
+	</ul>
 	{{end}}
 
 	<!--Social Link-->
