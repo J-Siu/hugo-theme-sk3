@@ -17,6 +17,27 @@
 	{{if site.Params.user_canonical}}<link rel="canonical" href="{{absURL .Permalink}}"/>{{end}}
 	<!--favicon-->
 	{{with site.Params.favicon}}<link rel="icon" href="{{.}}">{{end}}
+
+	<!--css-->
+	<link rel="stylesheet" href="{{relLangURL ""}}css/sk3.css">
+	<!--site.Params-->
+	<style>
+		{{with site.Params.card.width}}
+		@media only screen and (min-width: 993px){:root{--width-card: {{.}};}}
+		{{end}}
+		{{with site.Params.pagewidth}}
+		@media only screen and (min-width: 993px){:root{--width-html: {{.}};}}
+		{{end}}
+		{{with site.Params.color.bg}}:root{--color-bg:{{.}};}{{end}}
+		{{with site.Params.color.border}}:root{--color-border:{{.}};}{{end}}
+		{{with site.Params.color.link}}:root{--color-link:{{.}};}{{end}}
+		{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
+	</style>
+	<!--custom css-->
+	{{range site.Params.custom_css}}
+	<link rel="stylesheet" href="{{.|relURL}}">
+	{{end}}
+
 	<!--scripts-->
 	{{if or site.Menus.main site.Params.socialshare (default true .Params.toc)}}
 	<script>
@@ -32,5 +53,12 @@
 	<!--custom scripts-->
 	{{range site.Params.custom_js}}
 	<script src="{{.|relURL}}"></script>
+	{{end}}
+
+	<!--svg-->
+	{{if site.Params.svg_ext}}
+	<link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
+	{{else}}
+	{{partial "sk3-fa-brands.svg" .}}
 	{{end}}
 </head>

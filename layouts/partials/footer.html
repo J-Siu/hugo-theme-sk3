@@ -17,31 +17,6 @@
 
 </footer>
 
-<!--css-->
-<link rel="stylesheet" href="{{relLangURL ""}}css/sk3.css">
-<!--site.Params-->
-<style>
-	{{with site.Params.card.width}}
-	@media only screen and (min-width: 993px){:root{--width-card: {{.}};}}
-	{{end}}
-	{{with site.Params.pagewidth}}
-	@media only screen and (min-width: 993px){:root{--width-html: {{.}};}}
-	{{end}}
-	{{with site.Params.color.bg}}:root{--color-bg:{{.}};}{{end}}
-	{{with site.Params.color.border}}:root{--color-border:{{.}};}{{end}}
-	{{with site.Params.color.link}}:root{--color-link:{{.}};}{{end}}
-	{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
-</style>
-<!--custom css-->
-{{range site.Params.custom_css}}
-<link rel="stylesheet" href="{{.|relURL}}">
-{{end}}
 <!--hugo internal template-->
 {{if site.Params.opengraph}}{{template "_internal/opengraph.html" .}}{{end}}
 {{if site.Params.twittercards}}{{template "_internal/twitter_cards.html" .}}{{end}}
-<!--svg-->
-{{if site.Params.svg_ext}}
-<link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
-{{else}}
-{{partial "sk3-fa-brands.svg" .}}
-{{end}}
