@@ -6,9 +6,9 @@
 	{{end}}
 	<!--Title Bar-->
 	<div class="sk3-flex">
-		<div class="sk3-flex-center-v header-h1 menu-button">☰</div>
-		<a class="sk3-margin-h" href="{{relLangURL ""}}"><div class="header-h1">{{site.Title}}</div></a>
-		{{with site.Params.subtitle}}<h3 class="sk3-sub sk3-flex-center-v">{{.}}</h3>{{end}}
+		<div class="menu-btn sk3-flex-center-v sk3-margin-r">☰</div>
+		<a class="sk3-title-pad-left sk3-margin-r" href="{{relLangURL ""}}"><h1>{{site.Title}}</h1></a>
+		{{with site.Params.subtitle}}<span class="sk3-sub-title">{{.}}</span>{{end}}
 	</div>
 
 </header>

@@ -1,20 +1,25 @@
 :root {
-  --bg-color: #181a1b;
-  --border-color: white;
-  --card-width: 32%;
+  --color-bg: #181a1b;
+  --color-border: white;
+  --color-link: #3d84ff;
+  --color-txt: white;
   --font-size: 1em;
-  --html-width: 1200px;
-  --line-height: 1.429em;
-  --link-color: #3d84ff;
+  --h1-ln-h: 1em;
+  --h1-size: 1.6em;
+  --h2-ln-h: 1em;
+  --h2-size: 2em;
+  --h3-size: 1.17em;
+  --ln-h: 1.429em;
   --margin-pad-full: 0.7em;
   --margin-pad-half: 0.35em;
   --margin-pad-social: 0.2em;
   --sidebar-width: 200px;
-  --size-h1: 2em;
-  --size-h3: 1.17em;
-  --size-social-btn: 24px;
-  --text-color: white;
+  --sidebar-pad-down: 2.3em;
+  --social-btn-size: 24px;
+  --sub-title-ln-h: 1.6em;
   --toc-pad: 1.4em;
+  --width-card: 32%;
+  --width-html: 1200px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -25,32 +30,37 @@
 
 @media only screen and (min-width: 993px) {
   .sk3-card {
-    width: var(--card-width);
+    width: var(--width-card);
   }
 }
 
 h1 {
-  font-size: var(--size-h1);
-  line-height: var(--line-height);
+  font-size: var(--h1-size);
+  line-height: var(--h1-ln-h);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  line-height: var(--h2-ln-h);
 }
 
 h3 {
-  font-size: var(--size-h3);
+  font-size: var(--h3-size);
 }
 
 html {
-  background-color: var(--bg-color);
-  border-color: var(--border-color);
-  color: var(--text-color);
+  background-color: var(--color-bg);
+  border-color: var(--color-border);
+  color: var(--color-txt);
   font-family: Arial, Helvetica, sans-serif, "Lucida Console", Monaco, monospace;
   font-size: var(--font-size);
-  line-height: var(--line-height);
+  line-height: var(--ln-h);
 }
 
 body {
   margin-left: auto;
   margin-right: auto;
-  max-width: var(--html-width);
+  max-width: var(--width-html);
 }
 
 #content,
@@ -61,7 +71,7 @@ footer {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -70,9 +80,7 @@ a:hover {
 }
 
 header a,
-header h2,
-header h3,
-header h4 {
+header h1 {
   margin-block-end: 0;
   margin-block-start: 0;
   margin: 0;
@@ -82,7 +90,7 @@ header h4 {
 }
 
 img {
-	display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   max-width: 100%;
@@ -124,10 +132,12 @@ td {
   border-top: 1px solid;
 }
 
-.header-h1 {
-  font-size: var(--size-h1);
+.menu-btn {
+  font-size: var(--h1-size);
   font-weight: bold;
-  line-height: var(--line-height);
+  line-height: var(--h1-ln-h);
+  position: fixed !important;
+  z-index: 3;
 }
 
 .txt-center-h {
@@ -139,11 +149,11 @@ td {
 }
 
 .sidebar {
-  background-color: var(--bg-color);
+  background-color: var(--color-bg);
   bottom: 0;
   display: none;
   overflow: auto;
-  padding-top: var(--margin-pad-full);
+  padding-top: var(--sidebar-pad-down);
   position: fixed !important;
   top: 0;
   width: var(--sidebar-width);
@@ -151,11 +161,9 @@ td {
 }
 
 .sidebar-mask {
-  /* background-color: white; */
   bottom: 0;
   display: none;
   left: 0;
-  /* opacity: 15%; */
   position: fixed !important;
   right: 0;
   top: 0;
@@ -231,6 +239,10 @@ td {
   margin-right: var(--margin-pad-full);
 }
 
+.sk3-margin-r {
+  margin-right: var(--margin-pad-half);
+}
+
 .sk3-margin-v {
   margin-top: var(--margin-pad-half);
   margin-bottom: var(--margin-pad-half);
@@ -257,6 +269,10 @@ td {
   padding-top: var(--margin-pad-half);
 }
 
+.sk3-pad-down-full {
+  padding-top: var(--margin-pad-full);
+}
+
 .sk3-pad-h {
   padding-left: var(--margin-pad-half);
   padding-right: var(--margin-pad-half);
@@ -277,12 +293,26 @@ td {
   padding-bottom: var(--margin-pad-full);
 }
 
+.sk3-sub-title {
+  font-size: var(--h3-size);
+  font-weight: bold;
+  line-height: var(--sub-title-ln-h);
+}
+
 .sk3-sub {
   font-variant-position: sub;
 }
 
+.sk3-sup {
+  font-variant-position: super;
+}
+
+.sk3-title-pad-left {
+  padding-left: var(--h1-size);
+}
+
 sk3-pager {
-  font-size: var(--size-h3);
+  font-size: var(--h3-size);
   font-weight: bold;
   padding-bottom: var(--margin-pad-half);
   padding-top: var(--margin-pad-half);
@@ -301,12 +331,12 @@ sk3-pager ul {
 
 sk3-pager li.active {
   border: 1px solid;
-  border-color: var(--link-color);
+  border-color: var(--color-link);
   ;
 }
 
 sk3-social {
-  font-size: var(--size-h1);
+  font-size: var(--h1-size);
 }
 
 sk3-social a {
@@ -333,11 +363,11 @@ sk3-toc ul ul {
 
 /* svg */
 .sk3-social-fab {
-  height: var(--size-social-btn);
-  width: var(--size-social-btn);
+  height: var(--social-btn-size);
+  width: var(--social-btn-size);
   opacity: 0.7;
 
-  fill: var(--link-color);
+  fill: var(--color-link);
 }
 
 .sk3-social-fab:hover {
@@ -346,7 +376,7 @@ sk3-toc ul ul {
 
 /* Font Awesome webfont */
 .fab {
-  font-size: var(--size-social-btn);
+  font-size: var(--social-btn-size);
   padding: 2px;
   text-align: center;
   opacity: 0.7;

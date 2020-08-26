@@ -22,14 +22,14 @@
 <!--site.Params-->
 <style>
 	{{with site.Params.card.width}}
-	@media only screen and (min-width: 993px){:root{--card-width: {{.}};}}
+	@media only screen and (min-width: 993px){:root{--width-card: {{.}};}}
 	{{end}}
 	{{with site.Params.pagewidth}}
-	@media only screen and (min-width: 993px){:root{--html-width: {{.}};}}
+	@media only screen and (min-width: 993px){:root{--width-html: {{.}};}}
 	{{end}}
-	{{with site.Params.color.bg}}:root{--bg-color:{{.}};}{{end}}
-	{{with site.Params.color.border}}:root{--border-color:{{.}};}{{end}}
-	{{with site.Params.color.link}}:root{--link-color:{{.}};}{{end}}
+	{{with site.Params.color.bg}}:root{--color-bg:{{.}};}{{end}}
+	{{with site.Params.color.border}}:root{--color-border:{{.}};}{{end}}
+	{{with site.Params.color.link}}:root{--color-link:{{.}};}{{end}}
 	{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
 </style>
 <!--custom css-->
