@@ -13,7 +13,6 @@
 	{{end}}
 	{{end}}">
 	{{with .Params.author}}<meta name="author" content="{{.}}">{{end}}
-	{{with .Language}}<meta http-equiv="content-language" content="{{.}}">{{end}}
 	{{if site.Params.user_canonical}}<link rel="canonical" href="{{absURL .Permalink}}"/>{{end}}
 	<!--favicon-->
 	{{with site.Params.favicon}}<link rel="icon" href="{{.}}">{{end}}
