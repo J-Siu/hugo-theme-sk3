@@ -50,10 +50,9 @@
 		{{with site.Params.color.border}}:root{--color-border:{{.}};}{{end}}
 		{{with site.Params.color.link}}:root{--color-link:{{.}};}{{end}}
 		{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
-
-		/* H1 size */
 		{{if .IsHome}}
 		/*
+			H1 size:
 			In single/index page, H1 is smaller than H2
 			In Home page, where there is no page title, H1 same size as H2
 		*/
@@ -86,13 +85,13 @@
 	{{end}}
 	<!--script - Hugo-->
 	<script>
-		/**/
+		/*
 		console.log("Kind:{{.Kind}}")
 		console.log("Type:{{.Type}}")
 		console.log("Section:{{.Section}}")
 		console.log("desc:{{$desc}}")
 		console.log("title:{{$title}}")
-		/**/
+		*/
 	</script>
 	<!--svg-->
 	{{if site.Params.svg_ext}}
