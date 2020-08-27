@@ -15,6 +15,7 @@ linkedin
 pinterest
 qq
 reddit
+rss
 stack-exchange
 stack-overflow
 telegram

@@ -56,3 +56,8 @@ cls = "fab fa-youtube"
 id  = "youtubechannel"
 svg = "youtube"
 url = "https://www.youtube.com/channel/%s"
+[[site]]
+cls = "fas fa-rss"
+id  = "rss"
+svg = "rss"
+url = "/index.xml"

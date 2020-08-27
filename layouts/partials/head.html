@@ -27,6 +27,12 @@
 	{{with .Params.author}}<meta name="author" content="{{.}}">{{end}}
 	<!--canonical url-->
 	{{if site.Params.user_canonical}}<link rel="canonical" href="{{absURL .Permalink}}"/>{{end}}
+
+	<!--rss, etc.-->
+	{{range .AlternativeOutputFormats}}
+		{{printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML}}
+	{{end}}
+
 	<!--favicon-->
 	{{with site.Params.favicon}}<link rel="icon" href="{{.}}">{{end}}
 
@@ -80,16 +86,18 @@
 	{{end}}
 	<!--script - Hugo-->
 	<script>
+		/**/
 		console.log("Kind:{{.Kind}}")
 		console.log("Type:{{.Type}}")
 		console.log("Section:{{.Section}}")
 		console.log("desc:{{$desc}}")
 		console.log("title:{{$title}}")
+		/**/
 	</script>
 	<!--svg-->
 	{{if site.Params.svg_ext}}
 	<link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
 	{{else}}
-	{{partial "sk3-fa-brands.svg" .}}
+	{{partial "sk3-fa.svg" .}}
 	{{end}}
 </head>

@@ -1,9 +1,11 @@
 {{if site.Params.sociallink}}
 <sk3-social>
 	{{range site.Data.social.site}}
-	{{if isset site.Params.sociallink .id}}
-	<a href="{{printf .url (index site.Params.sociallink .id)}}" class="sk3-social-fab {{.cls}}"></a>
-	{{end}}
+		{{if isset site.Params.sociallink .id}}
+			{{$href := printf .url (index site.Params.sociallink .id)}}
+			{{if eq .id "rss"}}{{$href = .url}}{{end}}
+			<a href="{{$href}}" class="sk3-social-fab {{.cls}}"></a>
+		{{end}}
 	{{end}}
 </sk3-social>
 {{end}}
