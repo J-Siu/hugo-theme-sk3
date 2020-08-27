@@ -12,6 +12,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 - [Testing](#testing)
 - [Features](#features)
 - [Layout](#layout)
+  - [Markdown Style](#markdown-style)
   - [Site](#site)
     - [Main Section Type](#main-section-type)
     - [Table of ContentToc Open By Default](#table-of-contenttoc-open-by-default)
@@ -110,6 +111,10 @@ hugo server -D --bind :: \
 - [x] Social Share
 
 ### Layout
+
+#### Markdown Style
+
+Headline in markdown should start at level 3 (###), as site title is H1 and page title is H2.
 
 #### Site
 
@@ -283,6 +288,7 @@ svg_ext = true
 	linkedin       = ""
 	pinterest      = ""
 	reddit         = ""
+  rss            = true
 	tumblr         = ""
 	twitter        = ""
 	vimeo          = ""
@@ -558,6 +564,16 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Add user-declared canonical support
   - Fix footer alignment
   - Update favicon instructions
+- 0.9.8
+  - Add box to current list page button
+  - Add RSS
+  - CSS cleanup
+  - Center images
+  - Fix head description
+  - Fix head title
+  - Fix html issues
+  - Homepage title larger
+  - Sticky menu button
 
 ### License
 
