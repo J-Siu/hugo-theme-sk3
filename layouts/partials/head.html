@@ -2,24 +2,37 @@
 	<!--Meta-->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{site.Title}}{{if not .IsHome}} | {{.Title}}{{end}}</title>
-	<meta name="description" content="{{if .IsHome}}
-	{{site.Params.description}}
-	{{else}}
-	{{if .Description}}
-	{{.Description}}
-	{{else}}
-	{{site.Title}} - {{.Title}}
+	<!--title-->
+	{{$page_title := ""}}
+	{{if not .IsHome}}
+		{{$page_title =  delimit (slice "|" .Title) " "}}
 	{{end}}
-	{{end}}">
+	{{$title := delimit (slice site.Title $page_title) " "}}
+	<title>{{$title}}</title>
+	<!--description-->
+	{{$desc := ""}}
+	{{if .IsHome}}
+		<!--desc - home-->
+		{{$desc = site.Params.description}}
+	{{else}}
+		<!--desc - else-->
+		{{if .Description}}
+			{{$desc = .Description}}
+		{{else}}
+			{{$desc = delimit (slice site.Title "-" .Section "-" .Title) " "}}
+		{{end}}
+	{{end}}
+	<meta name="description" content="{{$desc}}"/>
+	<!--author-->
 	{{with .Params.author}}<meta name="author" content="{{.}}">{{end}}
+	<!--canonical url-->
 	{{if site.Params.user_canonical}}<link rel="canonical" href="{{absURL .Permalink}}"/>{{end}}
 	<!--favicon-->
 	{{with site.Params.favicon}}<link rel="icon" href="{{.}}">{{end}}
 
-	<!--css-->
+	<!--css - SK3-->
 	<link rel="stylesheet" href="{{relLangURL ""}}css/sk3.css">
-	<!--site.Params-->
+	<!--css - site.Params-->
 	<style>
 		{{with site.Params.card.width}}
 		@media only screen and (min-width: 993px){:root{--width-card: {{.}};}}
@@ -31,6 +44,8 @@
 		{{with site.Params.color.border}}:root{--color-border:{{.}};}{{end}}
 		{{with site.Params.color.link}}:root{--color-link:{{.}};}{{end}}
 		{{with site.Params.color.text}}:root{--text-color:{{.}};}{{end}}
+
+		/* H1 size */
 		{{if .IsHome}}
 		/*
 			In single/index page, H1 is smaller than H2
@@ -42,12 +57,12 @@
 		}
 		{{end}}
 	</style>
-	<!--custom css-->
+	<!--css - custom-->
 	{{range site.Params.custom_css}}
 	<link rel="stylesheet" href="{{.|relURL}}">
 	{{end}}
 
-	<!--scripts-->
+	<!--script - SK3-->
 	{{if or site.Menus.main site.Params.socialshare (default true .Params.toc)}}
 	<script>
 		openToc=false
@@ -55,15 +70,22 @@
 	</script>
 	<script defer src="{{relLangURL ""}}js/sk3.js"></script>
 	{{end}}
-	<!--Google-->
+	<!--script - Google Analytics-->
 	{{if site.GoogleAnalytics}}{{template "_internal/google_analytics_async.html" .}}{{end}}
-	<!--AdSense-->
+	<!--script - Google AdSense-->
 	{{partial "adsense.html" .}}
-	<!--custom scripts-->
+	<!--script - custom-->
 	{{range site.Params.custom_js}}
 	<script src="{{.|relURL}}"></script>
 	{{end}}
-
+	<!--script - Hugo-->
+	<script>
+		console.log("Kind:{{.Kind}}")
+		console.log("Type:{{.Type}}")
+		console.log("Section:{{.Section}}")
+		console.log("desc:{{$desc}}")
+		console.log("title:{{$title}}")
+	</script>
 	<!--svg-->
 	{{if site.Params.svg_ext}}
 	<link href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
