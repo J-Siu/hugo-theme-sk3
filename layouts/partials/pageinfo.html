@@ -10,7 +10,7 @@
 	{{if (.GetTerms "tags")}}
 	<div class="sk3-flex">
 		<div class="sk3-pad-h">Tag:</div>
-		{{range (.GetTerms "tags")}}
+		{{range sort (.GetTerms "tags") "LinkTitle"}}
 		<div class="sk3-pad-h"><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></div>
 		{{end}}
 	</div>
@@ -25,9 +25,8 @@
 {{if (default true .Params.prevnext)}}
 {{if or .PrevInSection .NextInSection}}
 <h3 class="sk3-flex">
-	{{with .PrevInSection}}<a href="{{.RelPermalink}}">
-		<< {{.Title}}</a> {{end}}
-			{{with .NextInSection}}<a class="sk3-flex-right" href="{{.RelPermalink}}">{{.Title}} >></a>{{end}}
+	{{with .PrevInSection}}<a href="{{.RelPermalink}}"><< {{.Title}}</a> {{end}}
+	{{with .NextInSection}}<a class="sk3-flex-right" href="{{.RelPermalink}}">{{.Title}} >></a>{{end}}
 </h3>
 {{end}}
 {{end}}
