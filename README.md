@@ -484,10 +484,11 @@ paginate               = 15
 
 Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome) Brands([free](//fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use)).
 
-`fa-svg-extract.sh` is used to extract icon from Font Awesome sprites/brands.svg.
+`fa-svg-extract.sh` is used to extract icon from Font Awesome sprites/brands.svg and sprites/solid.svg.
 
 ```sh
-./fa-svg-extract.sh brands.svg > sk3-fa-brands.svg
+./fa-svg-extract.sh brands.svg > sk3-fa.svg
+./fa-svg-extract.sh solid.svg >> sk3-fa.svg
 ```
 
 ### Thank You
@@ -566,13 +567,14 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Update favicon instructions
 - 0.9.8
   - Add box to current list page button
-  - Add RSS
+  - Add external link open in new tab
+  - Add rss
   - CSS cleanup
   - Center images
-  - Fix head description
-  - Fix head title
+  - Fix \<head\> description, title
   - Fix html issues
   - Homepage title larger
+  - Sort tags list / in page
   - Sticky menu button
 
 ### License
