@@ -1,61 +1,61 @@
 [[site]]
 cls = "fab fa-facebook"
 id  = "facebook"
-url = "https://www.facebook.com/%s/"
+url = "//www.facebook.com/%s/"
 [[site]]
 cls = "fab fa-flickr"
 id  = "flickr"
-url = "https://www.flickr.com/photos/%s/"
+url = "//www.flickr.com/photos/%s/"
 [[site]]
 cls = "fab fa-github"
 id  = "github"
-url = "https://github.com/%s/"
+url = "//github.com/%s/"
 [[site]]
 cls = "fab fa-instagram"
 id  = "instagram"
-url = "https://www.instagram.com/%s/"
+url = "//www.instagram.com/%s/"
 [[site]]
 cls = "fab fa-linkedin"
 id  = "linkedin"
-url = "https://www.linkedin.com/in/%s/"
+url = "//www.linkedin.com/in/%s/"
 [[site]]
 cls = "fab fa-pinterest"
 id  = "pinterest"
-url = "https://www.pinterest.com/%s/boards/"
+url = "//www.pinterest.com/%s/boards/"
 [[site]]
 cls = "fab fa-reddit"
 id  = "reddit"
-url = "https://www.reddit.com/user/%s"
+url = "//www.reddit.com/user/%s"
 [[site]]
 cls = "fab fa-stack-exchange"
 id  = "stack-exchange"
-url = "https://stackexchange.com/users/%s/"
+url = "//stackexchange.com/users/%s/"
 [[site]]
 cls = "fab fa-stack-overflow"
 id  = "stack-overflow"
-url = "https://stackoverflow.com/users/%s/"
+url = "//stackoverflow.com/users/%s/"
 [[site]]
 cls = "fab fa-tumblr"
 id  = "tumblr"
-url = "https://www.tumblr.com/dashboard/blog/%s/"
+url = "//www.tumblr.com/dashboard/blog/%s/"
 [[site]]
 cls = "fab fa-twitter"
 id  = "twitter"
-url = "https://twitter.com/%s"
+url = "//twitter.com/%s"
 [[site]]
 cls = "fab fa-vimeo"
 id  = "vimeo"
-url = "https://vimeo.com/%s"
+url = "//vimeo.com/%s"
 [[site]]
 cls = "fab fa-youtube"
 id  = "youtubeuser"
 svg = "youtube"
-url = "https://www.youtube.com/user/%s"
+url = "//www.youtube.com/user/%s"
 [[site]]
 cls = "fab fa-youtube"
 id  = "youtubechannel"
 svg = "youtube"
-url = "https://www.youtube.com/channel/%s"
+url = "//www.youtube.com/channel/%s"
 [[site]]
 cls = "fas fa-rss"
 id  = "rss"
