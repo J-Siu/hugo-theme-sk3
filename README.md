@@ -370,7 +370,7 @@ Use following to enable Twitter Cards / Opengraph:
 ```toml
 [Params]
 opengraph   = true
-twitercards = true
+twittercards = true
 description = "site description"
 title       = "site title"
 ```
