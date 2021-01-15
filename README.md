@@ -576,6 +576,8 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Homepage title larger
   - Sort tags list / in page
   - Sticky menu button
+- 0.9.9
+  - Merge fix by 0xflotus
 
 ### License
 
