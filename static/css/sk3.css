@@ -122,15 +122,18 @@ td {
 
 .box {
   border: 1px solid;
+	border-color: var(--color-border);
   padding: var(--margin-pad-full);
 }
 
 .box-right {
   border-right: 1px solid;
+	border-color: var(--color-border);
 }
 
 .box-top {
   border-top: 1px solid;
+	border-color: var(--color-border);
 }
 
 .txt-center-h {
