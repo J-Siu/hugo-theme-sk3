@@ -577,13 +577,16 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Sort tags list / in page
   - Sticky menu button
 - 0.9.9
-  - Merge fix by 0xflotus
+  - Merge [PR](https://github.com/J-Siu/hugo-theme-sk3/pull/26) by [0xflotus](https://github.com/0xflotus)
+- 1.0.0
+  - Fixed head.html text color variable name [issue #27](https://github.com/J-Siu/hugo-theme-sk3/issues/27)
+  - Fixed sk3.css box element color [issue #27](https://github.com/J-Siu/hugo-theme-sk3/issues/27)
 
 ### License
 
 The MIT License (MIT)
 
-Copyright (c) 2020 John Siu
+Copyright (c) 2021 John Siu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
