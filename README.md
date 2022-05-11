@@ -30,6 +30,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
   - [Color Theme](#color-theme)
   - [Card/List](#cardlist)
   - [Google AdSense](#google-adsense)
+  - [Google Analytic](#google-analytic)
   - [Twitter Cards / Opengraph](#twitter-cards--opengraph)
   - [Page Info Style](#page-info-style)
   - [Per Page](#per-page)
@@ -361,6 +362,16 @@ svg_ext = true
   adsense_id = ""
   ```
 
+#### Google Analytic
+
+- Support Google Analytic UA and GA4
+
+  ```toml
+  [Params]
+  googleAnalyticsUA = true
+  ```
+  If using GA4, set above to false, or unset.
+
 #### Twitter Cards / Opengraph
 
 Use following to enable Twitter Cards / Opengraph:
@@ -419,6 +430,7 @@ paginate               = 15
 #googleAnalytics = ""
 
 [Params]
+#googleAnalyticsUA = true
 #adsense_id     = ""
 #custom_css     = ["/css/abc.css", "/css/def.css"]
 #custom_js      = ["/js/abc.js", "/js/def.js"]

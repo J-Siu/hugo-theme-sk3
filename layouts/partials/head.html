@@ -76,7 +76,13 @@
 	<script defer src="{{relLangURL ""}}js/sk3.js"></script>
 	{{end}}
 	<!--script - Google Analytics-->
-	{{if site.GoogleAnalytics}}{{template "_internal/google_analytics_async.html" .}}{{end}}
+	{{if site.GoogleAnalytics}}
+	{{if site.Params.GoogleAnalyticsUA}}
+	{{template "_internal/google_analytics_async.html" .}}
+	{{else}}
+	{{template "_internal/google_analytics.html" .}}
+	{{end}}
+	{{end}}
 	<!--script - Google AdSense-->
 	{{partial "adsense.html" .}}
 	<!--script - custom-->

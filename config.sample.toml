@@ -12,19 +12,20 @@ paginate               = 15
 #googleAnalytics = ""
 
 [Params]
-# adsense_id     = ""
-# custom_css     = ["/css/abc.css", "/css/def.css"]
-# custom_js      = ["/js/abc.js", "/js/def.js"]
-# favicon        = "/favicon.ico"
-# listlastmod    = false
-# mainSections   = "post"
-# openToc        = false
-# pageinfobox    = true
-# pagewidth      = "1200px"
-# startdate      = "2012-12-02"
-# subtitle       = "A Hugo Theme"
-# svg_ext        = false
-# user_canonical = false
+# adsense_id        = ""
+# custom_css        = ["/css/abc.css", "/css/def.css"]
+# custom_js         = ["/js/abc.js", "/js/def.js"]
+# favicon           = "/favicon.ico"
+# googleAnalyticsUA = true
+# listlastmod       = false
+# mainSections      = "post"
+# openToc           = false
+# pageinfobox       = true
+# pagewidth         = "1200px"
+# startdate         = "2012-12-02"
+# subtitle          = "A Hugo Theme"
+# svg_ext           = false
+# user_canonical    = false
 
 # Fill in following if using opengraph / twitter card
 #opengraph   = true
@@ -32,45 +33,45 @@ paginate               = 15
 #description = "A Hugo Theme"
 #title       = "SK3"
 
-[Params.card]
-date    = true
-summary = true
-#width  = "32%"
+	[Params.card]
+	date    = true
+	summary = true
+	#width  = "32%"
 
-# [Params.color]
-# bg     = "#181a1b"
-# border = "white"
-# link   = "#3d84ff"
-# text   = "white"
+	# [Params.color]
+	# bg     = "#181a1b"
+	# border = "white"
+	# link   = "#3d84ff"
+	# text   = "white"
 
-# [Params.sociallink]
-# facebook       = ""
-# flickr         = ""
-# github         = ""
-# instagram      = ""
-# linkedin       = ""
-# pinterest      = ""
-# reddit         = ""
-# rss            = true
-# stack-exchange = ""
-# stack-overflow = ""
-# tumblr         = ""
-# twitter        = ""
-# vimeo          = ""
-# youtubechannel = ""
-# youtubeuser    = ""
+	# [Params.sociallink]
+	# facebook       = ""
+	# flickr         = ""
+	# github         = ""
+	# instagram      = ""
+	# linkedin       = ""
+	# pinterest      = ""
+	# reddit         = ""
+	# rss            = true
+	# stack-exchange = ""
+	# stack-overflow = ""
+	# tumblr         = ""
+	# twitter        = ""
+	# vimeo          = ""
+	# youtubechannel = ""
+	# youtubeuser    = ""
 
-[Params.socialshare]
-facebook  = true
-instagram = true
-linkedin  = true
-pinterest = true
-reddit    = true
-telegram  = true
-twitter   = true
-vk        = true
+	[Params.socialshare]
+	facebook  = true
+	instagram = true
+	linkedin  = true
+	pinterest = true
+	reddit    = true
+	telegram  = true
+	twitter   = true
+	vk        = true
 
 [markup]
-[markup.tableOfContents]
-endLevel   = 6
-startLevel = 1
+	[markup.tableOfContents]
+	endLevel   = 6
+	startLevel = 1
