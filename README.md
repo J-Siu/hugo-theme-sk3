@@ -605,6 +605,8 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Fixed sk3.css box element color [issue #27](https://github.com/J-Siu/hugo-theme-sk3/issues/27)
 - v1.1.0
   - Support Google Analytics GA4 with `googleAnalyticsUA`
+- v1.2.0
+  - Support AdSense page level control
 
 ### License
 
