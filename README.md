@@ -1,6 +1,6 @@
 ## Hugo Theme - SK3 (Skeleton 3)
 
-Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2) with Google AdSense support.
+Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2) with Google AdSense (UA/GA4) support.
 
 ---
 
