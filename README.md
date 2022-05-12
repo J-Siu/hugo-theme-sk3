@@ -362,6 +362,15 @@ svg_ext = true
   adsense_id = ""
   ```
 
+- Control page level ads:
+
+  ```toml
+  [Params]
+  adsense_page_level = true
+  ```
+
+  Add above to enable page level ads.
+
 #### Google Analytic
 
 - Support Google Analytic UA and GA4
@@ -370,7 +379,8 @@ svg_ext = true
   [Params]
   googleAnalyticsUA = true
   ```
-  If using GA4, set above to false, or unset.
+
+Only use this if using UA. If using GA4, set above to false, or unset.
 
 #### Twitter Cards / Opengraph
 
