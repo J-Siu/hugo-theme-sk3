@@ -37,6 +37,12 @@ title             = "SK3"
 	enablePageLevelAd = false
 	enableUA          = false
 
+	[Params.paypal]
+	# amount          = "5"
+	businessId      = ""
+	currency        = "CAD"
+	enableRecurring = true
+
 	[Params.card]
 	date    = true
 	summary = true

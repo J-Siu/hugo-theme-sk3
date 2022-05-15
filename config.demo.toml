@@ -10,11 +10,11 @@ DefaultContentLanguage = "en"
 enableGitInfo          = true
 enableInlineShortcodes = true
 languageCode           = "en"
-paginate               = 3
+paginate               = 12
 relativeURLs           = true
 
 [Params]
-enableExternalSvg    = true
+# enableExternalSvg    = true
 enableInfoBox        = true
 enableListLastModify = true
 enableOpenToc        = true
@@ -30,6 +30,12 @@ description       = "Hugo Theme SK3 Demo Site"
 enableOpenGraph   = true
 enableTwitterCard = true
 title             = "Hugo Theme SK3 Demo Site(params)"
+
+	[Params.paypal]
+	# amount          = "5"
+	businessId      = "HZF49NM9D35SJ"
+	currency        = "CAD"
+	enableRecurring = true
 
 	[Params.card]
 	date    = true

@@ -1,0 +1,6 @@
+{{if site.Params.paypal.businessId}}
+<a style="all:initial;"
+	href="https://www.paypal.com/donate/?business={{site.Params.paypal.businessId}}&amount={{site.Params.paypal.amount|default 0}}&no_recurring={{if site.Params.paypal.enableRecurring}}0{{else}}1{{end}}&currency_code={{site.Params.paypal.currency}}">
+	<img style="all:initial;height:24px" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" />
+</a>
+{{end}}

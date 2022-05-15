@@ -23,6 +23,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
   - [Custom Javascript](#custom-javascript)
   - [Favicon](#favicon)
   - [Google](#google)
+  - [Paypal Donation](#paypal-donation)
 - [Per Page Settings](#per-page-settings)
 - [Sample Config](#sample-config)
 - [Font Awesome](#font-awesome)
@@ -283,6 +284,19 @@ AdsenseId|text|""|AdSense ID/Tag.
 enablePageLevelAd|bool|false|Enable/Disable page level ads.
 enableUA|bool|false|Set this to 'true' if using Google Analytics UA.
 
+#### Paypal Button
+
+**[Params.paypal]** Enable Paypal donation button along side share buttons.
+
+Field|Type|Default Value|Description
+---|---|---|---
+amount|text|"0"|Default amount.
+businessId|text|""|Paypal business Id. Button will only show if this is set.
+currency|text|""|Currency code, eg. "CAD", "USD".
+enableRecurring|bool|false|Show recurring check-box.
+
+Information can be obtain by going through [Paypal Donate Button](https://www.paypal.com/donate/buttons?type=C&fromManage=true). You need your own Paypal account to go through the button creation process.
+
 ### Per Page Settings
 
 - Disable Disqus
@@ -337,6 +351,12 @@ description       = "A Hugo Theme"
 enableOpenGraph   = true
 enableTwitterCard = true
 title             = "SK3"
+
+	[Params.paypal]
+	amount          = ""
+	businessId      = ""
+	currency        = ""
+	enableRecurring = true
 
 	[Params.google]
 	AdsenseId         = ""
@@ -498,6 +518,8 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
     - Params names changes
     - Google param section
 
+- v2.1.0
+  - Support Paypal donation button
 ### License
 
 The MIT License (MIT)
