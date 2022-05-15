@@ -8,6 +8,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 
 - [SK Themes](#sk-themes)
 - [Sites](#sites)
+- [Version 2 Breaking Changes](#version-2-breaking-changes)
 - [Install](#install)
 - [Testing](#testing)
 - [Features](#features)
@@ -45,6 +46,10 @@ SK3|[hugo-theme-sk3](//github.com/J-Siu/hugo-theme-sk3)|[SK3](//themes.gohugo.io
 John Siu Blog: [JohnSiu.com](//JohnSiu.com/)
 
 SK3 demo site: [sk3.jsiu.dev](//sk3.jsiu.dev/) with content from [hugoBasicExample](//github.com/gohugoio/hugoBasicExample)
+
+### Version 2 Breaking Changes
+
+When upgrading from v1.x.x to v2.x.x, config file need to be updated as there are lot of name changes.
 
 ### Install
 
@@ -487,6 +492,11 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Support Google Analytics GA4 with `googleAnalyticsUA`
 - v1.2.0
   - Support AdSense page level control
+- v2.0.0
+  - Restructure README.md
+  - Breaking changes:
+    - Params names changes
+    - Google param section
 
 ### License
 
