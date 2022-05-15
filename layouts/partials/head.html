@@ -26,7 +26,7 @@
 	<!--author-->
 	{{with .Params.author}}<meta name="author" content="{{.}}">{{end}}
 	<!--canonical url-->
-	{{if site.Params.user_canonical}}<link rel="canonical" href="{{absURL .Permalink}}"/>{{end}}
+	{{if site.Params.enableUserCanonical}}<link rel="canonical" href="{{absURL .Permalink}}"/>{{end}}
 
 	<!--rss, etc.-->
 	{{range .AlternativeOutputFormats}}
@@ -63,21 +63,21 @@
 		{{end}}
 	</style>
 	<!--css - custom-->
-	{{range site.Params.custom_css}}
+	{{range site.Params.customCss}}
 	<link rel="stylesheet" href="{{.|relURL}}">
 	{{end}}
 
 	<!--script - SK3-->
 	{{if or site.Menus.main site.Params.socialshare (default true .Params.toc)}}
 	<script>
-		openToc=false
-		{{with site.Params.openToc}}openToc={{.}}{{end}}
+		enableOpenToc=false
+		{{with site.Params.enableOpenToc}}enableOpenToc={{.}}{{end}}
 	</script>
 	<script defer src="{{relLangURL ""}}js/sk3.js"></script>
 	{{end}}
 	<!--script - Google Analytics-->
 	{{if site.GoogleAnalytics}}
-	{{if site.Params.GoogleAnalyticsUA}}
+	{{if site.Params.google.enableUA}}
 	{{template "_internal/google_analytics_async.html" .}}
 	{{else}}
 	{{template "_internal/google_analytics.html" .}}
@@ -86,7 +86,7 @@
 	<!--script - Google AdSense-->
 	{{partial "adsense.html" .}}
 	<!--script - custom-->
-	{{range site.Params.custom_js}}
+	{{range site.Params.customJs}}
 	<script src="{{.|relURL}}"></script>
 	{{end}}
 	<!--script - Hugo-->
@@ -100,7 +100,7 @@
 		*/
 	</script>
 	<!--svg-->
-	{{if site.Params.svg_ext}}
+	{{if site.Params.enableExternalSvg}}
 	<link href="//use.fontawesome.com/releases/v5.13.1/css/all.css" rel="stylesheet">
 	{{else}}
 	{{partial "sk3-fa.svg" .}}

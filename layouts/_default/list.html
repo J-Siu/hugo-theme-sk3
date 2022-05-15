@@ -44,7 +44,7 @@
 					<h3>{{.Title}}</h3>
 				</a>
 				{{if site.Params.card.date}}
-				{{if and site.Params.listlastmod .Lastmod}}
+				{{if and site.Params.enableListLastModify .Lastmod}}
 				{{with .Lastmod}}<div class="sk3-flex-right sk3-flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}
 				{{else}}
 				{{with .Date}}<div class="sk3-flex-right sk3-flex-down">{{dateFormat "2006-01-02" .}}</div>{{end}}

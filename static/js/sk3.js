@@ -28,9 +28,9 @@ var c = document.getElementsByClassName("collapsible");
 for (var i = 0; i < c.length; i++) {
 	// Unhide
 	c[i].style.display = "block"
-	// Default from 'openToc'
+	// Default from 'enableOpenToc'
 	var e = c[i].nextElementSibling;
-	e.style.display = (openToc) ? "block" : "none"
+	e.style.display = (enableOpenToc) ? "block" : "none"
 	// Add event
 	c[i].addEventListener("click", function () {
 		this.classList.toggle(false);

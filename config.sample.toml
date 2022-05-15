@@ -7,60 +7,63 @@ enableGitInfo          = true
 enableInlineShortcodes = true
 languageCode           = "en"
 paginate               = 15
+relativeURLs           = true
 
 #disqusShortname = ""
 #googleAnalytics = ""
 
 [Params]
-# adsense_id         = ""
-# adsense_page_level = true
-# custom_css         = ["/css/abc.css", "/css/def.css"]
-# custom_js          = ["/js/abc.js", "/js/def.js"]
-# favicon            = "/favicon.ico"
-# googleAnalyticsUA  = true
-# listlastmod        = false
-# mainSections       = "post"
-# openToc            = false
-# pageinfobox        = true
-# pagewidth          = "1200px"
-# startdate          = "2012-12-02"
-# subtitle           = "A Hugo Theme"
-# svg_ext            = false
-# user_canonical     = false
+customCss            = ["/css/abc.css", "/css/def.css"]
+customJs             = ["/js/abc.js", "/js/def.js"]
+enableExternalSvg    = false
+enableInfoBox        = true
+enableListLastModify = false
+enableOpenToc        = false
+enableUserCanonical  = false
+favicon              = "/favicon.ico"
+mainSections         = "post"
+pagewidth            = "1200px"
+startdate            = "2012-12-02"
+subtitle             = "A Hugo Theme"
 
-# Fill in following if using opengraph / twitter card
-#opengraph   = true
-#twitercards = true
-#description = "A Hugo Theme"
-#title       = "SK3"
+# Fill in following if using Open Graph / Twitter Card
+description       = "A Hugo Theme"
+enableOpenGraph   = true
+enableTwitterCard = true
+title             = "SK3"
+
+	[Params.google]
+	AdsenseId         = ""
+	enablePageLevelAd = false
+	enableUA          = false
 
 	[Params.card]
 	date    = true
 	summary = true
-	#width  = "32%"
+	width   = "32%"
 
-	# [Params.color]
-	# bg     = "#181a1b"
-	# border = "white"
-	# link   = "#3d84ff"
-	# text   = "white"
+	[Params.color]
+	bg     = "#181a1b"
+	border = "white"
+	link   = "#3d84ff"
+	text   = "white"
 
-	# [Params.sociallink]
-	# facebook       = ""
-	# flickr         = ""
-	# github         = ""
-	# instagram      = ""
-	# linkedin       = ""
-	# pinterest      = ""
-	# reddit         = ""
-	# rss            = true
-	# stack-exchange = ""
-	# stack-overflow = ""
-	# tumblr         = ""
-	# twitter        = ""
-	# vimeo          = ""
-	# youtubechannel = ""
-	# youtubeuser    = ""
+	[Params.sociallink]
+	facebook       = ""
+	flickr         = ""
+	github         = ""
+	instagram      = ""
+	linkedin       = ""
+	pinterest      = ""
+	reddit         = ""
+	rss            = true
+	stack-exchange = ""
+	stack-overflow = ""
+	tumblr         = ""
+	twitter        = ""
+	vimeo          = ""
+	youtubechannel = ""
+	youtubeuser    = ""
 
 	[Params.socialshare]
 	facebook  = true
