@@ -517,9 +517,9 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Breaking changes:
     - Params names changes
     - Google param section
-
 - v2.1.0
   - Support Paypal donation button
+
 ### License
 
 The MIT License (MIT)
