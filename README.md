@@ -1,9 +1,10 @@
-## Hugo Theme - SK3 (Skeleton 3)
+# Hugo Theme - SK3 (Skeleton 3) [![Paypal donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate/?business=HZF49NM9D35SJ&no_recurring=0&currency_code=CAD)
 
 Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2) with Google AdSense (UA/GA4) support.
 
 ---
 
+### Table Of Content
 <!-- TOC -->
 
 - [SK Themes](#sk-themes)
