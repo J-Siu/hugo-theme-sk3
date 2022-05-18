@@ -7,6 +7,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 ### Table Of Content
 <!-- TOC -->
 
+- [Table Of Content](#table-of-content)
 - [SK Themes](#sk-themes)
 - [Sites](#sites)
 - [Version 2 Breaking Changes](#version-2-breaking-changes)
@@ -24,7 +25,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
   - [Custom Javascript](#custom-javascript)
   - [Favicon](#favicon)
   - [Google](#google)
-  - [Paypal Donation](#paypal-donation)
+  - [Paypal Button](#paypal-button)
 - [Per Page Settings](#per-page-settings)
 - [Sample Config](#sample-config)
 - [Font Awesome](#font-awesome)
@@ -34,6 +35,7 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 - [License](#license)
 
 <!-- /TOC -->
+<!--more-->
 
 ### SK Themes
 
