@@ -10,8 +10,10 @@ DefaultContentLanguage = "en"
 enableGitInfo          = true
 enableInlineShortcodes = true
 languageCode           = "en"
-pagerSize              = 12
 relativeURLs           = true
+
+[pagination]
+pagerSize = 15
 
 [Params]
 # enableExternalSvg    = true
@@ -31,82 +33,82 @@ enableOpenGraph   = true
 enableTwitterCard = true
 title             = "Hugo Theme SK3 Demo Site(params)"
 
-	[Params.paypal]
-	# amount          = "5"
-	businessId      = "HZF49NM9D35SJ"
-	currency        = "CAD"
-	enableRecurring = true
+[Params.paypal]
+# amount          = "5"
+businessId      = "HZF49NM9D35SJ"
+currency        = "CAD"
+enableRecurring = true
 
-	[Params.card]
-	date    = true
-	summary = true
-	# width = "32%"
+[Params.card]
+date    = true
+summary = true
+# width = "32%"
 
-	# [Params.color]
-	# bg     = "white"
-	# border = "black"
-	# link   = "#3d84ff"
-	# text   = "black"
+# [Params.color]
+# bg     = "white"
+# border = "black"
+# link   = "#3d84ff"
+# text   = "black"
 
-	[Params.sociallink]
-	facebook       = "john.siu.714"
-	flickr         = "johnsiu-com"
-	github         = "J-Siu"
-	instagram      = "john.sd.siu"
-	linkedin       = "john-sing-dao-siu"
-	pinterest      = "johnsdsiu"
-	reddit         = "js1943"
-	rss            = true
-	stack-exchange = "1882213"
-	stack-overflow = "1810391"
-	tumblr         = "jsds"
-	twitter        = "JohnSiuCom"
-	vimeo          = "user88929197"
-	youtubechannel = "UC5LvdqfL2PubOp904UnUJAg"
-	youtubeuser    = "JohnSDSiu"
+[Params.sociallink]
+facebook       = "john.siu.714"
+flickr         = "johnsiu-com"
+github         = "J-Siu"
+instagram      = "john.sd.siu"
+linkedin       = "john-sing-dao-siu"
+pinterest      = "johnsdsiu"
+reddit         = "js1943"
+rss            = true
+stack-exchange = "1882213"
+stack-overflow = "1810391"
+tumblr         = "jsds"
+twitter        = "JohnSiuCom"
+vimeo          = "user88929197"
+youtubechannel = "UC5LvdqfL2PubOp904UnUJAg"
+youtubeuser    = "JohnSDSiu"
 
-	[Params.socialshare]
-	facebook  = true
-	linkedin  = true
-	pinterest = true
-	reddit    = true
-	telegram  = true
-	twitter   = true
-	vk        = true
+[Params.socialshare]
+facebook  = true
+linkedin  = true
+pinterest = true
+reddit    = true
+telegram  = true
+twitter   = true
+vk        = true
 
 [markup]
 defaultMarkdownHandler = "goldmark"
 
-	[markup.highlight]
-	codeFences         = true
-	guessSyntax        = false
-	hl_Lines           = ""
-	lineNoStart        = 1
-	lineNos            = true
-	lineNumbersInTable = true
-	noClasses          = true
-	style              = "fruity"
-	tabWidth           = 4
+[markup.highlight]
+codeFences         = true
+guessSyntax        = false
+hl_Lines           = ""
+lineNoStart        = 1
+lineNos            = true
+lineNumbersInTable = true
+noClasses          = true
+style              = "fruity"
+tabWidth           = 4
 
-	[markup.tableOfContents]
-	endLevel   = 6
-	ordered    = false
-	startLevel = 1
+[markup.tableOfContents]
+endLevel   = 6
+ordered    = false
+startLevel = 1
 
-	[markup.goldmark]
-		[markup.goldmark.extensions]
-		definitionList = true
-		footnote       = true
-		linkify        = true
-		strikethrough  = true
-		table          = true
-		taskList       = true
-		typographer    = true
-		[markup.goldmark.parser]
-		attribute         = true
-		autoHeadingID     = true
-		autoHeadingIDType = "github"
-		[markup.goldmark.renderer]
-		hardWraps = false
-		unsafe    = true
-		xhtml     = false
+[markup.goldmark]
+[markup.goldmark.extensions]
+definitionList = true
+footnote       = true
+linkify        = true
+strikethrough  = true
+table          = true
+taskList       = true
+typographer    = true
+[markup.goldmark.parser]
+attribute         = true
+autoHeadingID     = true
+autoHeadingIDType = "github"
+[markup.goldmark.renderer]
+hardWraps = false
+unsafe    = true
+xhtml     = false

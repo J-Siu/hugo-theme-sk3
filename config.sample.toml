@@ -1,13 +1,15 @@
 lbaseURL = "https://"
-theme   = "sk3"
-title   = ""
+theme    = "sk3"
+title    = ""
 
 DefaultContentLanguage = "en"
 enableGitInfo          = true
 enableInlineShortcodes = true
 languageCode           = "en"
-pagerSize              = 15
 relativeURLs           = true
+
+[pagination]
+pagerSize = 15
 
 [services]
 [services.disqus]
