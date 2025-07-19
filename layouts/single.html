@@ -39,8 +39,8 @@
 	<div></div>
 
 	<!--Disqus-->
-	{{if and site.DisqusShortname (default true .Params.comment)}}
-	{{template "_internal/disqus.html" .}}
+	{{if and .Site.Config.Services.Disqus.Shortname (default true .Params.comment)}}
+	{{partial "disqus.html" .}}
 	{{end}}
 
 </div>

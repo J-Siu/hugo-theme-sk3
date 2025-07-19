@@ -18,5 +18,5 @@
 </footer>
 
 <!--hugo internal template-->
-{{if site.Params.enableOpenGraph}}{{template "_internal/opengraph.html" .}}{{end}}
-{{if site.Params.enableTwitterCard}}{{template "_internal/twitter_cards.html" .}}{{end}}
+{{if site.Params.enableOpenGraph}}{{partial "opengraph.html" .}}{{end}}
+{{if site.Params.enableTwitterCard}}{{partial "twitter_cards.html" .}}{{end}}

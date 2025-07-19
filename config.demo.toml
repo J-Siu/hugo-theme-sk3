@@ -10,7 +10,7 @@ DefaultContentLanguage = "en"
 enableGitInfo          = true
 enableInlineShortcodes = true
 languageCode           = "en"
-paginate               = 12
+pagerSize              = 12
 relativeURLs           = true
 
 [Params]

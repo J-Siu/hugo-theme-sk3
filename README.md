@@ -7,32 +7,33 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 ### Table Of Content
 <!-- TOC -->
 
-- [Table Of Content](#table-of-content)
-- [SK Themes](#sk-themes)
-- [Sites](#sites)
-- [Version 2 Breaking Changes](#version-2-breaking-changes)
-- [Install](#install)
-- [Testing](#testing)
-- [Features](#features)
-- [Layout](#layout)
-  - [Markdown Style](#markdown-style)
-  - [Site Config](#site-config)
-  - [Social Network](#social-network)
-  - [Share Button](#share-button)
-  - [Theme Color](#theme-color)
-  - [Layout Dimensions](#layout-dimensions)
-  - [Custom CSS](#custom-css)
-  - [Custom Javascript](#custom-javascript)
-  - [Favicon](#favicon)
-  - [Google](#google)
-  - [Paypal Button](#paypal-button)
-- [Per Page Settings](#per-page-settings)
-- [Sample Config](#sample-config)
-- [Font Awesome](#font-awesome)
-- [Thank You](#thank-you)
-- [Contributors](#contributors)
-- [Change Log](#change-log)
-- [License](#license)
+- [Hugo Theme - SK3 Skeleton 3 Paypal donate](#hugo-theme---sk3-skeleton-3-paypal-donate)
+        - [Table Of Content](#table-of-content)
+        - [SK Themes](#sk-themes)
+        - [Sites](#sites)
+        - [Version 2 Breaking Changes](#version-2-breaking-changes)
+        - [Install](#install)
+        - [Testing](#testing)
+        - [Features](#features)
+        - [Layout](#layout)
+            - [Markdown Style](#markdown-style)
+            - [Site Config](#site-config)
+            - [Social Network](#social-network)
+            - [Share Button](#share-button)
+            - [Theme Color](#theme-color)
+            - [Layout Dimensions](#layout-dimensions)
+            - [Custom CSS](#custom-css)
+            - [Custom Javascript](#custom-javascript)
+            - [Favicon](#favicon)
+            - [Google](#google)
+            - [Paypal Button](#paypal-button)
+        - [Per Page Settings](#per-page-settings)
+        - [Sample Config](#sample-config)
+        - [Font Awesome](#font-awesome)
+        - [Thank You](#thank-you)
+        - [Contributors](#contributors)
+        - [Change Log](#change-log)
+        - [License](#license)
 
 <!-- /TOC -->
 <!--more-->
@@ -283,9 +284,9 @@ touch static/favicon.ico
 
 Field|Type|Default Value|Description
 ---|---|---|---
-AdsenseId|text|""|AdSense ID/Tag.
+AdSenseId|text|""|AdSense ID/Tag.
+Analytics|text|""|Set this to Google Analytics ID.
 enablePageLevelAd|bool|false|Enable/Disable page level ads.
-enableUA|bool|false|Set this to 'true' if using Google Analytics UA.
 
 #### Paypal Button
 
