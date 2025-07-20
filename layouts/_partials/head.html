@@ -66,7 +66,6 @@
 	{{range site.Params.customCss}}
 	<link rel="stylesheet" href="{{.|relURL}}">
 	{{end}}
-
 	<!--script - SK3-->
 	{{if or site.Menus.main site.Params.socialshare (default true .Params.toc)}}
 	<script>
@@ -75,10 +74,10 @@
 	</script>
 	<script defer src="{{relLangURL ""}}js/sk3.js"></script>
 	{{end}}
+	<!--script - iubenda-->
+	{{partial "iubenda.html"}}
 	<!--script - Google Analytics-->
-	{{if site.Config.Services.GoogleAnalytics.ID}}
 	{{partial "google_analytics.html" .}}
-	{{end}}
 	<!--script - Google AdSense-->
 	{{partial "adsense.html" .}}
 	<!--script - custom-->

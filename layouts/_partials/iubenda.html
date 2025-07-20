@@ -1,0 +1,9 @@
+{{if and site.Params.iubenda.siteId site.Params.iubenda.cookiePolicyId }}
+<script type="text/javascript">
+var _iub = _iub || [];
+_iub.csConfiguration = {"siteId":{{site.Params.iubenda.siteId}},"cookiePolicyId":{{site.Params.iubenda.cookiePolicyId}},"lang":"en","storage":{"useSiteId":true}};
+</script>
+<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/{{site.Params.iubenda.siteId}}.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+{{end}}

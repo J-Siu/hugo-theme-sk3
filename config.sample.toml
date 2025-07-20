@@ -39,6 +39,10 @@ enableOpenGraph   = true
 enableTwitterCard = true
 title             = "SK3"
 
+[Params.iubenda]
+siteId         = ""
+cookiePolicyId = ""
+
 [Params.google]
 AdSenseId         = ""
 enablePageLevelAd = false
