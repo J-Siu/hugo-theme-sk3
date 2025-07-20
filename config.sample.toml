@@ -1,4 +1,4 @@
-lbaseURL = "https://"
+baseURL = "https://"
 theme    = "sk3"
 title    = ""
 
