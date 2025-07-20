@@ -1,6 +1,6 @@
 baseURL = "https://"
-theme    = "sk3"
-title    = ""
+theme   = "sk3"
+title   = ""
 
 DefaultContentLanguage = "en"
 enableGitInfo          = true
@@ -16,8 +16,6 @@ pagerSize = 15
 shortname = ""
 [services.googleAnalytics]
 id = ""
-
-#disqusShortname = ""
 
 [Params]
 customCss            = ["/css/abc.css", "/css/def.css"]

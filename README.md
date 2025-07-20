@@ -4,53 +4,51 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 
 ---
 
-### Table Of Content
 <!-- TOC -->
 
-- [Hugo Theme - SK3 Skeleton 3 Paypal donate](#hugo-theme---sk3-skeleton-3-paypal-donate)
-        - [Table Of Content](#table-of-content)
-        - [SK Themes](#sk-themes)
-        - [Sites](#sites)
-        - [Version 2 Breaking Changes](#version-2-breaking-changes)
-        - [Install](#install)
-        - [Testing](#testing)
-        - [Features](#features)
-        - [Layout](#layout)
-            - [Markdown Style](#markdown-style)
-            - [Site Config](#site-config)
-            - [Social Network](#social-network)
-            - [Share Button](#share-button)
-            - [Theme Color](#theme-color)
-            - [Layout Dimensions](#layout-dimensions)
-            - [Custom CSS](#custom-css)
-            - [Custom Javascript](#custom-javascript)
-            - [Favicon](#favicon)
-            - [Google](#google)
-            - [Paypal Button](#paypal-button)
-        - [Per Page Settings](#per-page-settings)
-        - [Sample Config](#sample-config)
-        - [Font Awesome](#font-awesome)
-        - [Thank You](#thank-you)
-        - [Contributors](#contributors)
-        - [Change Log](#change-log)
-        - [License](#license)
+    - [SK Themes](#sk-themes)
+    - [Sites](#sites)
+    - [Version 2 Breaking Changes](#version-2-breaking-changes)
+    - [Install](#install)
+    - [Testing](#testing)
+    - [Features](#features)
+    - [Layout](#layout)
+        - [Markdown Style](#markdown-style)
+        - [Site Config](#site-config)
+        - [Social Network](#social-network)
+        - [Share Button](#share-button)
+        - [Theme Color](#theme-color)
+        - [Layout Dimensions](#layout-dimensions)
+        - [Custom CSS](#custom-css)
+        - [Custom Javascript](#custom-javascript)
+        - [Favicon](#favicon)
+        - [Disqus](#disqus)
+        - [Google](#google)
+            - [AdSense](#adsense)
+            - [Analytics](#analytics)
+        - [Paypal Button](#paypal-button)
+    - [Per Page Settings](#per-page-settings)
+    - [Sample Config](#sample-config)
+    - [Font Awesome](#font-awesome)
+    - [Thank You](#thank-you)
+    - [Contributors](#contributors)
+    - [Change Log](#change-log)
+    - [License](#license)
 
 <!-- /TOC -->
 <!--more-->
 
 ### SK Themes
 
-Theme|GitHub|Hugo|Demo|Description
----|---|---|---|---
-SK1|[hugo-theme-sk1](//github.com/J-Siu/hugo-theme-sk1)|[SK1](//themes.gohugo.io/hugo-theme-sk1/)|[sk1.jsiu.dev](//sk1.jsiu.dev/)|Fully functional basic Hugo theme with no css, no javascript.
-SK2|[hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2)|[SK2](//themes.gohugo.io/hugo-theme-sk2/)|[sk2.jsiu.dev](//sk2.jsiu.dev/)|Fully functional basic Hugo theme with minimum css.
-SK3|[hugo-theme-sk3](//github.com/J-Siu/hugo-theme-sk3)|[SK3](//themes.gohugo.io/hugo-theme-sk3/)|[sk3.jsiu.dev](//sk3.jsiu.dev/)|Full feature Hugo theme with Google AdSense support.
+| Theme | GitHub                                              | Hugo                                      | Demo                            | Description                                                   |
+| ----- | --------------------------------------------------- | ----------------------------------------- | ------------------------------- | ------------------------------------------------------------- |
+| SK1   | [hugo-theme-sk1](//github.com/J-Siu/hugo-theme-sk1) | [SK1](//themes.gohugo.io/hugo-theme-sk1/) | [sk1.jsiu.dev](//sk1.jsiu.dev/) | Fully functional basic Hugo theme with no css, no javascript. |
+| SK2   | [hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2) | [SK2](//themes.gohugo.io/hugo-theme-sk2/) | [sk2.jsiu.dev](//sk2.jsiu.dev/) | Fully functional basic Hugo theme with minimum css.           |
+| SK3   | [hugo-theme-sk3](//github.com/J-Siu/hugo-theme-sk3) | [SK3](//themes.gohugo.io/hugo-theme-sk3/) | [johnsiu.com](//johnsiu.com/)   | Full feature Hugo theme with Google AdSense support.          |
 
 ### Sites
 
 John Siu Blog: [JohnSiu.com](//JohnSiu.com/)
-
-SK3 demo site: [sk3.jsiu.dev](//sk3.jsiu.dev/) with content from [hugoBasicExample](//github.com/gohugoio/hugoBasicExample)
 
 ### Version 2 Breaking Changes
 
@@ -81,19 +79,15 @@ In site directory:
 ### Testing
 
 ```sh
-git clone https://github.com/J-Siu/hugo-theme-sk3 sk3
-cd sk3
+cd <site root>
 
-# Pull example site.
-git submodule update --recursive --init
+git clone https://github.com/J-Siu/hugo-theme-sk3 themes/sk3
 
-cd exampleSite
 hugo server -D --bind :: \
 --disableFastRender \
 --theme sk3 \
---themesDir ../../ \
---config config.toml,../config.demo.toml \
---verbose
+--themesDir themes \
+--config config.toml,../config.sample.toml
 ```
 
 ### Features
@@ -103,8 +97,10 @@ hugo server -D --bind :: \
 - [x] Custom Javascript
 - [x] Customizable
 - [x] Disqus
-- [x] Google Adsense
+- [x] Google AdSense
 - [x] Google Analytics
+- [x] Iubenda (GDPR/CCPA)
+- [x] PayPal
 - [x] Minimalist Design
 - [x] Responsive
 - [x] Social Links
@@ -120,84 +116,84 @@ Headline in markdown should start at level 3 (###), as site title is H1 and page
 
 **[Params]**
 
-Field|Type|Default Value|Description
----|---|---|---
-customCss|text array|[]|See [Custom CSS](#custom-css)
-customJs|text array|[]|See [Custom Javascript](#custom-javascript)
-description|text|""|Open Graph / Twitter Card description
-enableExternalSvg|bool|false|`true` will load social icon using Font Awesome external css.
-enableInfoBox|bool|false| Enable page info box style
-enableListLastModify|bool|false|Use last modify date in list page.
-enableOpenGraph|bool|false|Enable Open Graph
-enableOpenToc|bool|true|Control if table of content(Toc) is open By default
-enableTwitterCard|bool|false|Enable Twitter Card
-enableUserCanonical|bool|false|Add `rel="canonical"` meta link with absolute URL to each page. Only use this if site require __user-declared canonical__ meta. This is not related to [Hugo Canonicalization](//gohugo.io/content-management/urls/#canonicalization) nor `canonifyurls`.
-favicon|text|""|See [Favicon](#favicon)
-images|text array|[]|Open Graph / Twitter Card image
-mainSections|text|n/a|Hugo default to section with most entries when For generating homepage list.
-pagewidth|text(px)|"1200px"|Page width will automatically set to 100% on small screen(<993px).
-startdate|text|""|eg. "2012-12-02". Year is extracted and generate copyright line "2012-(current year)". Site `copyright` override this behavior.
-subtitle|text|""|If defined, sub-title appear after site title in smaller font.
-title|text|""|Open Graph / Twitter Card title
+| Field                | Type       | Default Value | Description                                                                                                                                                                                                                                               |
+| -------------------- | ---------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| customCss            | text array | []            | See [Custom CSS](#custom-css)                                                                                                                                                                                                                             |
+| customJs             | text array | []            | See [Custom Javascript](#custom-javascript)                                                                                                                                                                                                               |
+| description          | text       | ""            | Open Graph / Twitter Card description                                                                                                                                                                                                                     |
+| enableExternalSvg    | bool       | false         | `true` will load social icon using Font Awesome external css.                                                                                                                                                                                             |
+| enableInfoBox        | bool       | false         | Enable page info box style                                                                                                                                                                                                                                |
+| enableListLastModify | bool       | false         | Use last modify date in list page.                                                                                                                                                                                                                        |
+| enableOpenGraph      | bool       | false         | Enable Open Graph                                                                                                                                                                                                                                         |
+| enableOpenToc        | bool       | true          | Control if table of content(Toc) is open By default                                                                                                                                                                                                       |
+| enableTwitterCard    | bool       | false         | Enable Twitter Card                                                                                                                                                                                                                                       |
+| enableUserCanonical  | bool       | false         | Add `rel="canonical"` meta link with absolute URL to each page. Only use this if site require **user-declared canonical** meta. This is not related to [Hugo Canonicalization](//gohugo.io/content-management/urls/#canonicalization) nor `canonifyurls`. |
+| favicon              | text       | ""            | See [Favicon](#favicon)                                                                                                                                                                                                                                   |
+| images               | text array | []            | Open Graph / Twitter Card image                                                                                                                                                                                                                           |
+| mainSections         | text       | n/a           | Hugo default to section with most entries when For generating homepage list.                                                                                                                                                                              |
+| pagewidth            | text(px)   | "1200px"      | Page width will automatically set to 100% on small screen(<993px).                                                                                                                                                                                        |
+| startdate            | text       | ""            | eg. "2012-12-02". Year is extracted and generate copyright line "2012-(current year)". Site `copyright` override this behavior.                                                                                                                           |
+| subtitle             | text       | ""            | If defined, sub-title appear after site title in smaller font.                                                                                                                                                                                            |
+| title                | text       | ""            | Open Graph / Twitter Card title                                                                                                                                                                                                                           |
 
 #### Social Network
 
 **[Params.sociallink]** Show social network buttons if IDs are provided.
 
-Field|Type|Default Value
----|---|---
-facebook|text|""
-flickr|text|""
-instagram|text|""
-linkedin|text|""
-pinterest|text|""
-reddit|text|""
-rss|bool|false
-tumblr|text|""
-twitter|text|""
-vimeo|text|""
-youtubechannel|text|""
-youtubeuser|text|""
+| Field          | Type | Default Value |
+| -------------- | ---- | ------------- |
+| facebook       | text | ""            |
+| flickr         | text | ""            |
+| instagram      | text | ""            |
+| linkedin       | text | ""            |
+| pinterest      | text | ""            |
+| reddit         | text | ""            |
+| rss            | bool | false         |
+| tumblr         | text | ""            |
+| twitter        | text | ""            |
+| vimeo          | text | ""            |
+| youtubechannel | text | ""            |
+| youtubeuser    | text | ""            |
 
 #### Share Button
 
 **[Params.socialshare]** Control if share buttons appear at the bottom of page.
 
-Field|Type|Default Value
----|---|---|---
-facebook|bool|false
-instagram|bool|false
-linkedin|bool|false
-pinterest|bool|false
-reddit|bool|false
-telegram|bool|false
-twitter|bool|false
-vk|bool|false
+| Field     | Type | Default Value |
+| --------- | ---- | ------------- |
+| facebook  | bool | false         |
+| instagram | bool | false         |
+| linkedin  | bool | false         |
+| pinterest | bool | false         |
+| reddit    | bool | false         |
+| telegram  | bool | false         |
+| twitter   | bool | false         |
+| vk        | bool | false         |
 
 #### Theme Color
 
 **[Params.color]** Control theme color. Default is a dark theme.
 
-Field|Type|Default Value|Light Theme**
----|---|----|---
-bg|text|"#181a1b"|"white"
-border|text|"white"|""black"
-link|text|"#3d84ff"|"#3d84ff"
-text|text|"white"|"black"
+| Field  | Type | Default Value | Light Theme\*\* |
+| ------ | ---- | ------------- | --------------- |
+| bg     | text | "#181a1b"     | "white"         |
+| border | text | "white"       | ""black"        |
+| link   | text | "#3d84ff"     | "#3d84ff"       |
+| text   | text | "white"       | "black"         |
 
 #### Layout Dimensions
 
 **[Params.card]** Control list page layout.
 
-Field|Type|Default Value|Description
----|---|---|---
-date|bool|true|Show data for each item in list
-summary|bool|true|Show summary for each item in list
-width|text(%)|"32%"|Control list page column width on desktop(>992px). 32% for 3 columns. 24% for 4 columns, etc. Single column use 100%.
+| Field   | Type    | Default Value | Description                                                                                                           |
+| ------- | ------- | ------------- | --------------------------------------------------------------------------------------------------------------------- |
+| date    | bool    | true          | Show data for each item in list                                                                                       |
+| summary | bool    | true          | Show summary for each item in list                                                                                    |
+| width   | text(%) | "32%"         | Control list page column width on desktop(>992px). 32% for 3 columns. 24% for 4 columns, etc. Single column use 100%. |
 
 #### Custom CSS
 
-If you add custom css files like following:
+If you add custom css files `abc.css` and `def.css` like following:
 
 ```sh
 ./
@@ -222,7 +218,7 @@ customCss = ["/css/abc.css", "/css/def.css"]
 
 #### Custom Javascript
 
-If you add custom javascript like following:
+If you add custom javascript `abc.js` and `def.js` like following:
 
 ```sh
 ./
@@ -244,7 +240,6 @@ The final path of your javascript files will be `/js/abc.js` and `/js/def.js`:
 [Params]
 customJs = ["/js/abc.js", "/js/def.js"]
 ```
-
 
 #### Favicon
 
@@ -278,26 +273,43 @@ SK themes come with default favicon. To disable it:
 touch static/favicon.ico
 ```
 
+#### Disqus
+
+Section `[services.disqus]`
+
+| Field     | Type | Default Value | Description       |
+| --------- | ---- | ------------- | ----------------- |
+| shortname | text | ""            | Disqus shortname. |
+
 #### Google
 
-**[Params.google]**
+##### AdSense
 
-Field|Type|Default Value|Description
----|---|---|---
-AdSenseId|text|""|AdSense ID/Tag.
-Analytics|text|""|Set this to Google Analytics ID.
-enablePageLevelAd|bool|false|Enable/Disable page level ads.
+Section `[Params.google]`
+
+| Field             | Type | Default Value | Description                    |
+| ----------------- | ---- | ------------- | ------------------------------ |
+| AdSenseId         | text | ""            | AdSense ID/Tag.                |
+| enablePageLevelAd | bool | false         | Enable/Disable page level ads. |
+
+##### Analytics
+
+Section `[services.googleAnalytics]`:
+
+| Field | Type | Default Value | Description         |
+| ----- | ---- | ------------- | ------------------- |
+| id    | text | ""            | Google Analytics ID |
 
 #### Paypal Button
 
 **[Params.paypal]** Enable Paypal donation button along side share buttons.
 
-Field|Type|Default Value|Description
----|---|---|---
-amount|text|"0"|Default amount.
-businessId|text|""|Paypal business Id. Button will only show if this is set.
-currency|text|""|Currency code, eg. "CAD", "USD".
-enableRecurring|bool|false|Show recurring check-box.
+| Field           | Type | Default Value | Description                                               |
+| --------------- | ---- | ------------- | --------------------------------------------------------- |
+| amount          | text | "0"           | Default amount.                                           |
+| businessId      | text | ""            | Paypal business Id. Button will only show if this is set. |
+| currency        | text | ""            | Currency code, eg. "CAD", "USD".                          |
+| enableRecurring | bool | false         | Show recurring check-box.                                 |
 
 Information can be obtain by going through [Paypal Donate Button](https://www.paypal.com/donate/buttons?type=C&fromManage=true). You need your own Paypal account to go through the button creation process.
 
@@ -319,7 +331,7 @@ Information can be obtain by going through [Paypal Donate Button](https://www.pa
 
 ### Sample Config
 
-`config.sample.toml` located in theme dir.
+`config.sample.toml`:
 
 ```toml
 baseURL = "https://"
@@ -330,11 +342,16 @@ DefaultContentLanguage = "en"
 enableGitInfo          = true
 enableInlineShortcodes = true
 languageCode           = "en"
-paginate               = 15
 relativeURLs           = true
 
-#disqusShortname = ""
-#googleAnalytics = ""
+[pagination]
+pagerSize = 15
+
+[services]
+[services.disqus]
+shortname = ""
+[services.googleAnalytics]
+id = ""
 
 [Params]
 customCss            = ["/css/abc.css", "/css/def.css"]
@@ -356,59 +373,62 @@ enableOpenGraph   = true
 enableTwitterCard = true
 title             = "SK3"
 
-	[Params.paypal]
-	amount          = ""
-	businessId      = ""
-	currency        = ""
-	enableRecurring = true
+[Params.iubenda]
+siteId         = ""
+cookiePolicyId = ""
 
-	[Params.google]
-	AdsenseId         = ""
-	enablePageLevelAd = false
-	enableUA          = false
+[Params.google]
+AdSenseId         = ""
+enablePageLevelAd = false
 
-	[Params.card]
-	date    = true
-	summary = true
-	width   = "32%"
+[Params.paypal]
+# amount          = "5"
+businessId      = ""
+currency        = "CAD"
+enableRecurring = true
 
-	[Params.color]
-	bg     = "#181a1b"
-	border = "white"
-	link   = "#3d84ff"
-	text   = "white"
+[Params.card]
+date    = true
+summary = true
+width   = "32%"
 
-	[Params.sociallink]
-	facebook       = ""
-	flickr          = ""
-	github         = ""
-	instagram      = ""
-	linkedin       = ""
-	pinterest      = ""
-	reddit         = ""
-	rss            = true
-	stack-exchange = ""
-	stack-overflow  = ""
-	tumblr         = ""
-	twitter        = ""
-	vimeo          = ""
-	youtubechannel = ""
-	youtubeuser    = ""
+[Params.color]
+bg     = "#181a1b"
+border = "white"
+link   = "#3d84ff"
+text   = "white"
 
-	[Params.socialshare]
-	facebook  = true
-	instagram = true
-	linkedin  = true
-	pinterest = true
-	reddit    = true
-	telegram  = true
-	twitter   = true
-	vk        = true
+[Params.sociallink]
+facebook       = ""
+flickr         = ""
+github         = ""
+instagram      = ""
+linkedin       = ""
+pinterest      = ""
+reddit         = ""
+rss            = true
+stack-exchange = ""
+stack-overflow = ""
+tumblr         = ""
+twitter        = ""
+vimeo          = ""
+youtubechannel = ""
+youtubeuser    = ""
+
+[Params.socialshare]
+facebook  = true
+instagram = true
+linkedin  = true
+pinterest = true
+reddit    = true
+telegram  = true
+twitter   = true
+vk        = true
 
 [markup]
-	[markup.tableOfContents]
-	endLevel   = 6
-	startLevel = 1
+[markup.tableOfContents]
+endLevel   = 6
+startLevel = 1
 ```
 
 ### Font Awesome
@@ -523,12 +543,30 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
     - Google param section
 - v2.1.0
   - Support Paypal donation button
+- v3.0.0
+  - Breaking changes
+    - Migration to Hugo 0.148.1
+      - Config file
+        - Following settings are moved
+          - `disqusShortname` - `[services.disqus]`.`shortname`
+          - `googleAnalyticsID` -> `[services.googleAnalytics]`.`id`
+          - `paginate` -> `[pagination]`.`pagerSize`
+        - Following settings are removed
+          - `[Params.google]`.`enableUA`
+      - Directory/Files changes
+        - Moved `layouts/partials/` -> `layouts/_partials/`
+        - Moved files in `layouts/_default/` -> `layouts/`
+        - Removed `config.demo.config`
+        - Removed `exampleSite`
+        - Removed `layouts/_default/`
+  - New features
+    - iubenda support -> `[Params.inbenda]`
 
 ### License
 
 The MIT License (MIT)
 
-Copyright (c) 2022 John, Sing Dao, Siu
+Copyright (c) 2025 John, Sing Dao, Siu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
