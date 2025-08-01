@@ -1,10 +1,11 @@
-description = "Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2)."
-features = ["disqus", "google adsense", "google analytics"]
-homepage = "https://sk3.jsiu.dev/"
-license = "MIT"
+demosite    = "https://sk3.jsiu.dev"
+description = "Full feature Hugo theme"
+features    = ["disqus", "google adsense", "google analytics"]
+homepage    = "https://github.com/J-Siu/hugo-theme-sk3"
+license     = "MIT"
 licenselink = "https://github.com/J-Siu/hugo-theme-sk3/blob/master/LICENSE"
-min_version = "0.148.0"
-name = "SK3"
+name        = "SK3"
+
 tags = [
 	"blog",
 	"clean",

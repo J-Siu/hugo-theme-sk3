@@ -570,6 +570,8 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Add exampleSite
 - v3.0.2
   - Fix theme.toml
+- v3.0.3
+  - Fix for Hugo submit
 
 ### License
 

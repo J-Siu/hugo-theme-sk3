@@ -2,6 +2,10 @@ baseURL = "https://sk3.jsiu.dev"
 theme   = "sk3"
 title   = "SK3"
 
+[module]
+[module.hugoVersion]
+min = "0.148.0"
+
 DefaultContentLanguage = "en"
 enableGitInfo          = true
 enableInlineShortcodes = true
