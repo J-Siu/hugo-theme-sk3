@@ -568,6 +568,8 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
     - iubenda support -> `[Params.inbenda]`
 - v3.0.1
   - Add exampleSite
+- v3.0.2
+  - Fix theme.toml
 
 ### License
 
