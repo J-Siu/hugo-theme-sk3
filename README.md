@@ -13,20 +13,20 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
     - [Testing](#testing)
     - [Features](#features)
     - [Layout](#layout)
-        - [Markdown Style](#markdown-style)
-        - [Site Config](#site-config)
-        - [Social Network](#social-network)
-        - [Share Button](#share-button)
-        - [Theme Color](#theme-color)
-        - [Layout Dimensions](#layout-dimensions)
-        - [Custom CSS](#custom-css)
-        - [Custom Javascript](#custom-javascript)
-        - [Favicon](#favicon)
-        - [Disqus](#disqus)
-        - [Google](#google)
-            - [AdSense](#adsense)
-            - [Analytics](#analytics)
-        - [Paypal Button](#paypal-button)
+      - [Markdown Style](#markdown-style)
+      - [Site Config](#site-config)
+      - [Social Network](#social-network)
+      - [Share Button](#share-button)
+      - [Theme Color](#theme-color)
+      - [Layout Dimensions](#layout-dimensions)
+      - [Custom CSS](#custom-css)
+      - [Custom Javascript](#custom-javascript)
+      - [Favicon](#favicon)
+      - [Disqus](#disqus)
+      - [Google](#google)
+        - [AdSense](#adsense)
+        - [Analytics](#analytics)
+      - [Paypal Button](#paypal-button)
     - [Per Page Settings](#per-page-settings)
     - [Sample Config](#sample-config)
     - [Font Awesome](#font-awesome)
@@ -44,9 +44,11 @@ Full feature Hugo theme build on top of [hugo-theme-sk2](//github.com/J-Siu/hugo
 | ----- | --------------------------------------------------- | ----------------------------------------- | ------------------------------- | ------------------------------------------------------------- |
 | SK1   | [hugo-theme-sk1](//github.com/J-Siu/hugo-theme-sk1) | [SK1](//themes.gohugo.io/hugo-theme-sk1/) | [sk1.jsiu.dev](//sk1.jsiu.dev/) | Fully functional basic Hugo theme with no css, no javascript. |
 | SK2   | [hugo-theme-sk2](//github.com/J-Siu/hugo-theme-sk2) | [SK2](//themes.gohugo.io/hugo-theme-sk2/) | [sk2.jsiu.dev](//sk2.jsiu.dev/) | Fully functional basic Hugo theme with minimum css.           |
-| SK3   | [hugo-theme-sk3](//github.com/J-Siu/hugo-theme-sk3) | [SK3](//themes.gohugo.io/hugo-theme-sk3/) | [johnsiu.com](//johnsiu.com/)   | Full feature Hugo theme with Google AdSense support.          |
+| SK3   | [hugo-theme-sk3](//github.com/J-Siu/hugo-theme-sk3) | [SK3](//themes.gohugo.io/hugo-theme-sk3/) | [sk3.jsiu.dev](//sk3.jsiu.dev/) | Full feature Hugo theme with Google AdSense support.          |
 
 ### Sites
+
+SK3 demo site: https://sk3.jsiu.dev/ with content from [hugoBasicExample](https://github.com/J-Siu/hugoBasicExample).
 
 John Siu Blog: [JohnSiu.com](//JohnSiu.com/)
 
@@ -79,15 +81,18 @@ In site directory:
 ### Testing
 
 ```sh
-cd <site root>
+git clone https://github.com/J-Siu/hugo-theme-sk3 sk3
+cd sk3
 
-git clone https://github.com/J-Siu/hugo-theme-sk3 themes/sk3
+# Pull example site.
+git submodule update --recursive --init
 
+cd exampleSite
 hugo server -D --bind :: \
 --disableFastRender \
 --theme sk3 \
---themesDir themes \
---config config.toml,../config.sample.toml
+--themesDir ../../ \
+--config config.toml,../config.demo.toml
 ```
 
 ### Features
@@ -561,6 +566,8 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
         - Removed `layouts/_default/`
   - New features
     - iubenda support -> `[Params.inbenda]`
+- v3.0.1
+  - Add exampleSite
 
 ### License
 

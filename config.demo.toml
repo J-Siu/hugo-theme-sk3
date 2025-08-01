@@ -1,6 +1,6 @@
-baseURL = "https://"
+baseURL = "https://sk3.jsiu.dev"
 theme   = "sk3"
-title   = ""
+title   = "SK3"
 
 DefaultContentLanguage = "en"
 enableGitInfo          = true
@@ -9,7 +9,7 @@ languageCode           = "en"
 relativeURLs           = true
 
 [pagination]
-pagerSize = 15
+pagerSize = 3
 
 [services]
 [services.disqus]
