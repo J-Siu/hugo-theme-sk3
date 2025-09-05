@@ -572,6 +572,8 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Fix theme.toml
 - v3.0.3
   - Fix for Hugo submit
+- v3.0.4
+  - Fix "enableListLastModify"
 
 ### License
 
