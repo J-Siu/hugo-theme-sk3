@@ -21,6 +21,9 @@
 	{{$p := .Pages}}
 	{{if .IsHome}}
 	{{$p = where site.RegularPages "Type" "in" site.Params.mainSections}}
+	{{if site.Params.enableListLastModify}}
+	{{$p = $p.ByLastmod.Reverse}}
+	{{end}}
 	{{else if eq .Kind "taxonomy"}}
 	{{$p = $p.ByTitle}}
 	{{end}}
