@@ -89,10 +89,11 @@ git submodule update --recursive --init
 
 cd exampleSite
 hugo server -D --bind :: \
+--config config.toml,../config.demo.toml \
 --disableFastRender \
+--renderToMemory \
 --theme sk3 \
---themesDir ../../ \
---config config.toml,../config.demo.toml
+--themesDir ../../
 ```
 
 ### Features
@@ -336,105 +337,7 @@ Information can be obtain by going through [Paypal Donate Button](https://www.pa
 
 ### Sample Config
 
-`config.sample.toml`:
-
-```toml
-baseURL = "https://"
-theme   = "sk3"
-title   = ""
-
-DefaultContentLanguage = "en"
-enableGitInfo          = true
-enableInlineShortcodes = true
-languageCode           = "en"
-relativeURLs           = true
-
-[pagination]
-pagerSize = 15
-
-[services]
-[services.disqus]
-shortname = ""
-[services.googleAnalytics]
-id = ""
-
-[Params]
-customCss            = ["/css/abc.css", "/css/def.css"]
-customJs             = ["/js/abc.js", "/js/def.js"]
-enableExternalSvg    = false
-enableInfoBox        = true
-enableListLastModify = false
-enableOpenToc        = false
-enableUserCanonical  = false
-favicon              = "/favicon.ico"
-mainSections         = "post"
-pagewidth            = "1200px"
-startdate            = "2012-12-02"
-subtitle             = "A Hugo Theme"
-
-# Fill in following if using Open Graph / Twitter Card
-description       = "A Hugo Theme"
-enableOpenGraph   = true
-enableTwitterCard = true
-title             = "SK3"
-
-[Params.iubenda]
-siteId         = ""
-cookiePolicyId = ""
-
-[Params.google]
-AdSenseId         = ""
-enablePageLevelAd = false
-
-[Params.paypal]
-# amount          = "5"
-businessId      = ""
-currency        = "CAD"
-enableRecurring = true
-
-[Params.card]
-date    = true
-summary = true
-width   = "32%"
-
-[Params.color]
-bg     = "#181a1b"
-border = "white"
-link   = "#3d84ff"
-text   = "white"
-
-[Params.sociallink]
-facebook       = ""
-flickr         = ""
-github         = ""
-instagram      = ""
-linkedin       = ""
-pinterest      = ""
-reddit         = ""
-rss            = true
-stack-exchange = ""
-stack-overflow = ""
-tumblr         = ""
-twitter        = ""
-vimeo          = ""
-youtubechannel = ""
-youtubeuser    = ""
-
-[Params.socialshare]
-facebook  = true
-instagram = true
-linkedin  = true
-pinterest = true
-reddit    = true
-telegram  = true
-twitter   = true
-vk        = true
-
-[markup]
-[markup.tableOfContents]
-endLevel   = 6
-startLevel = 1
-```
+[config.demo.toml](config.demo.toml)
 
 ### Font Awesome
 
@@ -574,6 +477,8 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
   - Fix for Hugo submit
 - v3.0.4
   - Fix "enableListLastModify"
+- v3.0.5
+  - update to Hugo v0.158.0
 
 ### License
 
