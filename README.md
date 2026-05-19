@@ -89,10 +89,11 @@ git submodule update --recursive --init
 
 cd exampleSite
 hugo server -D --bind :: \
+--config config.toml,../config.demo.toml \
 --disableFastRender \
+--renderToMemory \
 --theme sk3 \
---themesDir ../../ \
---config config.toml,../config.demo.toml
+--themesDir ../../
 ```
 
 ### Features
@@ -336,105 +337,7 @@ Information can be obtain by going through [Paypal Donate Button](https://www.pa
 
 ### Sample Config
 
-`config.sample.toml`:
-
-```toml
-baseURL = "https://"
-theme   = "sk3"
-title   = ""
-
-DefaultContentLanguage = "en"
-enableGitInfo          = true
-enableInlineShortcodes = true
-languageCode           = "en"
-relativeURLs           = true
-
-[pagination]
-pagerSize = 15
-
-[services]
-[services.disqus]
-shortname = ""
-[services.googleAnalytics]
-id = ""
-
-[Params]
-customCss            = ["/css/abc.css", "/css/def.css"]
-customJs             = ["/js/abc.js", "/js/def.js"]
-enableExternalSvg    = false
-enableInfoBox        = true
-enableListLastModify = false
-enableOpenToc        = false
-enableUserCanonical  = false
-favicon              = "/favicon.ico"
-mainSections         = "post"
-pagewidth            = "1200px"
-startdate            = "2012-12-02"
-subtitle             = "A Hugo Theme"
-
-# Fill in following if using Open Graph / Twitter Card
-description       = "A Hugo Theme"
-enableOpenGraph   = true
-enableTwitterCard = true
-title             = "SK3"
-
-[Params.iubenda]
-siteId         = ""
-cookiePolicyId = ""
-
-[Params.google]
-AdSenseId         = ""
-enablePageLevelAd = false
-
-[Params.paypal]
-# amount          = "5"
-businessId      = ""
-currency        = "CAD"
-enableRecurring = true
-
-[Params.card]
-date    = true
-summary = true
-width   = "32%"
-
-[Params.color]
-bg     = "#181a1b"
-border = "white"
-link   = "#3d84ff"
-text   = "white"
-
-[Params.sociallink]
-facebook       = ""
-flickr         = ""
-github         = ""
-instagram      = ""
-linkedin       = ""
-pinterest      = ""
-reddit         = ""
-rss            = true
-stack-exchange = ""
-stack-overflow = ""
-tumblr         = ""
-twitter        = ""
-vimeo          = ""
-youtubechannel = ""
-youtubeuser    = ""
-
-[Params.socialshare]
-facebook  = true
-instagram = true
-linkedin  = true
-pinterest = true
-reddit    = true
-telegram  = true
-twitter   = true
-vk        = true
-
-[markup]
-[markup.tableOfContents]
-endLevel   = 6
-startLevel = 1
-```
+- [config.demo.toml](config.demo.toml)
 
 ### Font Awesome
 
@@ -457,123 +360,7 @@ Social buttons provided by [Font Awesome](//github.com/FortAwesome/Font-Awesome)
 
 ### Change Log
 
-- 0.8.5
-  - Initial Commit
-- 0.8.6
-  - Share button in menu
-  - Fixed
-    - Adsense ID
-    - CSS color conflict with syntax highlight
-    - Display issue with Disqus
-    - Display issue with prev/next
-    - Unwanted title on homepage
-- 0.8.7
-  - CSS clean up
-  - Complete README.md
-  - Default page width 1200px
-  - Default card width 32%
-  - Fixed menu bar top and left "leaking"
-- 0.8.8
-  - CSS clean up
-  - Improve header
-  - Improve README.md
-  - Fix margin/padding
-- 0.8.9
-  - CSS / spacing update
-  - Include config.sample.toml
-  - Use Font Awesome web font
-- 0.9.0
-  - Switch to Font Awesome SVG
-- 0.9.1
-  - Add box style page info
-  - CSS clean up
-  - Do not render empty table of content
-  - Fix highlight font conflict
-- 0.9.2
-  - Add images
-  - Demo config
-  - Fix css
-  - Improve menu
-  - README.md update
-  - Template .Site. -> site.
-  - Use site.Params.mainSections
-- 0.9.3
-  - Click anywhere to close menu
-  - SVG external option
-- 0.9.4
-  - Fix css spacing, kbd, social buttons, author box
-  - Fix menu closing click through
-- 0.9.5
-  - Add `enableListLastModify`
-  - Fix H1 line height
-  - Fix Google Analytics
-  - Fix table for mobile screen
-  - Refactor css margin/padding/font size
-- 0.9.6
-  - Add default favicon.ico
-  - Remove H1 from header.html & menu.html (Bing SEO)
-  - Standardize .Site. -> site.
-  - Update README.md
-- 0.9.7
-  - Add custom css and js support
-  - Add open toc by default
-  - Add page related (enable/disable)
-  - Add user-declared canonical support
-  - Fix footer alignment
-  - Update favicon instructions
-- 0.9.8
-  - Add box to current list page button
-  - Add external link open in new tab
-  - Add rss
-  - CSS cleanup
-  - Center images
-  - Fix \<head\> description, title
-  - Fix html issues
-  - Homepage title larger
-  - Sort tags list / in page
-  - Sticky menu button
-- 0.9.9
-  - Merge [PR](https://github.com/J-Siu/hugo-theme-sk3/pull/26) by [0xflotus](https://github.com/0xflotus)
-- 1.0.0
-  - Fixed head.html text color variable name [issue #27](https://github.com/J-Siu/hugo-theme-sk3/issues/27)
-  - Fixed sk3.css box element color [issue #27](https://github.com/J-Siu/hugo-theme-sk3/issues/27)
-- v1.1.0
-  - Support Google Analytics GA4 with `googleAnalyticsUA`
-- v1.2.0
-  - Support AdSense page level control
-- v2.0.0
-  - Restructure README.md
-  - Breaking changes:
-    - Params names changes
-    - Google param section
-- v2.1.0
-  - Support Paypal donation button
-- v3.0.0
-  - Breaking changes
-    - Migration to Hugo 0.148.1
-      - Config file
-        - Following settings are moved
-          - `disqusShortname` - `[services.disqus]`.`shortname`
-          - `googleAnalyticsID` -> `[services.googleAnalytics]`.`id`
-          - `paginate` -> `[pagination]`.`pagerSize`
-        - Following settings are removed
-          - `[Params.google]`.`enableUA`
-      - Directory/Files changes
-        - Moved `layouts/partials/` -> `layouts/_partials/`
-        - Moved files in `layouts/_default/` -> `layouts/`
-        - Removed `config.demo.config`
-        - Removed `exampleSite`
-        - Removed `layouts/_default/`
-  - New features
-    - iubenda support -> `[Params.inbenda]`
-- v3.0.1
-  - Add exampleSite
-- v3.0.2
-  - Fix theme.toml
-- v3.0.3
-  - Fix for Hugo submit
-- v3.0.4
-  - Fix "enableListLastModify"
+- [CHANGELOG.md](CHANGELOG.md)
 
 ### License
 
